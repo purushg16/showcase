@@ -1,0 +1,66 @@
+import { Box, HStack, Heading, Icon, Text } from "@chakra-ui/react";
+import {
+  IoLogoGithub,
+  IoLogoNodejs,
+  IoLogoPython,
+  IoLogoReact,
+} from "react-icons/io5";
+import { SiFlutter, SiMongodb, SiTypescript } from "react-icons/si";
+import { TbBrandJavascript } from "react-icons/tb";
+
+const FrontEndSkills = () => {
+  return (
+    <>
+      <HStack>
+        <Icon as={IoLogoReact} boxSize={20} color="white" />
+        <Icon as={SiTypescript} boxSize={20} color="white" />
+        <Icon as={TbBrandJavascript} boxSize={20} color="white" />
+      </HStack>
+      <Text color="white" fontSize="2xl" mt={10}>
+        As a Frontend Developer, I specialize in building responsive and dynamic
+        user interfaces using React, TypeScript, and JavaScript. My expertise
+        lies in crafting efficient and maintainable code, ensuring seamless user
+        experiences across various platforms.
+      </Text>
+    </>
+  );
+};
+
+const BackEndSkills = () => {
+  return (
+    <>
+      <HStack>
+        <Icon as={IoLogoNodejs} boxSize={20} color="white" />
+        <Heading color="white"> Expressjs </Heading>
+        <Icon as={IoLogoGithub} boxSize={20} color="white" />
+        <Icon as={SiMongodb} boxSize={20} color="white" />
+      </HStack>
+      <Text color="white" fontSize="2xl" mt={10}>
+        As a Full Stack Developer, I leverage the power of Node.js and Express
+        to build scalable and performant server-side applications. Proficient in
+        MongoDB, I design dynamic and efficient databases. My collaborative
+        approach is reflected in my active contributions to open-source projects
+        on GitHub.
+      </Text>
+    </>
+  );
+};
+
+const OtherSkills = () => {
+  return (
+    <>
+      <HStack>
+        <Icon as={IoLogoPython} boxSize={20} color="white" />
+        <Icon as={SiFlutter} boxSize={20} color="white" />
+      </HStack>
+      <Text color="white" fontSize="2xl" mt={10}>
+        As other, I specialize in creating cross-platform mobile applications
+        with Flutter, delivering smooth and visually appealing user interfaces.
+        Proficient in Python, I develop robust backend solutions, leveraging its
+        versatility for web applications and data processing tasks.
+      </Text>
+    </>
+  );
+};
+
+export { FrontEndSkills, BackEndSkills, OtherSkills };

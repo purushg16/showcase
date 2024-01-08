@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Open+Sans:wght@300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+body,
+html,
+#root {
+  height: 100%;
+}
+
 :root {
   line-height: 1.5;
   font-weight: 400;
@@ -15,6 +21,26 @@
   -webkit-text-size-adjust: 100%;
 }
 
-* {
-  font-family: "Public Sans", sans-serif;
+/* 
+font-family: 'Major Mono Display', monospace;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Public Sans', sans-serif;
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Public Sans, sans-serif !important;
+}
+
+p {
+  font-family: "Public Sans", sans-serif !important;
+}
+
+button {
+  border-radius: 0px !important;
 }
