@@ -16,7 +16,8 @@ const FrontEndSkills = () => {
         <Icon as={SiTypescript} boxSize={20} color="white" />
         <Icon as={TbBrandJavascript} boxSize={20} color="white" />
       </HStack>
-      <Text color="white" fontSize="2xl" mt={10}>
+      <Text color="white" fontSize="2xl">
+        <Heading my={6}> Frontend_ </Heading>
         As a Frontend Developer, I specialize in building responsive and dynamic
         user interfaces using React, TypeScript, and JavaScript. My expertise
         lies in crafting efficient and maintainable code, ensuring seamless user
@@ -35,7 +36,8 @@ const BackEndSkills = () => {
         <Icon as={IoLogoGithub} boxSize={20} color="white" />
         <Icon as={SiMongodb} boxSize={20} color="white" />
       </HStack>
-      <Text color="white" fontSize="2xl" mt={10}>
+      <Text color="white" fontSize="2xl">
+        <Heading my={6}> Backend_ </Heading>
         As a Full Stack Developer, I leverage the power of Node.js and Express
         to build scalable and performant server-side applications. Proficient in
         MongoDB, I design dynamic and efficient databases. My collaborative
@@ -53,7 +55,8 @@ const OtherSkills = () => {
         <Icon as={IoLogoPython} boxSize={20} color="white" />
         <Icon as={SiFlutter} boxSize={20} color="white" />
       </HStack>
-      <Text color="white" fontSize="2xl" mt={10}>
+      <Text color="white" fontSize="2xl">
+        <Heading my={6}> Others_ </Heading>
         As other, I specialize in creating cross-platform mobile applications
         with Flutter, delivering smooth and visually appealing user interfaces.
         Proficient in Python, I develop robust backend solutions, leveraging its

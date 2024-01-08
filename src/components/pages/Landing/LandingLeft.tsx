@@ -4,11 +4,14 @@ import {
   FrontEndSkills,
   OtherSkills,
 } from "../../elements/Skills";
+import useSkillStore from "../../../functions/store/skillStore";
 
 const BG_IMG = "https://www.transparenttextures.com/patterns/hexabump.png";
 const BG_CLR = "#000004";
 
 const LandingLeft = () => {
+  const selectedSkill = useSkillStore((s) => s.selectedSkill);
+
   return (
     <Flex
       flexDirection="column"
@@ -19,9 +22,9 @@ const LandingLeft = () => {
       backgroundImage={`url(${BG_IMG})`}
     >
       <Box px={10}>
-        <FrontEndSkills />
-        {/* <BackEndSkills /> */}
-        {/* <OtherSkills /> */}
+        {selectedSkill === "front" && <FrontEndSkills />}
+        {selectedSkill === "back" && <BackEndSkills />}
+        {selectedSkill === "others" && <OtherSkills />}
       </Box>
     </Flex>
   );

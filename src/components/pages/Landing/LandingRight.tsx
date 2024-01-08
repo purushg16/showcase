@@ -10,8 +10,12 @@ import {
 } from "@chakra-ui/react";
 import { IoNavigate } from "react-icons/io5";
 import { TIconButton } from "../../elements/Button";
+import useSkillStore from "../../../functions/store/skillStore";
 
 const LandingRight = () => {
+  const selectSkill = useSkillStore((s) => s.selectSkill);
+  const selectedSkill = useSkillStore((s) => s.selectedSkill);
+
   return (
     <Flex
       px={10}
@@ -43,9 +47,46 @@ const LandingRight = () => {
 
         <Box ml={5}>
           <HStack my={3}>
-            <Button variant="ghost"> Front-end </Button>
-            <Button variant="ghost"> Back-end </Button>
-            <Button variant="ghost"> Others </Button>
+            <Button
+              display="flex"
+              variant="ghost"
+              onClick={() => {
+                selectSkill("front");
+              }}
+            >
+              {selectedSkill === "front" && (
+                <Text color="red" fontSize="2xl" mr={2}>
+                  {">"}
+                </Text>
+              )}
+              Front-end
+            </Button>
+            <Button
+              variant="ghost"
+              onClick={() => {
+                selectSkill("back");
+              }}
+            >
+              {selectedSkill === "back" && (
+                <Text color="red" fontSize="2xl" mr={2}>
+                  {">"}
+                </Text>
+              )}
+              Back-end
+            </Button>
+            <Button
+              variant="ghost"
+              onClick={() => {
+                selectSkill("others");
+              }}
+            >
+              {selectedSkill === "others" && (
+                <Text color="red" fontSize="2xl" mr={2}>
+                  {">"}
+                </Text>
+              )}
+              Others
+            </Button>
           </HStack>
 
           <TIconButton text="See Projects" icon={IoNavigate} color="red" />
