@@ -1,23 +1,36 @@
 import {
+  Avatar,
+  AvatarBadge,
   Box,
   Button,
   Flex,
   HStack,
   Heading,
+  Highlight,
   Icon,
   Show,
   Text,
+  useColorMode,
 } from "@chakra-ui/react";
 import { IoNavigate } from "react-icons/io5";
 import { TIconButton } from "../../elements/Button";
 import useSkillStore from "../../../functions/store/skillStore";
+import AnimateMove from "../../motions/Move";
+import {
+  TbExclamationMark,
+  TbMoodCrazyHappy,
+  TbMoodNervous,
+} from "react-icons/tb";
 
 const LandingRight = () => {
   const selectSkill = useSkillStore((s) => s.selectSkill);
   const selectedSkill = useSkillStore((s) => s.selectedSkill);
+  const { colorMode } = useColorMode();
 
   return (
     <Flex
+      borderLeft="2px solid"
+      borderColor="red.300"
       px={10}
       flexDirection="column"
       alignItems="start"
@@ -33,7 +46,10 @@ const LandingRight = () => {
           <Heading lineHeight="90%" fontSize="9em">
             SHOW
             <br />
-            CASE<span style={{ color: "red" }}>.</span>
+            CASE
+            <span>
+              <Highlight query="." children="." styles={{ color: "red.900" }} />
+            </span>
           </Heading>
         </Show>
 
@@ -55,9 +71,11 @@ const LandingRight = () => {
               }}
             >
               {selectedSkill === "front" && (
-                <Text color="red" fontSize="2xl" mr={2}>
-                  {">"}
-                </Text>
+                <AnimateMove>
+                  <Text color="red" fontSize="2xl" mr={2}>
+                    {"I"}
+                  </Text>
+                </AnimateMove>
               )}
               Front-end
             </Button>
@@ -68,9 +86,11 @@ const LandingRight = () => {
               }}
             >
               {selectedSkill === "back" && (
-                <Text color="red" fontSize="2xl" mr={2}>
-                  {">"}
-                </Text>
+                <AnimateMove>
+                  <Text color="red" fontSize="2xl" mr={2}>
+                    {"I"}
+                  </Text>
+                </AnimateMove>
               )}
               Back-end
             </Button>
@@ -81,15 +101,20 @@ const LandingRight = () => {
               }}
             >
               {selectedSkill === "others" && (
-                <Text color="red" fontSize="2xl" mr={2}>
-                  {">"}
-                </Text>
+                <AnimateMove>
+                  <Text color="red" fontSize="2xl" mr={2}>
+                    I
+                  </Text>
+                </AnimateMove>
               )}
               Others
             </Button>
           </HStack>
 
-          <TIconButton text="See Projects" icon={IoNavigate} color="red" />
+          <Box my={5}>
+            <TIconButton text="See Projects" icon={IoNavigate} color="red" />
+            <TIconButton text="More Me" icon={TbMoodCrazyHappy} />
+          </Box>
         </Box>
       </Box>
     </Flex>

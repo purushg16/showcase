@@ -1,15 +1,11 @@
-import { Box, Flex } from "@chakra-ui/react";
-import {
-  BackEndSkills,
-  FrontEndSkills,
-  OtherSkills,
-} from "../../elements/Skills";
+import { Box, Flex, useColorMode } from "@chakra-ui/react";
 import useSkillStore from "../../../functions/store/skillStore";
+import SkillCard from "../../elements/SkillCard";
 
-const BG_IMG = "https://www.transparenttextures.com/patterns/hexabump.png";
-const BG_CLR = "#000004";
+const BG_IMG = "https://www.transparenttextures.com/patterns/gplay.png";
 
 const LandingLeft = () => {
+  const { colorMode } = useColorMode();
   const selectedSkill = useSkillStore((s) => s.selectedSkill);
 
   return (
@@ -18,13 +14,11 @@ const LandingLeft = () => {
       justifyContent="center"
       alignItems="center"
       height="100%"
-      backgroundColor={BG_CLR}
+      backgroundColor={colorMode}
       backgroundImage={`url(${BG_IMG})`}
     >
       <Box px={10}>
-        {selectedSkill === "front" && <FrontEndSkills />}
-        {selectedSkill === "back" && <BackEndSkills />}
-        {selectedSkill === "others" && <OtherSkills />}
+        <SkillCard skill={selectedSkill} />
       </Box>
     </Flex>
   );

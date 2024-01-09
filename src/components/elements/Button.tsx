@@ -9,7 +9,7 @@ interface Props {
 
 const TIconButton = ({ icon, text, color = "gray" }: Props) => {
   return (
-    <Button colorScheme={color}>
+    <Button colorScheme={color} mr={2}>
       {text} <Icon as={icon} mx={2} />
     </Button>
   );

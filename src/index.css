@@ -37,6 +37,10 @@ h6 {
   font-family: Public Sans, sans-serif !important;
 }
 
+#font-mono {
+  font-family: "Major Mono Display", monospace !important;
+}
+
 p {
   font-family: "Public Sans", sans-serif !important;
 }

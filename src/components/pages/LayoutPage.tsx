@@ -3,9 +3,9 @@ import { Box } from "@chakra-ui/layout";
 import { useColorMode } from "@chakra-ui/react";
 
 const Layout = () => {
-  // const { toggleColorMode, colorMode } = useColorMode();
+  const { toggleColorMode, colorMode } = useColorMode();
+  if (colorMode === "light") toggleColorMode();
   // if (colorMode === "dark") toggleColorMode();
-  // if (colorMode === "light") toggleColorMode();
 
   return (
     <Box height="100%">
