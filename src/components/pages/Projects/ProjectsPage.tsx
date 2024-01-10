@@ -19,7 +19,7 @@ const ProjectsPage = () => {
           </Text>
         </AnimateMove>
 
-        <SimpleGrid columns={3} spacing={10} mt={20}>
+        <SimpleGrid columns={{ md: 1, lg: 3 }} spacing={10} mt={20}>
           <ProjectCard
             title="web"
             desc={

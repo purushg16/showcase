@@ -34,7 +34,7 @@ const ProjectCard = ({ title, desc, icon }: Props) => {
         borderRadius={0}
         transition="all 0.5s"
         boxShadow="0px 0px 0px 1px black"
-        _hover={{ boxShadow: "0px 0px 40px 1px black", color: "red.200" }}
+        _hover={{ boxShadow: "0px 0px 40px 1px black", color: "teal.200" }}
       >
         <Flex direction="column" height="100%">
           <Box>
