@@ -1,31 +1,22 @@
 import {
-  Avatar,
-  AvatarBadge,
   Box,
   Button,
   Flex,
   HStack,
   Heading,
   Highlight,
-  Icon,
   Show,
   Text,
-  useColorMode,
 } from "@chakra-ui/react";
 import { IoNavigate } from "react-icons/io5";
-import { TIconButton } from "../../elements/Button";
+import { TbMoodCrazyHappy } from "react-icons/tb";
 import useSkillStore from "../../../functions/store/skillStore";
+import { TIconButton } from "../../elements/Button";
 import AnimateMove from "../../motions/Move";
-import {
-  TbExclamationMark,
-  TbMoodCrazyHappy,
-  TbMoodNervous,
-} from "react-icons/tb";
 
 const LandingRight = () => {
   const selectSkill = useSkillStore((s) => s.selectSkill);
   const selectedSkill = useSkillStore((s) => s.selectedSkill);
-  const { colorMode } = useColorMode();
 
   return (
     <Flex
@@ -112,7 +103,13 @@ const LandingRight = () => {
           </HStack>
 
           <Box my={5}>
-            <TIconButton text="See Projects" icon={IoNavigate} color="red" />
+            <TIconButton
+              text="See Projects"
+              icon={IoNavigate}
+              color="red"
+              route="/projects"
+              link
+            />
             <TIconButton text="More Me" icon={TbMoodCrazyHappy} />
           </Box>
         </Box>

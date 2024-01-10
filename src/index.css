@@ -4,6 +4,7 @@ body,
 html,
 #root {
   height: 100%;
+  overflow-y: auto;
 }
 
 :root {
@@ -35,6 +36,14 @@ h4,
 h5,
 h6 {
   font-family: Public Sans, sans-serif !important;
+}
+
+h5 {
+  font-weight: 300 !important;
+}
+
+h6 {
+  font-weight: 100 !important;
 }
 
 #font-mono {
