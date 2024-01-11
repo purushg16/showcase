@@ -1,5 +1,5 @@
-import { HamburgerIcon } from "@chakra-ui/icons";
-import { Box, Button, Flex, Heading, Spacer } from "@chakra-ui/react";
+import { Box, Flex, Heading, Spacer } from "@chakra-ui/react";
+import MenuModal from "./NavBarElements/MenuModal";
 
 const Navbar = () => {
   return (
@@ -9,9 +9,7 @@ const Navbar = () => {
           Purush
         </Heading>
         <Spacer />
-        <Button variant="text" size="lg">
-          <HamburgerIcon />
-        </Button>
+        <MenuModal />
       </Flex>
     </Box>
   );

@@ -3,14 +3,14 @@ import { IconType } from "react-icons";
 import { useNavigate } from "react-router-dom";
 import AnimateMove from "../motions/Move";
 
-interface Props {
+interface LinkButtonProps {
   text: string;
   route: string;
   color?: string;
   icon?: IconType;
 }
 
-const LinkButton = ({ text, route }: Props) => {
+const LinkButton = ({ text, route }: LinkButtonProps) => {
   const navigate = useNavigate();
   return (
     <Button
@@ -36,29 +36,36 @@ const LinkButton = ({ text, route }: Props) => {
     </Button>
   );
 };
-
 export { LinkButton };
 
-// const TIconButton = ({
-//   icon,
-//   text,
-//   color = "gray",
-//   link = false,
-//   route = "/",
-// }: Props) => {
-//   const navigate = useNavigate();
+interface NavButtonProps {
+  text: string;
+  route: string;
+}
 
-//   return (
-//     <Button
-//       colorScheme={color}
-//       mr={2}
-//       onClick={() => {
-//         link && navigate(route);
-//       }}
-//     >
-//       {text} <Icon as={icon} mx={2} />
-//     </Button>
-//   );
-// };
+const NavButton = ({ text, route }: NavButtonProps) => {
+  const navigate = useNavigate();
 
-// export { TIconButton };
+  return (
+    <Button
+      onClick={() => {
+        navigate(`/${route}`);
+      }}
+      pl={0}
+      pb={0}
+      size="lg"
+      justifyContent="start"
+      width="100%"
+      fontWeight={300}
+      color="gray"
+      textAlign="left"
+      variant="text"
+      borderBottom={"1px solid gray"}
+      _hover={{ color: "white" }}
+      transition="all 0.7s"
+    >
+      {text}
+    </Button>
+  );
+};
+export { NavButton };
