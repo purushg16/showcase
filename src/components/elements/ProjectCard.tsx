@@ -15,17 +15,17 @@ import { ReactNode } from "react";
 
 interface Props {
   title: string;
-  desc: string;
+  sTitle?: string;
   icon: ReactNode;
+  slNo: number;
+  color: string;
 }
 
-const ProjectCard = ({ title, desc, icon }: Props) => {
-  const { colorMode } = useColorMode();
-
+const ProjectCard = ({ title, icon, sTitle, slNo, color }: Props) => {
   return (
     <AnimateMove direction="y">
       <Box
-        background={colorMode}
+        background={`${color}.400`}
         overflow="hidden"
         position="relative"
         padding={10}
@@ -33,8 +33,7 @@ const ProjectCard = ({ title, desc, icon }: Props) => {
         cursor="pointer"
         borderRadius={0}
         transition="all 0.5s"
-        boxShadow="0px 0px 0px 1px black"
-        _hover={{ boxShadow: "0px 0px 40px 1px black", color: "teal.200" }}
+        _hover={{ color: "black" }}
       >
         <Flex direction="column" height="100%">
           <Box>
@@ -48,13 +47,16 @@ const ProjectCard = ({ title, desc, icon }: Props) => {
             >
               {icon}
             </Image>
-            <Heading mb={3} as={"h6"}>
-              {title}
-            </Heading>
+            <Heading color="gray.300"> 0{slNo} </Heading>
             <Divider />
           </Box>
           <Spacer />
-          <Box mt={10}>{desc}</Box>
+          <Box mt={10}>
+            <Heading as={"h3"}>
+              {title} <br />
+              {!!sTitle && sTitle}
+            </Heading>
+          </Box>
         </Flex>
       </Box>
     </AnimateMove>

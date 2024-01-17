@@ -1,40 +1,51 @@
 import { Outlet } from "react-router-dom";
 import { Box } from "@chakra-ui/layout";
-import { useColorMode } from "@chakra-ui/react";
+import { Grid, Flex, GridItem } from "@chakra-ui/react";
 import Navbar from "../elements/Navbar";
 
-const Layout = () => {
-  const { toggleColorMode, colorMode } = useColorMode();
-  // if (colorMode === "light") toggleColorMode();
-  // if (colorMode === "dark") toggleColorMode();
-
+const LayoutPage = () => {
   return (
-    <Box
+    <Grid
+      background="#FAFAFA"
       height="100%"
-      padding={10}
-      background='url("https://www.transparenttextures.com/patterns/fake-brick.png");'
-      backgroundColor="black"
-      overflowY="hidden"
+      templateAreas={`"navbar" "outlet"`}
+      templateRows={"5% 1fr"}
     >
-      <Navbar />
-      <Box
-        height="100%"
-        maxHeight="100%"
-        overflowY="scroll"
-        width="inherit"
-        css={{
-          "&::-webkit-scrollbar": {
-            width: "0.5em",
-          },
-          "&::-webkit-scrollbar-thumb": {
-            backgroundColor: "transparent",
-          },
-        }}
-      >
-        <Outlet />
-      </Box>
-    </Box>
+      <GridItem area={"navbar"} style={{ padding: "2% 7%" }}>
+        <Navbar />
+      </GridItem>
+      <GridItem area={"outlet"} padding={{ sm: 0, md: 10 }} height="100%">
+        <Flex
+          width="100%"
+          justifyContent="center"
+          alignItems="center"
+          height="100%"
+        >
+          <Outlet />
+        </Flex>
+      </GridItem>
+    </Grid>
   );
 };
 
-export default Layout;
+export default LayoutPage;
+
+<Box height="100%" padding={10} overflowY="hidden">
+  <Navbar />
+  <Box
+    height="100%"
+    maxHeight="100%"
+    overflowY="scroll"
+    width="inherit"
+    css={{
+      "&::-webkit-scrollbar": {
+        width: "0.5em",
+      },
+      "&::-webkit-scrollbar-thumb": {
+        backgroundColor: "transparent",
+      },
+    }}
+  >
+    <Outlet />
+  </Box>
+</Box>;

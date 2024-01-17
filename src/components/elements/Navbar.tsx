@@ -1,15 +1,19 @@
-import { Box, Flex, Heading, Spacer } from "@chakra-ui/react";
+import { Box, Flex, HStack, Show, Spacer, Text } from "@chakra-ui/react";
 import MenuModal from "./NavBarElements/MenuModal";
+import { LinkButton } from "./Button";
 
 const Navbar = () => {
   return (
     <Box>
       <Flex alignItems="baseline">
-        <Heading as={"h5"} size="md">
-          Purush
-        </Heading>
+        <Text fontSize="xl">purush</Text>
         <Spacer />
-        <MenuModal />
+        <Show below="md">
+          <MenuModal />
+        </Show>
+        <Show above="md">
+          <Text> ~ Maximum Effort</Text>
+        </Show>
       </Flex>
     </Box>
   );

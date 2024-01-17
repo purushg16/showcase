@@ -1,19 +1,18 @@
 import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "../pages/ErrorPage";
-import Layout from "../pages/LayoutPage";
-import LandingPage from "../pages/Landing/LandingPage";
+import LayoutPage from "../pages/LayoutPage";
 import ProjectsPage from "../pages/Projects/ProjectsPage";
 import SingleTypeProjects from "../pages/Projects/SingleTypeProjects";
-import Lander from "../pages/Lander";
+import Lander from "../pages/Landing/Lander";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <LayoutPage />,
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Lander /> },
-      { path: "/projects", element: <ProjectsPage /> },
+      { path: "/works", element: <ProjectsPage /> },
       { path: "/projects/:projectType", element: <SingleTypeProjects /> },
     ],
   },

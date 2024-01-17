@@ -2,6 +2,7 @@ import { Box, Button, Flex, Icon, Spacer, Text } from "@chakra-ui/react";
 import { IconType } from "react-icons";
 import { useNavigate } from "react-router-dom";
 import AnimateMove from "../motions/Move";
+import { ReactNode } from "react";
 
 interface LinkButtonProps {
   text: string;
@@ -14,25 +15,15 @@ const LinkButton = ({ text, route }: LinkButtonProps) => {
   const navigate = useNavigate();
   return (
     <Button
-      variant="outline"
-      justifyContent="start"
-      alignItems="center"
-      size="lg"
+      variant="text"
+      fontWeight={300}
+      _hover={{ opacity: 0.7 }}
       transition="all 0.7s"
-      _hover={{ color: "teal", borderColor: "teal" }}
       onClick={() => {
         navigate(`/${route}`);
       }}
     >
-      <Flex width="100%">
-        <Text color="white" fontSize="sm">
-          {text}
-        </Text>
-        <Spacer />
-        <Text fontSize="sm">
-          <AnimateMove direction="y">|</AnimateMove>
-        </Text>
-      </Flex>
+      {text}
     </Button>
   );
 };
@@ -69,3 +60,26 @@ const NavButton = ({ text, route }: NavButtonProps) => {
   );
 };
 export { NavButton };
+
+interface IconButtonType {
+  text: string;
+  icon: ReactNode;
+  route: string;
+}
+
+const IconButton = ({ text, icon, route }: IconButtonType) => {
+  const navigate = useNavigate();
+
+  return (
+    <Button
+      onClick={() => {
+        navigate(`/${route}`);
+      }}
+      colorScheme="gray"
+    >
+      {text}
+      <Box mx={2}>{icon}</Box>
+    </Button>
+  );
+};
+export { IconButton };
