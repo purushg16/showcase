@@ -1,18 +1,20 @@
-import { Box, SimpleGrid, Text } from "@chakra-ui/react";
-import { IoGlobe, IoLogoPython } from "react-icons/io5";
-import { SiFlutter } from "react-icons/si";
+import { Box, Icon, SimpleGrid, Text } from "@chakra-ui/react";
+import { IoGlobe, IoLogoPython, IoUmbrella } from "react-icons/io5";
+import { SiFlutter, SiPolymerproject } from "react-icons/si";
 import ProjectCard from "../../elements/ProjectCard";
 import AnimateMove from "../../motions/Move";
 
 const ProjectsPage = () => {
   return (
-    <Box py={5}>
+    <Box paddingY={{ sm: 20, md: 5 }}>
       <AnimateMove direction="y">
-        <Text fontWeight={500} fontSize="4xl" textAlign="center" mb={1}>
+        <Text fontWeight={500} fontSize="4xl" mb={1}>
           Projects
+          <Icon as={IoUmbrella} ml={1} />
         </Text>
-        <Text textAlign="center" mb={10}>
-          Well, let's see!
+        <Text mb={10}>
+          I have created about 10+ projects on each firm listed below. Feel free
+          to check everything!
         </Text>
       </AnimateMove>
 
