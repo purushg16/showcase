@@ -1,8 +1,7 @@
-import { Box, Button, Flex, Icon, Spacer, Text } from "@chakra-ui/react";
+import { Button, Text } from "@chakra-ui/react";
+import { ReactNode } from "react";
 import { IconType } from "react-icons";
 import { useNavigate } from "react-router-dom";
-import AnimateMove from "../motions/Move";
-import { ReactNode } from "react";
 
 interface LinkButtonProps {
   text: string;
@@ -15,6 +14,7 @@ const LinkButton = ({ text, route }: LinkButtonProps) => {
   const navigate = useNavigate();
   return (
     <Button
+      size="sm"
       variant="text"
       fontWeight={300}
       _hover={{ opacity: 0.7 }}
@@ -28,6 +28,8 @@ const LinkButton = ({ text, route }: LinkButtonProps) => {
   );
 };
 export { LinkButton };
+export { NavButton };
+export { IconButton };
 
 interface NavButtonProps {
   text: string;
@@ -39,6 +41,7 @@ const NavButton = ({ text, route }: NavButtonProps) => {
 
   return (
     <Button
+      id="nav-btn"
       onClick={() => {
         navigate(`/${route}`);
       }}
@@ -51,6 +54,7 @@ const NavButton = ({ text, route }: NavButtonProps) => {
       color="gray"
       textAlign="left"
       variant="text"
+      borderRadius={0}
       borderBottom={"1px solid gray"}
       _hover={{ color: "white" }}
       transition="all 0.7s"
@@ -59,15 +63,15 @@ const NavButton = ({ text, route }: NavButtonProps) => {
     </Button>
   );
 };
-export { NavButton };
 
 interface IconButtonType {
   text: string;
   icon: ReactNode;
   route: string;
+  color?: string;
 }
 
-const IconButton = ({ text, icon, route }: IconButtonType) => {
+const IconButton = ({ text, icon, route, color = "gray" }: IconButtonType) => {
   const navigate = useNavigate();
 
   return (
@@ -75,11 +79,11 @@ const IconButton = ({ text, icon, route }: IconButtonType) => {
       onClick={() => {
         navigate(`/${route}`);
       }}
-      colorScheme="gray"
+      colorScheme={color}
+      fontWeight={400}
     >
       {text}
-      <Box mx={2}>{icon}</Box>
+      <Text mx={2}>{icon}</Text>
     </Button>
   );
 };
-export { IconButton };

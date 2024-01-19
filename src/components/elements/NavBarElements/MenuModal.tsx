@@ -17,10 +17,13 @@ import {
   VStack,
   Heading,
   HStack,
+  Image,
+  Icon,
 } from "@chakra-ui/react";
 import ProjectCard from "../ProjectCard";
-import { NavButton } from "../Button";
+import { LinkButton, NavButton } from "../Button";
 import AnimateMove from "../../motions/Move";
+import { IoHome } from "react-icons/io5";
 
 const MenuModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -39,7 +42,7 @@ const MenuModal = () => {
       >
         <ModalOverlay />
         <ModalContent p={10} height="100%" background="black">
-          <ModalCloseButton m={10} background="none" />
+          <ModalCloseButton m={10} color="white" />
           <ModalBody height="100%">
             <Flex
               height="100%"
@@ -54,6 +57,7 @@ const MenuModal = () => {
                       <NavButton text="home" route="" />
                     </Box>
                   </AnimateMove>
+
                   <AnimateMove direction="y">
                     <Box onClick={onClose}>
                       <NavButton text="work" route="projects" />
@@ -70,6 +74,7 @@ const MenuModal = () => {
                     </Box>
                   </AnimateMove>
                 </SimpleGrid>
+
                 {/* 
               <Box>
                 <SimpleGrid columns={3}>

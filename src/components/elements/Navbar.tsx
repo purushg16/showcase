@@ -6,13 +6,18 @@ const Navbar = () => {
   return (
     <Box>
       <Flex alignItems="baseline">
-        <Text fontSize="xl">purush</Text>
+        <Text fontSize="md" fontWeight={700}>
+          PURUSH
+        </Text>
         <Spacer />
         <Show below="md">
           <MenuModal />
         </Show>
         <Show above="md">
-          <Text> ~ Maximum Effort</Text>
+          <HStack>
+            <LinkButton text="About" route="about" />
+            <LinkButton text="Contact" route="contact" />
+          </HStack>
         </Show>
       </Flex>
     </Box>

@@ -1,65 +1,81 @@
-import { ReactIcon } from "@chakra-ui/icons";
-import {
-  Box,
-  Divider,
-  Flex,
-  Heading,
-  Icon,
-  Image,
-  Spacer,
-  useColorMode,
-} from "@chakra-ui/react";
-import AnimateMove from "../motions/Move";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import { IconType } from "react-icons";
-import { ReactNode } from "react";
+import { TbArrowRight } from "react-icons/tb";
+import { useNavigate } from "react-router-dom";
+import AnimateScale from "../motions/Scale";
+import { IconButton } from "./Button";
 
 interface Props {
   title: string;
-  sTitle?: string;
-  icon: ReactNode;
-  slNo: number;
+  icon: IconType;
   color: string;
+  buttonColor: string;
+  route: string;
 }
 
-const ProjectCard = ({ title, icon, sTitle, slNo, color }: Props) => {
+const ProjectCard = ({ title, icon, color, buttonColor, route }: Props) => {
+  const navigate = useNavigate();
+
   return (
-    <AnimateMove direction="y">
+    <AnimateScale>
       <Box
-        background={`${color}.400`}
-        overflow="hidden"
-        position="relative"
-        padding={10}
-        height={300}
+        onClick={() => {
+          navigate(`/${route}`);
+        }}
         cursor="pointer"
-        borderRadius={0}
-        transition="all 0.5s"
-        _hover={{ color: "black" }}
+        height={340}
+        borderRadius={7}
+        background={color}
+        p={5}
+        boxShadow="1px 1px 20px 1px #cdcdcd"
+        position="relative"
+        overflow="hidden"
+        transition="all 0.7s"
+        _hover={{
+          boxShadow: "1px 1px 20px 10px #cdcdcd",
+        }}
       >
-        <Flex direction="column" height="100%">
-          <Box>
-            <Image
-              as={Icon}
-              boxSize={300}
-              position="absolute"
-              right={-150}
-              top={-10}
-              opacity={0.1}
+        <Flex
+          flexDirection="column"
+          height="100%"
+          justifyContent="space-between"
+        >
+          <Image
+            color="#c6d1ff"
+            as={icon}
+            position="absolute"
+            right={-100}
+            bottom={-50}
+            boxSize={300}
+          />
+
+          <Box height={200}>
+            <Text fontSize="4xl" fontWeight={500}>
+              {title}
+            </Text>
+            <Text
+              px={2}
+              borderRadius={7}
+              color="blue.900"
+              background="gray.300"
+              w="max-content"
+              fontSize="sm"
+              opacity={0.5}
             >
-              {icon}
-            </Image>
-            <Heading color="gray.300"> 0{slNo} </Heading>
-            <Divider />
+              20 Projects
+            </Text>
           </Box>
-          <Spacer />
-          <Box mt={10}>
-            <Heading as={"h3"}>
-              {title} <br />
-              {!!sTitle && sTitle}
-            </Heading>
+          <Box>
+            <IconButton
+              text=""
+              icon={<TbArrowRight style={{ transform: "rotate(320deg)" }} />}
+              route={route}
+              color={buttonColor}
+            />
           </Box>
         </Flex>
       </Box>
-    </AnimateMove>
+    </AnimateScale>
   );
 };
 

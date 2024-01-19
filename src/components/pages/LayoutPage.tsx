@@ -1,6 +1,6 @@
-import { Outlet } from "react-router-dom";
 import { Box } from "@chakra-ui/layout";
-import { Grid, Flex, GridItem } from "@chakra-ui/react";
+import { Flex, Grid, GridItem } from "@chakra-ui/react";
+import { Outlet } from "react-router-dom";
 import Navbar from "../elements/Navbar";
 
 const LayoutPage = () => {
@@ -21,7 +21,9 @@ const LayoutPage = () => {
           alignItems="center"
           height="100%"
         >
-          <Outlet />
+          <Box width="80%">
+            <Outlet />
+          </Box>
         </Flex>
       </GridItem>
     </Grid>
