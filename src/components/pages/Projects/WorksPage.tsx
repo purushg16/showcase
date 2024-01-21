@@ -1,8 +1,8 @@
 import { Box, Icon, SimpleGrid, Text } from "@chakra-ui/react";
 import { IoGlobe, IoLogoPython, IoUmbrella } from "react-icons/io5";
 import { SiFlutter } from "react-icons/si";
-import ProjectCard from "../../elements/ProjectCard";
 import AnimateMove from "../../motions/Move";
+import ProjectCard from "../../elements/Cards/ProjectCard";
 
 const WorksPage = () => {
   return (

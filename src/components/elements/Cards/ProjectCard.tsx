@@ -2,8 +2,8 @@ import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import { IconType } from "react-icons";
 import { TbArrowRight } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
-import AnimateScale from "../motions/Scale";
-import { IconButton } from "./Button";
+import AnimateScale from "../../motions/Scale";
+import { IconButton } from "../Button";
 
 interface Props {
   title: string;

@@ -1,5 +1,5 @@
 import { Box, SimpleGrid } from "@chakra-ui/react";
-import SkillCard from "../../elements/SkillCard";
+import SkillCard from "../../elements/Cards/SkillCard";
 import { SiReact } from "react-icons/si";
 import { langugageFilterType } from "./langugageFilterType";
 

@@ -1,8 +1,8 @@
 import { ReactIcon } from "@chakra-ui/icons";
 import { Box, Flex, Image, Text, VStack } from "@chakra-ui/react";
 import { IconType } from "react-icons";
-import AnimateMove from "../motions/Move";
-import AnimateRotate from "../motions/Rotate";
+import AnimateMove from "../../motions/Move";
+import AnimateRotate from "../../motions/Rotate";
 
 interface Props {
   skill: string;
