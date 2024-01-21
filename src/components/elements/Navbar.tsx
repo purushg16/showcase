@@ -20,11 +20,11 @@ const Navbar = () => {
           p={0}
           variant="text"
           fontSize="md"
-          fontWeight={700}
+          fontWeight={500}
           cursor="pointer"
           onClick={() => navigate("/")}
         >
-          PURUSH
+          Purush
         </Button>
         <Spacer />
         <Show below="md">
