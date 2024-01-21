@@ -1,29 +1,18 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
 import {
+  Box,
+  Button,
+  Flex,
   Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
-  Button,
-  useDisclosure,
-  Flex,
-  Text,
-  Spacer,
-  Box,
+  ModalContent,
+  ModalOverlay,
   SimpleGrid,
-  VStack,
-  Heading,
-  HStack,
-  Image,
-  Icon,
+  useDisclosure,
 } from "@chakra-ui/react";
-import ProjectCard from "../ProjectCard";
-import { LinkButton, NavButton } from "../Button";
 import AnimateMove from "../../motions/Move";
-import { IoHome } from "react-icons/io5";
+import { NavButton } from "../Button";
 
 const MenuModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();

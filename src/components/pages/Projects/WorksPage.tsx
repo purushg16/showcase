@@ -1,10 +1,10 @@
 import { Box, Icon, SimpleGrid, Text } from "@chakra-ui/react";
 import { IoGlobe, IoLogoPython, IoUmbrella } from "react-icons/io5";
-import { SiFlutter, SiPolymerproject } from "react-icons/si";
+import { SiFlutter } from "react-icons/si";
 import ProjectCard from "../../elements/ProjectCard";
 import AnimateMove from "../../motions/Move";
 
-const ProjectsPage = () => {
+const WorksPage = () => {
   return (
     <Box paddingY={{ sm: 20, md: 5 }}>
       <AnimateMove direction="y">
@@ -24,25 +24,22 @@ const ProjectsPage = () => {
           title="Web"
           color="#0000ff78"
           icon={IoGlobe}
-          buttonColor="gray"
         />
         <ProjectCard
           route="works/python"
           title="Python"
           color="lavender"
           icon={IoLogoPython}
-          buttonColor="blackAlpha"
         />
         <ProjectCard
           route="works/flutter"
           title="Flutter"
           color="white"
           icon={SiFlutter}
-          buttonColor="gray"
         />
       </SimpleGrid>
     </Box>
   );
 };
 
-export default ProjectsPage;
+export default WorksPage;

@@ -1,10 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "../pages/ErrorPage";
 import LayoutPage from "../pages/LayoutPage";
-import ProjectsPage from "../pages/Projects/ProjectsPage";
+import WorksPage from "../pages/Projects/WorksPage";
 import SingleTypeProjects from "../pages/Projects/SingleTypeProjects";
 import Lander from "../pages/Landing/Lander";
 import AboutPage from "../pages/AboutPage/AboutPage";
+import ProjectsPage from "../pages/Projects/ProjectsPage";
 
 const router = createBrowserRouter([
   {
@@ -13,8 +14,9 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Lander /> },
-      { path: "/works", element: <ProjectsPage /> },
-      { path: "/works/:projectType", element: <SingleTypeProjects /> },
+      { path: "/works", element: <WorksPage /> },
+      { path: "/projects", element: <ProjectsPage /> },
+      { path: "/projects/:projectType", element: <SingleTypeProjects /> },
       { path: "/about", element: <AboutPage /> },
     ],
   },

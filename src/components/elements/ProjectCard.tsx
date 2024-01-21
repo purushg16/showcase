@@ -9,11 +9,10 @@ interface Props {
   title: string;
   icon: IconType;
   color: string;
-  buttonColor: string;
   route: string;
 }
 
-const ProjectCard = ({ title, icon, color, buttonColor, route }: Props) => {
+const ProjectCard = ({ title, icon, color, route }: Props) => {
   const navigate = useNavigate();
 
   return (
@@ -24,7 +23,8 @@ const ProjectCard = ({ title, icon, color, buttonColor, route }: Props) => {
         }}
         cursor="pointer"
         height={340}
-        background={color}
+        border="1px solid"
+        borderColor={color}
         p={5}
         boxShadow="1px 1px 20px 1px #cdcdcd"
         position="relative"
@@ -55,7 +55,6 @@ const ProjectCard = ({ title, icon, color, buttonColor, route }: Props) => {
             <Text
               px={2}
               color="blue.900"
-              background="gray.300"
               w="max-content"
               fontSize="sm"
               opacity={0.5}
@@ -68,7 +67,6 @@ const ProjectCard = ({ title, icon, color, buttonColor, route }: Props) => {
               text=""
               icon={<TbArrowRight style={{ transform: "rotate(320deg)" }} />}
               route={route}
-              color={buttonColor}
             />
           </Box>
         </Flex>
