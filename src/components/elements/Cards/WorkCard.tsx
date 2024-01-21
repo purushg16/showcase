@@ -2,6 +2,8 @@ import { Box, Flex, Icon, Text } from "@chakra-ui/react";
 import { TbArrowRight } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
 import Work from "../../entities/Work";
+import AnimateMove from "../../motions/Move";
+import AnimateScale from "../../motions/Scale";
 
 interface Props {
   work: Work;
@@ -24,22 +26,28 @@ const WorkCard = ({ work, index, count }: Props) => {
     >
       <Flex flexDirection="column" height="100%" justifyContent="space-between">
         <Box>
-          <Text fontWeight={700}>
-            {index < 9 && 0}
-            {index}
-          </Text>
+          <AnimateMove direction="y">
+            <Text fontWeight={700}>
+              {index < 9 && 0}
+              {index}
+            </Text>
+          </AnimateMove>
           <Text fontWeight={700} opacity={0.5}>
             {index < 9 && 0}
             {count}
           </Text>
         </Box>
         <Box>
-          <Text textAlign="right">
-            <Icon as={TbArrowRight} transform="rotate(320deg)" />
-          </Text>
-          <Text fontSize="5xl" textAlign="right">
-            {work.title}
-          </Text>
+          <AnimateScale>
+            <Text textAlign="right">
+              <Icon as={TbArrowRight} transform="rotate(320deg)" />
+            </Text>
+          </AnimateScale>
+          <AnimateMove direction="y">
+            <Text fontSize="5xl" textAlign="right">
+              {work.title}
+            </Text>
+          </AnimateMove>
         </Box>
       </Flex>
     </Box>

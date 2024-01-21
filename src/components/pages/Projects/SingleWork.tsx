@@ -17,27 +17,28 @@ const SingleWork = () => {
         >
           <Box width="max-content">
             <Text fontSize="lg"> Total Projects </Text>
-            <Text color="gray"> 20 </Text>
+            <Text color="gray"> {works.count} </Text>
           </Box>
           <Box flex={1}>
             <Text fontSize="lg"> Description </Text>
-            <Text color="gray">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
-              minima quisquam corrupti aut totam ullam
-            </Text>
+            <Text color="gray">{works.results.description}</Text>
           </Box>
 
           <Box flex={1}>
             <Text fontSize="lg"> Toolkits </Text>
             <Text color="gray">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
-              minima quisquam corrupti aut totam ullam
+              {works.results.toolKit.map((tool, index) => (
+                <>
+                  {tool}
+                  {index + 1 !== works.results.toolKit.length ? ", " : "."}
+                </>
+              ))}
             </Text>
           </Box>
         </SimpleGrid>
 
         <SimpleGrid columns={{ sm: 1, md: 2 }} my={10} spacing={7}>
-          {works.results.map((work, index) => (
+          {works.results.data.map((work, index) => (
             <WorkCard work={work} index={index + 1} count={works.count} />
           ))}
         </SimpleGrid>
