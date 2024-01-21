@@ -8,12 +8,14 @@ const LayoutPage = () => {
     <Grid
       background="#FAFAFA"
       height="100%"
+      overflowY="scroll"
       templateAreas={`"navbar" "outlet"`}
       templateRows={"5% 1fr"}
     >
       <GridItem area={"navbar"} style={{ padding: "2% 7%" }}>
         <Navbar />
       </GridItem>
+
       <GridItem area={"outlet"} padding={{ sm: 0, md: 10 }} height="100%">
         <Flex
           width="100%"

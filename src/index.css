@@ -7,6 +7,10 @@ html,
   overflow-y: auto;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 :root {
   line-height: 1.5;
   font-weight: 400;
@@ -25,7 +29,6 @@ html,
 /* 
 font-family: 'Major Mono Display', monospace;
 font-family: 'Open Sans', sans-serif;
-font-family: 'Oswald', sans-serif;
 font-family: 'Public Sans', sans-serif;
 */
 
@@ -50,10 +53,16 @@ h6 {
   font-family: "Major Mono Display", monospace !important;
 }
 
+#font-oswald {
+  font-family: "Oswald", sans-serif !important;
+}
+
 p {
   font-family: "Public Sans", sans-serif !important;
 }
-/* 
-button {
-  border-radius: 99px !important;
-} */
+
+button,
+input,
+textarea {
+  border-radius: 0px !important;
+}

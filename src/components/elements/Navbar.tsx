@@ -1,22 +1,40 @@
-import { Box, Flex, HStack, Show, Spacer, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  HStack,
+  Show,
+  Spacer,
+  Text,
+} from "@chakra-ui/react";
 import MenuModal from "./NavBarElements/MenuModal";
 import { LinkButton } from "./Button";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <Box>
       <Flex alignItems="baseline">
-        <Text fontSize="md" fontWeight={700}>
+        <Button
+          p={0}
+          variant="text"
+          fontSize="md"
+          fontWeight={700}
+          cursor="pointer"
+          onClick={() => navigate("/")}
+        >
           PURUSH
-        </Text>
+        </Button>
         <Spacer />
         <Show below="md">
           <MenuModal />
         </Show>
         <Show above="md">
           <HStack>
+            <LinkButton text="Works" route="works" />
             <LinkButton text="About" route="about" />
-            <LinkButton text="Contact" route="contact" />
+            {/* <LinkButton text="Contact" route="contact" /> */}
           </HStack>
         </Show>
       </Flex>

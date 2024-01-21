@@ -76,6 +76,7 @@ const IconButton = ({ text, icon, route, color = "gray" }: IconButtonType) => {
 
   return (
     <Button
+      variant="outline"
       onClick={() => {
         navigate(`/${route}`);
       }}

@@ -24,7 +24,6 @@ const ProjectCard = ({ title, icon, color, buttonColor, route }: Props) => {
         }}
         cursor="pointer"
         height={340}
-        borderRadius={7}
         background={color}
         p={5}
         boxShadow="1px 1px 20px 1px #cdcdcd"
@@ -55,7 +54,6 @@ const ProjectCard = ({ title, icon, color, buttonColor, route }: Props) => {
             </Text>
             <Text
               px={2}
-              borderRadius={7}
               color="blue.900"
               background="gray.300"
               w="max-content"
