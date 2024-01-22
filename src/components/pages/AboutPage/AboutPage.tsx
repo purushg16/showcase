@@ -70,7 +70,9 @@ const AboutPage = () => {
 
             <HStack gap={2}>
               <IconButton route="works" text="Works" icon={<TbArrowRight />} />
-              <IconButton route="contact" text="Contact" icon={<TbPhone />} />
+              <HashLink to="/about#contact">
+                <IconButton route="about" text="Contact" icon={<TbPhone />} />
+              </HashLink>
 
               <HashLink to="/about#more">
                 <IconButton
@@ -89,11 +91,10 @@ const AboutPage = () => {
         columns={{ sm: 1, md: 1, lg: 2 }}
         mt={40}
         spacing={{ md: 5, lg: 0 }}
+        id="more"
       >
         <Box>
-          <Text id="more" fontSize="4xl">
-            Languages
-          </Text>
+          <Text fontSize="4xl">Languages</Text>
           <Show above="md">
             <HStack my={5}>
               <Button
@@ -156,6 +157,7 @@ const AboutPage = () => {
         columns={{ sm: 1, md: 1, lg: 2 }}
         mt={40}
         spacing={{ md: 5, lg: 0 }}
+        id="contact"
       >
         <Box>
           <Text id="more" fontSize="4xl">
