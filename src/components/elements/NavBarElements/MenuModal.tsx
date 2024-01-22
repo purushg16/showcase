@@ -43,23 +43,23 @@ const MenuModal = () => {
                 <SimpleGrid columns={{ md: 1, lg: 4 }} spacing={6}>
                   <AnimateMove direction="y">
                     <Box onClick={onClose}>
-                      <NavButton text="home" route="" />
+                      <NavButton text="Home" route="" />
                     </Box>
                   </AnimateMove>
 
                   <AnimateMove direction="y">
                     <Box onClick={onClose}>
-                      <NavButton text="work" route="projects" />
+                      <NavButton text="Works" route="works" />
                     </Box>
                   </AnimateMove>
-                  <AnimateMove direction="y">
+                  {/* <AnimateMove direction="y">
                     <Box onClick={onClose}>
-                      <NavButton text="profile" route="projects" />
+                      <NavButton text="profile" route="about" />
                     </Box>
-                  </AnimateMove>
+                  </AnimateMove> */}
                   <AnimateMove direction="y">
                     <Box onClick={onClose}>
-                      <NavButton text="contact" route="projects" />
+                      <NavButton text="Contact" route="about" />
                     </Box>
                   </AnimateMove>
                 </SimpleGrid>
