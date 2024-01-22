@@ -1,12 +1,17 @@
 import { Box, SimpleGrid, Text } from "@chakra-ui/react";
 import WorkCard from "../../elements/Cards/WorkCard";
 import works from "../../data/works";
+import { useParams } from "react-router-dom";
 
 const SingleWork = () => {
+  const params = useParams().type;
+
   return (
     <Box paddingY={{ sm: 20, md: 5 }}>
       <Box>
-        <Text fontSize="4xl"> Web Works </Text>
+        <Text fontSize="4xl" textTransform="capitalize">
+          {params} Works
+        </Text>
 
         <SimpleGrid
           columns={{ sm: 1, md: 2, lg: 3 }}

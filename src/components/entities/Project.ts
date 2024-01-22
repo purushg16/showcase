@@ -1,4 +1,4 @@
-export default interface Work {
+export default interface Project {
   id: string;
   title: string;
   slug: string;
@@ -11,4 +11,8 @@ export default interface Work {
   language: string[];
   tools: string[];
   platform: string[];
+  designSystem: {
+    typography: string[];
+    color: string[];
+  };
 }

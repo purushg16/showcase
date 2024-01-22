@@ -10,7 +10,7 @@ interface Props {
 const DefinitionItem = ({ title, children }: Props) => {
   return (
     <Box marginY={5}>
-      <Text my={1} as="dt" fontSize="lg" color="gray.600" fontWeight={600}>
+      <Text my={1} as="dt" fontSize="lg" color="gray.400" fontWeight={400}>
         {title}
       </Text>
       <dd> {children} </dd>

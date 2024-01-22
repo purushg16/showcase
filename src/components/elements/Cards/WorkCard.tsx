@@ -1,12 +1,12 @@
 import { Box, Flex, Icon, Text } from "@chakra-ui/react";
 import { TbArrowRight } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
-import Work from "../../entities/Work";
+import Project from "../../entities/Project";
 import AnimateMove from "../../motions/Move";
 import AnimateScale from "../../motions/Scale";
 
 interface Props {
-  work: Work;
+  work: Project;
   index: number;
   count: number;
 }

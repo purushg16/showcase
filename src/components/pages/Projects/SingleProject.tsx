@@ -1,19 +1,19 @@
 import {
   Box,
-  Button,
+  Divider,
   GridItem,
   Image,
   SimpleGrid,
-  IconButton,
   Text,
-  HStack,
 } from "@chakra-ui/react";
-import { Link, useParams } from "react-router-dom";
+import { TbArrowLeft } from "react-icons/tb";
+import { useParams } from "react-router-dom";
 import works from "../../data/works";
-import DefinitionItem from "../../elements/DefinitionItem";
-import { TbArrowRight } from "react-icons/tb";
+import { IconButton } from "../../elements/Button";
+import DesignSystem from "../../elements/Project/DesignSystem";
+import ProjectDetails from "../../elements/Project/ProjectDetails";
 import AnimateRotate from "../../motions/Rotate";
-import { SiGithub } from "react-icons/si";
+import Screenshots from "./Screenshots";
 
 const SingleProject = () => {
   const title = useParams().title;
@@ -24,62 +24,7 @@ const SingleProject = () => {
     <Box my={10}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5}>
         <GridItem>
-          <Text fontSize="4xl"> {project.title} </Text>
-          <Text> {project.description} </Text>
-
-          <Box mt={2}>
-            <HStack gap={3}>
-              <Link to={project.git} target="_blank">
-                <Button
-                  rightIcon={<SiGithub />}
-                  colorScheme="blue"
-                  variant="outline"
-                >
-                  Source
-                </Button>
-              </Link>
-
-              <Link to={project.url} target="_blank">
-                <Button
-                  rightIcon={<TbArrowRight />}
-                  colorScheme="blue"
-                  variant="solid"
-                >
-                  Visit
-                </Button>
-              </Link>
-            </HStack>
-          </Box>
-          <SimpleGrid columns={2} marginY={10} rowGap={10}>
-            <DefinitionItem
-              title="Details"
-              children={
-                <Text>
-                  Duration: {project.duration} {project.durationUnit}
-                </Text>
-              }
-            />
-
-            <DefinitionItem
-              title="Languages"
-              children={project.language.map((language) => (
-                <Text key={language}>{language}</Text>
-              ))}
-            />
-            <DefinitionItem
-              title="Deployed In"
-              children={project.platform.map((platform) => (
-                <Text key={platform}>{platform}</Text>
-              ))}
-            />
-
-            <DefinitionItem
-              title="Tools"
-              children={project.tools.map((tool) => (
-                <Text key={tool}>{tool}</Text>
-              ))}
-            />
-          </SimpleGrid>
+          <ProjectDetails project={project} />
         </GridItem>
 
         <GridItem>
@@ -88,6 +33,28 @@ const SingleProject = () => {
           </AnimateRotate>
         </GridItem>
       </SimpleGrid>
+
+      <Divider my={10} />
+
+      <Box>
+        <Screenshots slug={project.slug} />
+      </Box>
+
+      <Divider my={10} />
+
+      <Box>
+        <DesignSystem designSystem={project.designSystem} />
+      </Box>
+
+      <Divider my={10} />
+      <Box textAlign="center">
+        <IconButton
+          text="All Projects"
+          route="works/web"
+          icon={<TbArrowLeft />}
+          left
+        />
+      </Box>
     </Box>
   );
 };

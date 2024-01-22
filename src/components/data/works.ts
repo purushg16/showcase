@@ -28,7 +28,11 @@ export default {
         platform: ["Netlify", "render"],
         image_url:
           "https://urja-thedyingstudio.netlify.app/static/media/logo.b7237d76420d18270deb.png",
-        git: "",
+        git: "https://github.com/purushg16/boutique",
+        designSystem: {
+          typography: ["MackinacMed", "Poppins"],
+          color: ["D2F5E0", "417570", "F8F6F3", "54B84C"],
+        },
       },
       {
         id: "2",
@@ -45,6 +49,10 @@ export default {
         tools: ["MongoDB", "VScode", "Github", "Netlify", "render"],
         image_url: "",
         git: "",
+        designSystem: {
+          typography: ["MackinacMed", "Poppins"],
+          color: ["D2F5E0", "417570", "F8F6F3", "54B84C"],
+        },
       },
     ],
   },

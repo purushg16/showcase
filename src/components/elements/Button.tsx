@@ -69,9 +69,16 @@ interface IconButtonType {
   icon: ReactNode;
   route: string;
   color?: string;
+  left?: boolean;
 }
 
-const IconButton = ({ text, icon, route, color = "gray" }: IconButtonType) => {
+const IconButton = ({
+  text,
+  icon,
+  route,
+  color = "gray",
+  left = false,
+}: IconButtonType) => {
   const navigate = useNavigate();
 
   return (
@@ -83,8 +90,9 @@ const IconButton = ({ text, icon, route, color = "gray" }: IconButtonType) => {
       colorScheme={color}
       fontWeight={400}
     >
+      {left && <Text mx={2}>{icon}</Text>}
       {text}
-      <Text mx={2}>{icon}</Text>
+      {!left && <Text mx={2}>{icon}</Text>}
     </Button>
   );
 };
