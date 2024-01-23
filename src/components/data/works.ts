@@ -1,7 +1,7 @@
-import img from "../../../dist/assets/bf-d copy.png";
-import img1 from "../../../dist/assets/bf-f copy.png";
-import img2 from "../../../dist/assets/bf-h copy.png";
-import img3 from "../../../dist/assets/bf-p copy.png";
+import img from "../../../dist/assets/bf-d.png";
+import img1 from "../../../dist/assets/bf-f.png";
+import img2 from "../../../dist/assets/bf-h.png";
+import img3 from "../../../dist/assets/bf-p.png";
 
 export default {
   count: 2,
