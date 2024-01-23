@@ -34,16 +34,17 @@ export { IconButton };
 interface NavButtonProps {
   text: string;
   route: string;
+  hash?: boolean;
 }
 
-const NavButton = ({ text, route }: NavButtonProps) => {
+const NavButton = ({ text, route, hash = false }: NavButtonProps) => {
   const navigate = useNavigate();
 
   return (
     <Button
       id="nav-btn"
       onClick={() => {
-        navigate(`/${route}`);
+        !hash && navigate(`/${route}`);
       }}
       pl={0}
       pb={0}

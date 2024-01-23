@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import AnimateMove from "../../motions/Move";
 import { NavButton } from "../Button";
+import { HashLink, NavHashLink } from "react-router-hash-link";
 
 const MenuModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -52,45 +53,14 @@ const MenuModal = () => {
                       <NavButton text="Works" route="works" />
                     </Box>
                   </AnimateMove>
-                  {/* <AnimateMove direction="y">
-                    <Box onClick={onClose}>
-                      <NavButton text="profile" route="about" />
-                    </Box>
-                  </AnimateMove> */}
                   <AnimateMove direction="y">
                     <Box onClick={onClose}>
-                      <NavButton text="Contact" route="about" />
+                      <NavButton text="Profile" route="about" />
                     </Box>
                   </AnimateMove>
                 </SimpleGrid>
-
-                {/* 
-              <Box>
-                <SimpleGrid columns={3}>
-                  <ProjectCard
-                    title="h"
-                    desc={"woefhweo oewfhwoefw oweugfwe fwoewe u"}
-                    icon={<></>}
-                  />
-                  <ProjectCard
-                    title="h"
-                    desc={"woefhweo oewfhwoefw oweugfwe fwoewe u"}
-                    icon={<></>}
-                  />
-                  <ProjectCard
-                    title="h"
-                    desc={"woefhweo oewfhwoefw oweugfwe fwoewe u"}
-                    icon={<></>}
-                  />
-                </SimpleGrid>
-              </Box> */}
               </Box>
             </Flex>
-
-            {/* <Flex width="100%" height="100%" flexDirection="column">
-              <Spacer />
-              <Text>hello</Text>
-            </Flex> */}
           </ModalBody>
         </ModalContent>
       </Modal>
