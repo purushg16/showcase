@@ -15,4 +15,5 @@ export default interface Project {
     typography: string[];
     color: string[];
   };
+  screenshots: string[];
 }

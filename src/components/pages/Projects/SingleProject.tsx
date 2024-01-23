@@ -37,7 +37,7 @@ const SingleProject = () => {
       <Divider my={10} />
 
       <Box>
-        <Screenshots slug={project.slug} />
+        <Screenshots screenshots={project.screenshots} />
       </Box>
 
       <Divider my={10} />

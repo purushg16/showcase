@@ -8,20 +8,16 @@ import {
   Button,
   IconButton,
 } from "@chakra-ui/react";
-import img from "../../../../dist/assets/bf-d copy.png";
-import img1 from "../../../../dist/assets/bf-f copy.png";
-import img2 from "../../../../dist/assets/bf-h copy.png";
-import img3 from "../../../../dist/assets/bf-p copy.png";
 import { useState } from "react";
 import { IoGrid } from "react-icons/io5";
 import { CiGrid2H } from "react-icons/ci";
 import { CiGrid41 } from "react-icons/ci";
 
 interface Props {
-  slug: string;
+  screenshots: string[];
 }
 
-const Screenshots = ({ slug }: Props) => {
+const Screenshots = ({ screenshots }: Props) => {
   const [gridSize, setGridSize] = useState(1);
 
   return (
@@ -50,14 +46,9 @@ const Screenshots = ({ slug }: Props) => {
         spacing={2}
         marginY={5}
       >
-        <Image src={img} alt="nope" loading="eager" />
-        <Image src={img1} alt="nope" loading="eager" />
-        <Image src={img2} alt="nope" loading="eager" />
-        <Image src={img3} alt="nope" loading="eager" />
-
-        {/* {data.results.map((img) => (
-        <Image src={img.image} alt="" loading="eager" />
-      ))} */}
+        {screenshots.map((img) => (
+          <Image src={img} alt="nope" loading="eager" />
+        ))}
       </SimpleGrid>
     </>
   );

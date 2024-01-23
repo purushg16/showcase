@@ -34,7 +34,7 @@ const DesignSystem = ({ designSystem }: Props) => {
           <Text fontSize="xl" color="gray">
             Colors
           </Text>
-          <SimpleGrid columns={3} rowGap={3} my={5}>
+          <SimpleGrid columns={2} rowGap={3} my={5}>
             {designSystem.color.map((c) => (
               <Text>
                 <Button

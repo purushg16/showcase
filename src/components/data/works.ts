@@ -1,3 +1,8 @@
+import img from "../../../dist/assets/bf-d copy.png";
+import img1 from "../../../dist/assets/bf-f copy.png";
+import img2 from "../../../dist/assets/bf-h copy.png";
+import img3 from "../../../dist/assets/bf-p copy.png";
+
 export default {
   count: 2,
   results: {
@@ -28,6 +33,7 @@ export default {
         platform: ["Netlify", "render"],
         image_url:
           "https://urja-thedyingstudio.netlify.app/static/media/logo.b7237d76420d18270deb.png",
+        screenshots: [img, img1, img2, img3],
         git: "https://github.com/purushg16/boutique",
         designSystem: {
           typography: ["MackinacMed", "Poppins"],
@@ -48,6 +54,8 @@ export default {
         platform: ["Netlify", "render"],
         tools: ["MongoDB", "VScode", "Github", "Netlify", "render"],
         image_url: "",
+        screenshots: [img, img1, img2, img3],
+
         git: "",
         designSystem: {
           typography: ["MackinacMed", "Poppins"],
