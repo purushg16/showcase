@@ -13,23 +13,18 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { IoArrowDown, IoMailSharp, IoSend } from "react-icons/io5";
+import { IoArrowDown, IoSend } from "react-icons/io5";
 import { TbArrowRight, TbPhone } from "react-icons/tb";
-import { TiSocialLinkedin } from "react-icons/ti";
-import { VscGithubAlt } from "react-icons/vsc";
-import { Link, useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import logo from "../../../../dist/assets/logo.png";
 import { IconButton } from "../../elements/Button";
+import Footer from "../../elements/Footer";
 import AnimateMove from "../../motions/Move";
 import SkillsGrid from "./SkillsGrid";
 import { langugageFilterType } from "./langugageFilterType";
-import { AiOutlineMail } from "react-icons/ai";
-import { SiInstagram } from "react-icons/si";
 
 const AboutPage = () => {
   const [filter, setFilter] = useState<langugageFilterType>("all");
-  const navigate = useNavigate();
 
   return (
     <Box paddingY={{ sm: 20, md: 5 }}>
@@ -184,25 +179,7 @@ const AboutPage = () => {
         </Box>
       </SimpleGrid>
 
-      <Box my={10}>
-        <HStack my={2} gap={5}>
-          <Link target="_blank" to="https://github.com/purushg16">
-            <Icon as={VscGithubAlt} boxSize={5} />
-          </Link>
-
-          <Link target="_blank" to="https://instagram.com/macdasys">
-            <Icon as={SiInstagram} boxSize={5} />
-          </Link>
-
-          <Link
-            target="_blank"
-            to="https://www.linkedin.com/in/purushothaman-g-081a2622a"
-          >
-            <Icon as={TiSocialLinkedin} boxSize={6} />
-          </Link>
-        </HStack>
-        <Text fontSize="xs">© 2024 PURUSHOTHAMAN DESIGN</Text>
-      </Box>
+      <Footer />
     </Box>
   );
 };
