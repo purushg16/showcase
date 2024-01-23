@@ -4,7 +4,7 @@ import { IconButton } from "../../elements/Button";
 import AnimateMove from "../../motions/Move";
 import Footer from "../../elements/Footer";
 
-const Lander = () => {
+const LandingPage = () => {
   return (
     <Box textAlign="left">
       <AnimateMove>
@@ -32,4 +32,4 @@ const Lander = () => {
   );
 };
 
-export default Lander;
+export default LandingPage;

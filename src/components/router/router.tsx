@@ -3,7 +3,7 @@ import ErrorPage from "../pages/ErrorPage";
 import LayoutPage from "../pages/LayoutPage";
 import WorksPage from "../pages/Projects/WorksPage";
 import SingleProject from "../pages/Projects/SingleProject";
-import Lander from "../pages/Landing/Lander";
+import LandingPage from "../pages/Landing/LandingPage";
 import AboutPage from "../pages/AboutPage/AboutPage";
 import SingleWork from "../pages/Projects/SingleWork";
 
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     element: <LayoutPage />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <Lander /> },
+      { index: true, element: <LandingPage /> },
       { path: "/works", element: <WorksPage /> },
       { path: "/works/:type", element: <SingleWork /> },
       { path: "/works/:type/:title", element: <SingleProject /> },
