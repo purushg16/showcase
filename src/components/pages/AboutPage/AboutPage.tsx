@@ -22,6 +22,7 @@ import Footer from "../../elements/Footer";
 import AnimateMove from "../../motions/Move";
 import SkillsGrid from "./SkillsGrid";
 import { langugageFilterType } from "./langugageFilterType";
+import Techniques from "../../elements/About/Techniques";
 
 const AboutPage = () => {
   const [filter, setFilter] = useState<langugageFilterType>("all");
@@ -120,6 +121,8 @@ const AboutPage = () => {
           <SkillsGrid filter={filter} />
         </Box>
       </SimpleGrid>
+
+      <Techniques />
 
       <SimpleGrid
         columns={{ sm: 1, md: 1, lg: 2 }}
