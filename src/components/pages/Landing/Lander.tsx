@@ -2,6 +2,7 @@ import { Box, Highlight, Text } from "@chakra-ui/react";
 import { TbArrowRight } from "react-icons/tb";
 import { IconButton } from "../../elements/Button";
 import AnimateMove from "../../motions/Move";
+import Footer from "../../elements/Footer";
 
 const Lander = () => {
   return (
@@ -25,6 +26,8 @@ const Lander = () => {
 
         <IconButton route="works" text="Works" icon={<TbArrowRight />} />
       </AnimateMove>
+
+      <Footer />
     </Box>
   );
 };
