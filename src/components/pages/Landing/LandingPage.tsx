@@ -8,7 +8,7 @@ const LandingPage = () => {
   return (
     <Box textAlign="left">
       <AnimateMove>
-        <Text fontSize="xl" fontWeight={500} opacity={0.8}>
+        <Text fontSize="md" fontWeight={500} opacity={0.8}>
           👋 Hey There, I'm Purush
         </Text>
       </AnimateMove>
