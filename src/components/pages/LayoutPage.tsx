@@ -4,17 +4,13 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../elements/Navbar";
 
 const LayoutPage = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
-  // if (colorMode === "dark") toggleColorMode();
-  // if (colorMode === "light") toggleColorMode();
-
+  const { colorMode } = useColorMode();
   return (
     <Grid
       background={colorMode === "light" ? "#FAFAFA" : ""}
       height="100%"
-      overflowY="scroll"
       templateAreas={`"navbar" "outlet"`}
-      templateRows={"5% 1fr"}
+      templateRows={"20% 1fr"}
     >
       <GridItem area={"navbar"} style={{ padding: "2% 7%" }}>
         <Navbar />
@@ -37,23 +33,3 @@ const LayoutPage = () => {
 };
 
 export default LayoutPage;
-
-<Box height="100%" padding={10} overflowY="hidden">
-  <Navbar />
-  <Box
-    height="100%"
-    maxHeight="100%"
-    overflowY="scroll"
-    width="inherit"
-    css={{
-      "&::-webkit-scrollbar": {
-        width: "0.5em",
-      },
-      "&::-webkit-scrollbar-thumb": {
-        backgroundColor: "transparent",
-      },
-    }}
-  >
-    <Outlet />
-  </Box>
-</Box>;
