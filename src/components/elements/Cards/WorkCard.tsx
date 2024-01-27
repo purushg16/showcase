@@ -22,7 +22,6 @@ const WorkCard = ({ work, index, count }: Props) => {
       minHeight={300}
       cursor="pointer"
       transition="all 0.7s"
-      _hover={{ bg: "gray.100" }}
     >
       <Flex flexDirection="column" height="100%" justifyContent="space-between">
         <Box>

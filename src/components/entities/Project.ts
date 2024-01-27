@@ -8,8 +8,7 @@ export default interface Project {
   durationUnit: string;
   description: string;
   image_url: string;
-  language: string[];
-  tools: string[];
+  tags: string[];
   platform: string[];
   designSystem: {
     typography: string[];

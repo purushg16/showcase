@@ -1,12 +1,16 @@
 import { Box } from "@chakra-ui/layout";
-import { Flex, Grid, GridItem } from "@chakra-ui/react";
+import { Flex, Grid, GridItem, useColorMode } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../elements/Navbar";
 
 const LayoutPage = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+  // if (colorMode === "dark") toggleColorMode();
+  // if (colorMode === "light") toggleColorMode();
+
   return (
     <Grid
-      background="#FAFAFA"
+      background={colorMode === "light" ? "#FAFAFA" : ""}
       height="100%"
       overflowY="scroll"
       templateAreas={`"navbar" "outlet"`}

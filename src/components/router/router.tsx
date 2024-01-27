@@ -5,7 +5,7 @@ import WorksPage from "../pages/Projects/WorksPage";
 import SingleProject from "../pages/Projects/SingleProject";
 import LandingPage from "../pages/Landing/LandingPage";
 import AboutPage from "../pages/AboutPage/AboutPage";
-import SingleWork from "../pages/Projects/SingleWork";
+import ProjectsPage from "../pages/Projects/ProjectsPage";
 
 const router = createBrowserRouter([
   {
@@ -14,9 +14,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <LandingPage /> },
-      { path: "/works", element: <WorksPage /> },
-      { path: "/works/:type", element: <SingleWork /> },
-      { path: "/works/:type/:title", element: <SingleProject /> },
+      { path: "/works/", element: <ProjectsPage /> },
+      { path: "/works/:title", element: <SingleProject /> },
       { path: "/about", element: <AboutPage /> },
     ],
   },

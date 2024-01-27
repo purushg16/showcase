@@ -1,4 +1,4 @@
-import { HStack, Button, SimpleGrid, Box, Text } from "@chakra-ui/react";
+import { HStack, Button, SimpleGrid, Box, Text, Icon } from "@chakra-ui/react";
 import { SiGithub } from "react-icons/si";
 import { TbArrowRight } from "react-icons/tb";
 import { Link } from "react-router-dom";
@@ -12,60 +12,44 @@ interface Props {
 const ProjectDetails = ({ project }: Props) => {
   return (
     <>
-      <Text fontSize="4xl"> {project.title} </Text>
-      <Text> {project.description} </Text>
-
       <Box mt={2}>
-        <HStack gap={3}>
-          <Link to={project.git} target="_blank">
-            <Button
-              rightIcon={<SiGithub />}
-              colorScheme="blue"
-              variant="outline"
-            >
-              Source
-            </Button>
-          </Link>
-
+        <HStack spacing={3}>
+          <Text fontSize="sm"> April, 2022 </Text>
+          <Text fontSize="sm"> · </Text>
           <Link to={project.url} target="_blank">
-            <Button
-              rightIcon={<TbArrowRight />}
-              colorScheme="blue"
-              variant="solid"
-            >
-              Visit
-            </Button>
+            <Text fontSize="sm">
+              Visit Project
+              <Icon as={TbArrowRight} ml={1} transform="rotate(320deg)" />
+            </Text>
           </Link>
         </HStack>
       </Box>
 
-      <SimpleGrid columns={2} marginY={10} rowGap={10}>
+      <Text fontSize="4xl" mb={3} fontWeight={700}>
+        {project.title}
+      </Text>
+      <Text color="gray.600" fontSize="xl">
+        {project.description}
+      </Text>
+      <Text fontSize="sm" mt={1} color="gray.600">
+        Duration: {project.duration} {project.durationUnit}
+      </Text>
+
+      <SimpleGrid columns={1} marginY={10} rowGap={1}>
         <DefinitionItem
-          title="Details"
-          children={
-            <Text>
-              Duration: {project.duration} {project.durationUnit}
+          title="Tags"
+          children={project.tags.map((tag) => (
+            <Text color="gray" key={tag}>
+              {tag}
             </Text>
-          }
-        />
-
-        <DefinitionItem
-          title="Languages"
-          children={project.language.map((language) => (
-            <Text key={language}>{language}</Text>
           ))}
         />
         <DefinitionItem
-          title="Deployed In"
+          title="Platforms"
           children={project.platform.map((platform) => (
-            <Text key={platform}>{platform}</Text>
-          ))}
-        />
-
-        <DefinitionItem
-          title="Tools"
-          children={project.tools.map((tool) => (
-            <Text key={tool}>{tool}</Text>
+            <Text color="gray" key={platform}>
+              {platform}
+            </Text>
           ))}
         />
       </SimpleGrid>

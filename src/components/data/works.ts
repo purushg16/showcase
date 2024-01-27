@@ -28,8 +28,7 @@ export default {
         durationUnit: "days",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem.",
-        language: ["React", "Node", "Javascript"],
-        tools: ["MongoDB", "VScode", "Github"],
+        tags: ["MERN", "Javascript", "Github"],
         platform: ["Netlify", "render"],
         image_url:
           "https://urja-thedyingstudio.netlify.app/static/media/logo.b7237d76420d18270deb.png",
@@ -50,9 +49,8 @@ export default {
         durationUnit: "months",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem.",
-        language: [],
         platform: ["Netlify", "render"],
-        tools: ["MongoDB", "VScode", "Github", "Netlify", "render"],
+        tags: ["MongoDB", "VScode", "Github", "Netlify", "render"],
         image_url: "",
         screenshots: [img, img1, img2, img3],
 

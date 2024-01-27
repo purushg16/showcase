@@ -1,16 +1,13 @@
 import { Box, SimpleGrid, Text } from "@chakra-ui/react";
 import WorkCard from "../../elements/Cards/WorkCard";
 import works from "../../data/works";
-import { useParams } from "react-router-dom";
 
-const SingleWork = () => {
-  const params = useParams().type;
-
+const ProjectsPage = () => {
   return (
     <Box paddingY={{ sm: 20, md: 5 }}>
       <Box>
         <Text fontSize="4xl" textTransform="capitalize">
-          {params} Works
+          Works
         </Text>
 
         <SimpleGrid
@@ -52,4 +49,4 @@ const SingleWork = () => {
   );
 };
 
-export default SingleWork;
+export default ProjectsPage;
