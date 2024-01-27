@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Open+Sans:wght@300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-body,
-html,
-#root {
-  height: 100%;
-  overflow-y: auto;
-}
-
 * {
   scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  height: max-content;
 }
 
 :root {
@@ -67,18 +66,20 @@ textarea {
   border-radius: 0px !important;
 }
 
-::-webkit-scrollbar {
-  width: 5px;
+/* .scrollable-content::-webkit-scrollbar {
+  width: 3px;
 }
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+.scrollable-content::-webkit-scrollbar * {
+  background: transparent;
+}
+.scrollable-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 0, 0, 0.1) !important;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #90caf9;
-}
+} */
 
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
   background: #6dbbfb;
-}
+} */

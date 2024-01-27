@@ -1,31 +1,116 @@
-import { Box, Highlight, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  HStack,
+  Highlight,
+  Icon,
+  Image,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import { TbArrowRight } from "react-icons/tb";
-import { IconButton } from "../../elements/Button";
+import { Link } from "react-router-dom";
 import AnimateMove from "../../motions/Move";
 import Footer from "../../elements/Footer";
 
 const LandingPage = () => {
   return (
     <Box textAlign="left">
-      <AnimateMove>
-        <Text fontSize="md" fontWeight={500} opacity={0.8}>
-          👋 Hey There, I'm Purush
-        </Text>
-      </AnimateMove>
-      <br />
       <AnimateMove direction="y">
-        <Text fontSize="3xl">
-          <Highlight
-            query={"MERN Stack"}
-            styles={{ color: "blue" }}
-            children="An aspiring MERN Stack freelancer, placing the right colors at right place."
+        <Flex flexDir="column" gap={5}>
+          <Image
+            boxSize={100}
+            borderRadius={999}
+            src="https://images.unsplash.com/photo-1637858868799-7f26a0640eb6?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           />
-        </Text>
+          <Text fontSize="3xl" fontWeight={700}>
+            <Text fontSize="md" fontWeight={500} opacity={0.8}>
+              👋 Hey There,
+            </Text>
+            I'm Purush
+            <Text fontSize="sm" fontWeight={300} color="gray">
+              I write code & can provide extreme outcome.
+            </Text>
+          </Text>
 
-        <Text my={5}>Loved to provide what you love 💙.</Text>
+          <Box>
+            <Text fontSize="xl">
+              <Highlight
+                query={"MERN Stack"}
+                styles={{ color: "teal" }}
+                children={`An aspiring MERN Stack freelancer,  
+                            who loves building cool things with code, 
+                            placing the right colors at right place and 
+                            providing the lovable product.`}
+              />
+            </Text>
+          </Box>
 
-        <IconButton route="works" text="Works" icon={<TbArrowRight />} />
+          <Box>
+            <HStack gap={7}>
+              <Link to="about">
+                <Button
+                  pb={2}
+                  variant="link"
+                  leftIcon={
+                    <Icon as={TbArrowRight} transform="rotate(320deg)" />
+                  }
+                  borderBottom="1px solid gray"
+                  _hover={{ opacity: 0.8 }}
+                >
+                  About
+                </Button>
+              </Link>
+              <Link to="about">
+                <Button
+                  pb={2}
+                  variant="link"
+                  leftIcon={
+                    <Icon as={TbArrowRight} transform="rotate(320deg)" />
+                  }
+                  borderBottom="1px solid gray"
+                  _hover={{ opacity: 0.8 }}
+                >
+                  Connect
+                </Button>
+              </Link>
+            </HStack>
+          </Box>
+        </Flex>
       </AnimateMove>
+
+      <Box my={20}>
+        <Text fontSize="xl" mb={5}>
+          Recent Posts
+        </Text>
+        <VStack alignItems="start" gap={5} mb={8}>
+          <HStack columnGap={10}>
+            <Text> Oct 26, 2026 </Text>
+            <Link to=""> Lorem ipsum dolor sit. </Link>
+          </HStack>
+          <HStack columnGap={10}>
+            <Text> Oct 26, 2026 </Text>
+            <Link to=""> Lorem ipsum dolor sit. </Link>
+          </HStack>
+          <HStack columnGap={10}>
+            <Text> Oct 26, 2026 </Text>
+            <Link to=""> Lorem ipsum dolor sit. </Link>
+          </HStack>
+        </VStack>
+
+        <Link to="about">
+          <Button
+            pb={2}
+            variant="link"
+            leftIcon={<Icon as={TbArrowRight} transform="rotate(320deg)" />}
+            borderBottom="1px solid gray"
+            _hover={{ opacity: 0.8 }}
+          >
+            See All
+          </Button>
+        </Link>
+      </Box>
 
       <Footer />
     </Box>
