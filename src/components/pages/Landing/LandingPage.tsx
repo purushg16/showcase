@@ -26,13 +26,13 @@ const LandingPage = () => {
               👋 Hey There,
             </Text>
             I'm Purush
-            <Text fontSize="sm" fontWeight={300} color="gray">
+            <Text fontSize="md" fontWeight={300} color="gray">
               I write code & can provide extreme outcome.
             </Text>
           </Text>
 
           <Box>
-            <Text fontSize="xl">
+            <Text fontSize="md">
               <Highlight
                 query={"MERN Stack"}
                 styles={{ color: "teal" }}
@@ -77,39 +77,41 @@ const LandingPage = () => {
         </Flex>
       </AnimateMove>
 
-      <Box my={20}>
-        <Text fontSize="xl" mb={5}>
-          Recent Posts
-        </Text>
-        <VStack alignItems="start" gap={5} mb={8}>
-          <HStack columnGap={10}>
-            <Text color="gray"> Oct 26, 2026 </Text>
-            <Link to=""> Lorem ipsum dolor sit. </Link>
-          </HStack>
-          <HStack columnGap={10}>
-            <Text color="gray"> Oct 26, 2026 </Text>
+      <AnimateMove>
+        <Box my={20}>
+          <Text fontSize="xl" mb={5}>
+            Recent Posts
+          </Text>
+          <VStack alignItems="start" gap={5} mb={8}>
+            <HStack columnGap={10}>
+              <Text color="gray"> Oct 26, 2026 </Text>
+              <Link to=""> Lorem ipsum dolor sit. </Link>
+            </HStack>
+            <HStack columnGap={10}>
+              <Text color="gray"> Oct 26, 2026 </Text>
 
-            <Link to=""> Lorem ipsum dolor sit. </Link>
-          </HStack>
-          <HStack columnGap={10}>
-            <Text color="gray"> Oct 26, 2026 </Text>
+              <Link to=""> Lorem ipsum dolor sit. </Link>
+            </HStack>
+            <HStack columnGap={10}>
+              <Text color="gray"> Oct 26, 2026 </Text>
 
-            <Link to=""> Lorem ipsum dolor sit. </Link>
-          </HStack>
-        </VStack>
+              <Link to=""> Lorem ipsum dolor sit. </Link>
+            </HStack>
+          </VStack>
 
-        <Link to="about">
-          <Button
-            pb={2}
-            variant="link"
-            leftIcon={<Icon as={TbArrowRight} transform="rotate(320deg)" />}
-            borderBottom="1px solid gray"
-            _hover={{ opacity: 0.8 }}
-          >
-            See All
-          </Button>
-        </Link>
-      </Box>
+          <Link to="about">
+            <Button
+              pb={2}
+              variant="link"
+              leftIcon={<Icon as={TbArrowRight} transform="rotate(320deg)" />}
+              borderBottom="1px solid gray"
+              _hover={{ opacity: 0.8 }}
+            >
+              See All
+            </Button>
+          </Link>
+        </Box>
+      </AnimateMove>
 
       <Footer />
     </Box>
