@@ -16,7 +16,7 @@ const LinkButton = ({ text, route }: LinkButtonProps) => {
     <Button
       size="sm"
       variant="text"
-      fontWeight={300}
+      fontWeight={400}
       _hover={{ opacity: 0.7 }}
       transition="all 0.7s"
       onClick={() => {

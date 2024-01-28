@@ -1,14 +1,14 @@
 import { Box } from "@chakra-ui/layout";
-import { Flex, Grid, GridItem, useColorMode } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../elements/Navbar";
 
 const LayoutPage = () => {
   return (
-    <Box height="max-content">
+    <Box height="max-content" maxW={800} marginX="auto" px="1.5rem">
       <Navbar />
       <Flex justifyContent="center" alignItems="start">
-        <Box px={{ sm: "5%", md: "15%" }} py={10}>
+        <Box py={10}>
           <Outlet />
         </Box>
       </Flex>

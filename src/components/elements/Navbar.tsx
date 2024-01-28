@@ -24,11 +24,10 @@ const Navbar = () => {
       top={0}
       bg={colorMode === "dark" ? "#121212" : "white"}
     >
-      <Flex alignItems="center" paddingX={{ sm: "5%", md: "15%" }} py={4}>
+      <Flex alignItems="center" py="0.75rem">
         <Button
           p={0}
           variant="text"
-          fontSize="md"
           fontWeight={500}
           cursor="pointer"
           onClick={() => navigate("/")}
@@ -58,7 +57,7 @@ const Navbar = () => {
           bg="none"
           _hover={{ bg: "none" }}
         >
-          {colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
+          {colorMode === "dark" ? <MoonIcon /> : <SunIcon />}
         </IconButton>
       </Flex>
     </Box>

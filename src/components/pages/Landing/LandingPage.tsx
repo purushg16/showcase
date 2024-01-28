@@ -79,23 +79,29 @@ const LandingPage = () => {
 
       <AnimateMove>
         <Box my={20}>
-          <Text fontSize="xl" mb={5}>
+          <Text fontSize="md" mb={5}>
             Recent Posts
           </Text>
           <VStack alignItems="start" gap={5} mb={8}>
             <HStack columnGap={10}>
               <Text color="gray"> Oct 26, 2026 </Text>
-              <Link to=""> Lorem ipsum dolor sit. </Link>
+              <Link to="">
+                <Text fontWeight={500}> Lorem ipsum dolor sit. </Text>
+              </Link>
             </HStack>
             <HStack columnGap={10}>
               <Text color="gray"> Oct 26, 2026 </Text>
 
-              <Link to=""> Lorem ipsum dolor sit. </Link>
+              <Link to="">
+                <Text fontWeight={500}> Lorem ipsum dolor sit. </Text>
+              </Link>
             </HStack>
             <HStack columnGap={10}>
               <Text color="gray"> Oct 26, 2026 </Text>
 
-              <Link to=""> Lorem ipsum dolor sit. </Link>
+              <Link to="">
+                <Text fontWeight={500}> Lorem ipsum dolor sit. </Text>
+              </Link>
             </HStack>
           </VStack>
 
