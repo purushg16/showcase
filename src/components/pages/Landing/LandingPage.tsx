@@ -13,17 +13,14 @@ import { TbArrowRight } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import AnimateMove from "../../motions/Move";
 import Footer from "../../elements/Footer";
+import profile from "../../../assets/profile.jpg";
 
 const LandingPage = () => {
   return (
     <Box textAlign="left">
       <AnimateMove direction="y">
         <Flex flexDir="column" gap={5}>
-          <Image
-            boxSize={100}
-            borderRadius={999}
-            src="https://images.unsplash.com/photo-1637858868799-7f26a0640eb6?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          />
+          <Image boxSize={100} borderRadius={999} src={profile} />
           <Text fontSize="3xl" fontWeight={700}>
             <Text fontSize="md" fontWeight={500} opacity={0.8}>
               👋 Hey There,
@@ -86,15 +83,17 @@ const LandingPage = () => {
         </Text>
         <VStack alignItems="start" gap={5} mb={8}>
           <HStack columnGap={10}>
-            <Text> Oct 26, 2026 </Text>
+            <Text color="gray"> Oct 26, 2026 </Text>
             <Link to=""> Lorem ipsum dolor sit. </Link>
           </HStack>
           <HStack columnGap={10}>
-            <Text> Oct 26, 2026 </Text>
+            <Text color="gray"> Oct 26, 2026 </Text>
+
             <Link to=""> Lorem ipsum dolor sit. </Link>
           </HStack>
           <HStack columnGap={10}>
-            <Text> Oct 26, 2026 </Text>
+            <Text color="gray"> Oct 26, 2026 </Text>
+
             <Link to=""> Lorem ipsum dolor sit. </Link>
           </HStack>
         </VStack>
