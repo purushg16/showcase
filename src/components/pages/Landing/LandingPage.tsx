@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Divider,
   Flex,
   HStack,
   Highlight,
@@ -77,8 +78,10 @@ const LandingPage = () => {
         </Flex>
       </AnimateMove>
 
+      <Divider my={10} w={400} mx="auto" />
+
       <AnimateMove>
-        <Box my={20}>
+        <Box>
           <Text fontSize="md" mb={5}>
             Recent Posts
           </Text>
@@ -118,6 +121,8 @@ const LandingPage = () => {
           </Link>
         </Box>
       </AnimateMove>
+
+      <Divider my={10} w={400} mx="auto" />
 
       <Footer />
     </Box>
