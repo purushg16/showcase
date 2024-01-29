@@ -11,30 +11,6 @@ const ProjectsPage = () => {
 
       <Text color="gray">Here are some of the projects I've worked on.</Text>
 
-      {/* <Flex>
-          <Box flex={1}>
-            <Text fontSize="md"> Total Projects </Text>
-            <Text color="gray"> {works.count} </Text>
-          </Box>
-
-          <Box flex={1}>
-            <Text fontSize="md"> Description </Text>
-            <Text color="gray">{works.results.description}</Text>
-          </Box>
-
-          <Box flex={1}>
-            <Text fontSize="md"> Toolkits </Text>
-            <Text color="gray">
-              {works.results.toolKit.map((tool, index) => (
-                <>
-                  {tool}
-                  {index + 1 !== works.results.toolKit.length ? ", " : "."}
-                </>
-              ))}
-            </Text>
-          </Box>
-        </Flex> */}
-
       <Divider my={10} w={200} mx="auto" />
 
       <SimpleGrid columns={1} my={10} spacing={{ sm: 12, md: 8 }}>

@@ -27,6 +27,8 @@ const WorkCard = ({ work, index, count }: Props) => {
         maxW={{ sm: "100%", md: "40%" }}
         borderRadius={9}
         overflow="hidden"
+        _hover={{ opacity: 0.7 }}
+        transition="all 0.7s"
       />
       <Box flex={1}>
         <Box>
