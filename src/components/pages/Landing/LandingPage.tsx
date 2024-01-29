@@ -49,6 +49,7 @@ const LandingPage = () => {
             <HStack gap={7}>
               <Link to="about">
                 <Button
+                  borderRadius={0}
                   pb={2}
                   variant="link"
                   leftIcon={
@@ -62,6 +63,7 @@ const LandingPage = () => {
               </Link>
               <Link to="about">
                 <Button
+                  borderRadius={0}
                   pb={2}
                   variant="link"
                   leftIcon={
@@ -111,6 +113,7 @@ const LandingPage = () => {
           <Link to="about">
             <Button
               pb={2}
+              borderRadius={0}
               variant="link"
               leftIcon={<Icon as={TbArrowRight} transform="rotate(320deg)" />}
               borderBottom="1px solid gray"
