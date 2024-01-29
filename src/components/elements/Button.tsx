@@ -17,7 +17,8 @@ const LinkButton = ({ text, route }: LinkButtonProps) => {
       size="sm"
       variant="text"
       fontWeight={400}
-      _hover={{ opacity: 0.7 }}
+      color="gray"
+      _hover={{ color: "white" }}
       transition="all 0.7s"
       onClick={() => {
         navigate(`/${route}`);
