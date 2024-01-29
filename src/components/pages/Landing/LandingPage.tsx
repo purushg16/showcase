@@ -80,7 +80,7 @@ const LandingPage = () => {
         </Flex>
       </AnimateMove>
 
-      <Divider my={10} w={400} mx="auto" />
+      <Divider my={10} w="40%" mx="auto" />
 
       <AnimateMove>
         <Box>
@@ -125,7 +125,7 @@ const LandingPage = () => {
         </Box>
       </AnimateMove>
 
-      <Divider my={10} w={400} mx="auto" />
+      <Divider my={10} w="40%" mx="auto" />
 
       <Footer />
     </Box>

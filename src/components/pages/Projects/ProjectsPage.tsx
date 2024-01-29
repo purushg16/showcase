@@ -11,7 +11,7 @@ const ProjectsPage = () => {
 
       <Text color="gray">Here are some of the projects I've worked on.</Text>
 
-      <Divider my={10} w={200} mx="auto" />
+      <Divider my={10} w="40%" mx="auto" />
 
       <SimpleGrid my={10} spacing={16}>
         {works.results.data.map((work, index) => (
@@ -19,7 +19,7 @@ const ProjectsPage = () => {
         ))}
       </SimpleGrid>
 
-      <Divider my={10} w={200} mx="auto" />
+      <Divider my={10} w="40%" mx="auto" />
     </Box>
   );
 };

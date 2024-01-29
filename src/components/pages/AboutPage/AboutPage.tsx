@@ -186,7 +186,7 @@ const AboutPage = () => {
         </AnimateMove>
       </Flex>
       <Footer />
-      <Divider my={10} w={400} mx="auto" />
+      <Divider my={10} w="40%" mx="auto" />
     </Box>
   );
 };
