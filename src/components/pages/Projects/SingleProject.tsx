@@ -15,6 +15,7 @@ import DesignSystem from "../../elements/Project/DesignSystem";
 import ProjectDetails from "../../elements/Project/ProjectDetails";
 import AnimateRotate from "../../motions/Rotate";
 import Screenshots from "./Screenshots";
+import AnimateMove from "../../motions/Move";
 
 const SingleProject = () => {
   const title = useParams().title;
@@ -30,10 +31,12 @@ const SingleProject = () => {
       </AnimateRotate>
 
       <Box>
-        <Screenshots
-          screenshots={project.screenshots}
-          desc={project.screenshostDesc}
-        />
+        <AnimateMove direction="y">
+          <Screenshots
+            screenshots={project.screenshots}
+            desc={project.screenshostDesc}
+          />
+        </AnimateMove>
       </Box>
 
       <Box>
