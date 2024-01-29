@@ -3,37 +3,19 @@ import {
   Button,
   Divider,
   Flex,
-  HStack,
-  Hide,
-  Highlight,
   Icon,
-  Image,
-  Input,
-  Show,
   SimpleGrid,
-  Stack,
   Text,
-  Textarea,
 } from "@chakra-ui/react";
-import { useState } from "react";
-import { IoArrowDown, IoSend } from "react-icons/io5";
-import { TbArrowRight, TbPhone } from "react-icons/tb";
-import { HashLink } from "react-router-hash-link";
-import logo from "../../../../dist/assets/logo.png";
-import { IconButton } from "../../elements/Button";
+import { SiGithub, SiGmail, SiInstagram, SiLinkedin } from "react-icons/si";
+import { TbArrowRight } from "react-icons/tb";
+import { Link } from "react-router-dom";
 import Footer from "../../elements/Footer";
 import AnimateMove from "../../motions/Move";
-import SkillsGrid from "./SkillsGrid";
-import { langugageFilterType } from "./langugageFilterType";
-import Techniques from "../../elements/About/Techniques";
-import { SiGithub, SiGmail, SiInstagram, SiLinkedin } from "react-icons/si";
-import { Link } from "react-router-dom";
 
 const AboutPage = () => {
-  const [filter, setFilter] = useState<langugageFilterType>("all");
-
   return (
-    <Box paddingY={{ sm: 20, md: 5 }}>
+    <Box>
       <AnimateMove direction="y">
         <Box>
           <Text fontSize="3xl" fontWeight={700}>
