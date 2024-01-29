@@ -1,5 +1,4 @@
 import { Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
-import AnimateMove from "../../motions/Move";
 import { Link } from "react-router-dom";
 
 const MenuModal = () => {
@@ -13,19 +12,20 @@ const MenuModal = () => {
           _hover={{ bg: "none" }}
           _focus={{ bg: "none" }}
           _active={{ bg: "none" }}
+          color="gray"
         >
           Menu
         </MenuButton>
         <MenuList>
-          <MenuItem>
-            <AnimateMove direction="y">
-              <Link to="about"> About </Link>
-            </AnimateMove>
+          <MenuItem _hover={{ bg: "none" }}>
+            <Link to="/about" style={{ width: "100%" }}>
+              About
+            </Link>
           </MenuItem>
-          <MenuItem>
-            <AnimateMove direction="y">
-              <Link to="works"> Works </Link>
-            </AnimateMove>
+          <MenuItem _hover={{ bg: "none" }}>
+            <Link to="/works" style={{ width: "100%" }}>
+              Works
+            </Link>
           </MenuItem>
         </MenuList>
       </Menu>
