@@ -26,7 +26,14 @@ const BlogsPage = () => {
         </Box>
       </AnimateMove>
 
-      <AnimateMove direction="y">
+      <AnimateMove>
+        <Text textAlign="center">
+          There are no blogs I have published as of now! Soon all will reach
+          you!
+        </Text>
+      </AnimateMove>
+
+      {/* <AnimateMove direction="y">
         <SimpleGrid spacing={12}>
           <Flex gap={8}>
             <Box
@@ -110,7 +117,7 @@ const BlogsPage = () => {
             </Box>
           </Flex>
         </SimpleGrid>
-      </AnimateMove>
+      </AnimateMove> */}
 
       <AnimateMove direction="y">
         <Box textAlign="center" px={{ base: 4, md: 8 }}>
