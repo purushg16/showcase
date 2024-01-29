@@ -60,6 +60,31 @@ p {
   font-family: "Public Sans", sans-serif !important;
 }
 
+#card-img-cont {
+  position: relative;
+  overflow: hidden;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 999px;
+}
+
+#card-img-cont img {
+  vertical-align: top;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#card-img-cont img:hover {
+  -ms-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -o-transform: scale(1.03);
+  transform: scale(1.03);
+}
+
 /* button,
 input,
 textarea {
