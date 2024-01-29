@@ -32,7 +32,12 @@ export default {
         platform: ["Netlify", "render"],
         image_url:
           "https://urja-thedyingstudio.netlify.app/static/media/logo.b7237d76420d18270deb.png",
-        screenshots: [img, img1, img2, img3],
+        screenshots: [img, img1, img2],
+        screenshostDesc: [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
+        ],
         git: "https://github.com/purushg16/boutique",
         designSystem: {
           typography: ["MackinacMed", "Poppins"],
@@ -53,7 +58,11 @@ export default {
         tags: ["MongoDB", "VScode", "Github", "Netlify", "render"],
         image_url: "",
         screenshots: [img, img1, img2, img3],
-
+        screenshostDesc: [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
+        ],
         git: "",
         designSystem: {
           typography: ["MackinacMed", "Poppins"],
@@ -73,8 +82,12 @@ export default {
         platform: ["Netlify", "render"],
         tags: ["MongoDB", "VScode", "Github", "Netlify", "render"],
         image_url: "",
-        screenshots: [img, img1, img2, img3],
-
+        screenshots: [img, img1, img2],
+        screenshostDesc: [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
+        ],
         git: "",
         designSystem: {
           typography: ["MackinacMed", "Poppins"],

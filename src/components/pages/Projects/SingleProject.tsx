@@ -1,6 +1,7 @@
 import {
   Box,
   Divider,
+  Flex,
   GridItem,
   Image,
   SimpleGrid,
@@ -21,41 +22,37 @@ const SingleProject = () => {
 
   if (!project) return <Text> No data found! </Text>;
   return (
-    <Box my={10}>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5}>
-        <GridItem>
-          <ProjectDetails project={project} />
-        </GridItem>
+    <Flex flexDir="column" gap={16}>
+      <ProjectDetails project={project} />
 
-        <GridItem>
-          <AnimateRotate>
-            <Image src={project.image_url} alt="" w="100%" />
-          </AnimateRotate>
-        </GridItem>
-      </SimpleGrid>
-
-      <Divider my={10} />
+      <AnimateRotate>
+        <Image src={project.image_url} alt="" w="100%" loading="lazy" />
+      </AnimateRotate>
 
       <Box>
-        <Screenshots screenshots={project.screenshots} />
+        <Screenshots
+          screenshots={project.screenshots}
+          desc={project.screenshostDesc}
+        />
       </Box>
-
-      <Divider my={10} />
 
       <Box>
-        <DesignSystem designSystem={project.designSystem} />
+        <Divider my={10} w={400} mx="auto" />
+
+        <DesignSystem designSystem={project.designSystem} tags={project.tags} />
       </Box>
 
-      <Divider my={10} />
       <Box textAlign="center">
+        <Divider my={10} w={400} mx="auto" />
+
         <IconButton
           text="All Projects"
-          route="works/web"
+          route="works"
           icon={<TbArrowLeft />}
           left
         />
       </Box>
-    </Box>
+    </Flex>
   );
 };
 

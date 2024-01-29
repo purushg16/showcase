@@ -11,7 +11,7 @@ interface Props {
 
 const ProjectDetails = ({ project }: Props) => {
   return (
-    <>
+    <Box>
       <Box mt={2}>
         <HStack spacing={3}>
           <Text fontSize="sm"> April, 2022 </Text>
@@ -25,17 +25,14 @@ const ProjectDetails = ({ project }: Props) => {
         </HStack>
       </Box>
 
-      <Text fontSize="4xl" mb={3} fontWeight={700}>
+      <Text fontSize="5xl" fontWeight={700}>
         {project.title}
       </Text>
       <Text color="gray.600" fontSize="xl">
         {project.description}
       </Text>
-      <Text fontSize="sm" mt={1} color="gray.600">
-        Duration: {project.duration} {project.durationUnit}
-      </Text>
 
-      <SimpleGrid columns={1} marginY={10} rowGap={1}>
+      {/* <SimpleGrid columns={1} marginY={10} rowGap={1}>
         <DefinitionItem
           title="Tags"
           children={project.tags.map((tag) => (
@@ -52,8 +49,8 @@ const ProjectDetails = ({ project }: Props) => {
             </Text>
           ))}
         />
-      </SimpleGrid>
-    </>
+      </SimpleGrid> */}
+    </Box>
   );
 };
 

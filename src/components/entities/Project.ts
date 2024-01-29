@@ -15,4 +15,5 @@ export default interface Project {
     color: string[];
   };
   screenshots: string[];
+  screenshostDesc: string[];
 }

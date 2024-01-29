@@ -1,7 +1,9 @@
 import {
   Box,
   Button,
+  Flex,
   GridItem,
+  HStack,
   SimpleGrid,
   Text,
   VStack,
@@ -12,43 +14,53 @@ interface Props {
     typography: string[];
     color: string[];
   };
+  tags: string[];
 }
 
-const DesignSystem = ({ designSystem }: Props) => {
+const DesignSystem = ({ designSystem, tags }: Props) => {
   return (
     <Box>
-      <Text fontSize="4xl"> Design System </Text>
+      <Text fontSize="3xl"> Properites </Text>
 
-      <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={5} my={5}>
-        <GridItem>
-          <Text fontSize="xl" color="gray">
-            Typography
-          </Text>
-          <VStack alignItems="start" my={5}>
-            {designSystem.typography.map((font) => (
-              <Text key={font}> {font} </Text>
+      <Flex flexDir="column" gap={4} my={4}>
+        <Box>
+          <Text color="gray"> Tags </Text>
+          <HStack alignItems="start" my={4} gap={4}>
+            {tags.map((tag) => (
+              <Button key={tag} colorScheme="gray" size="sm" cursor="auto">
+                {tag}
+              </Button>
             ))}
-          </VStack>
-        </GridItem>
-        <GridItem>
-          <Text fontSize="xl" color="gray">
-            Colors
-          </Text>
-          <SimpleGrid columns={2} rowGap={3} my={5}>
-            {designSystem.color.map((c) => (
-              <Text>
-                <Button
-                  background={`#${c}`}
-                  size="xs"
-                  mr={2}
-                  _hover={{ bg: `#${c}` }}
-                />
-                {c}
-              </Text>
-            ))}
-          </SimpleGrid>
-        </GridItem>
-      </SimpleGrid>
+          </HStack>
+        </Box>
+
+        <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={4} my={8}>
+          <GridItem>
+            <Text color="gray">Typography</Text>
+            <VStack alignItems="start" my={4}>
+              {designSystem.typography.map((font) => (
+                <Text key={font}> {font} </Text>
+              ))}
+            </VStack>
+          </GridItem>
+          <GridItem>
+            <Text color="gray">Colors</Text>
+            <SimpleGrid columns={2} rowGap={3} my={4}>
+              {designSystem.color.map((c) => (
+                <Text>
+                  <Button
+                    background={`#${c}`}
+                    size="xs"
+                    mr={2}
+                    _hover={{ background: `#${c}` }}
+                  />
+                  {c}
+                </Text>
+              ))}
+            </SimpleGrid>
+          </GridItem>
+        </SimpleGrid>
+      </Flex>
     </Box>
   );
 };
