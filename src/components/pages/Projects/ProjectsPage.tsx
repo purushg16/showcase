@@ -1,6 +1,6 @@
-import { Box, Divider, Flex, SimpleGrid, Text } from "@chakra-ui/react";
-import WorkCard from "../../elements/Cards/WorkCard";
+import { Box, Divider, SimpleGrid, Text } from "@chakra-ui/react";
 import works from "../../data/works";
+import WorkCard from "../../elements/Cards/WorkCard";
 
 const ProjectsPage = () => {
   return (

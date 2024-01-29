@@ -1,8 +1,11 @@
 import {
   Box,
   Button,
+  Divider,
   Flex,
   HStack,
+  Hide,
+  Highlight,
   Icon,
   Image,
   Input,
@@ -23,166 +26,167 @@ import AnimateMove from "../../motions/Move";
 import SkillsGrid from "./SkillsGrid";
 import { langugageFilterType } from "./langugageFilterType";
 import Techniques from "../../elements/About/Techniques";
+import { SiGithub, SiGmail, SiInstagram, SiLinkedin } from "react-icons/si";
+import { Link } from "react-router-dom";
 
 const AboutPage = () => {
   const [filter, setFilter] = useState<langugageFilterType>("all");
 
   return (
     <Box paddingY={{ sm: 20, md: 5 }}>
-      <SimpleGrid columns={{ sm: 1, md: 1, lg: 2 }} gap={10}>
-        <AnimateMove>
-          <Box>
-            <Image borderRadius={7} src={logo} alt="will arrive shortly" />
-          </Box>
+      <AnimateMove direction="y">
+        <Box>
+          <Text fontSize="3xl" fontWeight={700}>
+            About
+          </Text>
+          <Text color="gray">Myself</Text>
+        </Box>
+      </AnimateMove>
+
+      <Flex gap={20} w="100%" my={20} flexDir="column">
+        <AnimateMove direction="y">
+          <Flex w="100%" flexDir={{ base: "column", md: "row" }} rowGap={4}>
+            <Box w={{ base: "max-content", md: "20%" }}>
+              <Text color="gray"> About </Text>
+            </Box>
+
+            <Box flex={1}>
+              <Text>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <Text my={4}>
+                  Quo quisquam, eligendi distinctio excepturi ratione, magni
+                  vitae esse.
+                </Text>
+                <Text my={4}>
+                  Quo quisquam, eligendi distinctio excepturi ratione, magni
+                  vitae esse reprehenderit.
+                </Text>
+              </Text>
+            </Box>
+          </Flex>
         </AnimateMove>
 
         <AnimateMove direction="y">
-          <Flex
-            flexDirection="column"
-            justifyContent="space-between"
-            height="100%"
-          >
-            <Box>
-              <Text
-                fontWeight={600}
-                opacity={0.5}
-                lineHeight={0}
-                fontSize={"sm"}
-              >
-                Web Developer
-              </Text>
-              <Text fontSize="4xl" fontWeight={600}>
-                Purushothaman G
-              </Text>
-
-              <Text textAlign="justify" py={7}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-                veritatis qui numquam veniam delectus blanditiis non,
-                accusantium aperiam? Veniam eius sunt, veritatis sequi dolorum
-                sint esse dolorem temporibus aut omnis blanditiis deserunt ad
-                iure alias ut, placeat vero necessitatibus, eveniet hic.
-              </Text>
+          <Flex w="100%" flexDir={{ base: "column", md: "row" }} rowGap={4}>
+            <Box w={{ base: "max-content", md: "20%" }}>
+              <Text color="gray"> Contact </Text>
             </Box>
 
-            <HStack gap={2}>
-              <IconButton route="works" text="Works" icon={<TbArrowRight />} />
-              <HashLink to="/about#contact">
-                <IconButton route="about" text="Contact" icon={<TbPhone />} />
-              </HashLink>
-
-              <HashLink to="/about#more">
-                <IconButton
-                  route="about"
-                  text="More"
-                  icon={<IoArrowDown />}
-                  color="messenger"
-                />
-              </HashLink>
-            </HStack>
+            <Box flex={1}>
+              <Text>
+                Have a question or just want to chat? Feel free to email me. Try
+                finding me anywhere else at @_purush_g
+                <SimpleGrid columns={{ base: 1, md: 2 }} mt={8} spacing={4}>
+                  <Button
+                    py={8}
+                    variant="outline"
+                    rightIcon={
+                      <Icon as={TbArrowRight} transform="rotate(320deg)" />
+                    }
+                    leftIcon={
+                      <>
+                        <Icon as={SiInstagram} mr={4} />
+                        <Text> Instagram </Text>
+                      </>
+                    }
+                    _hover={{ opacity: 0.8 }}
+                    alignItems="center"
+                    justifyContent="space-between"
+                  />
+                  <Button
+                    py={8}
+                    variant="outline"
+                    rightIcon={
+                      <Icon as={TbArrowRight} transform="rotate(320deg)" />
+                    }
+                    leftIcon={
+                      <>
+                        <Icon as={SiGmail} mr={4} />
+                        <Text> EMail </Text>
+                      </>
+                    }
+                    _hover={{ opacity: 0.8 }}
+                    alignItems="center"
+                    justifyContent="space-between"
+                  />
+                  <Button
+                    py={8}
+                    variant="outline"
+                    rightIcon={
+                      <Icon as={TbArrowRight} transform="rotate(320deg)" />
+                    }
+                    leftIcon={
+                      <>
+                        <Icon as={SiGithub} mr={4} />
+                        <Text> Github </Text>
+                      </>
+                    }
+                    _hover={{ opacity: 0.8 }}
+                    alignItems="center"
+                    justifyContent="space-between"
+                  />
+                  <Button
+                    py={8}
+                    variant="outline"
+                    rightIcon={
+                      <Icon as={TbArrowRight} transform="rotate(320deg)" />
+                    }
+                    leftIcon={
+                      <>
+                        <Icon as={SiLinkedin} mr={4} />
+                        <Text> LinkedIn </Text>
+                      </>
+                    }
+                    _hover={{ opacity: 0.8 }}
+                    alignItems="center"
+                    justifyContent="space-between"
+                  />
+                </SimpleGrid>
+              </Text>
+            </Box>
           </Flex>
         </AnimateMove>
-      </SimpleGrid>
 
-      <SimpleGrid
-        columns={{ sm: 1, md: 1, lg: 2 }}
-        mt={40}
-        spacing={{ md: 5, lg: 0 }}
-        id="more"
-      >
-        <Box>
-          <Text fontSize="4xl">Languages</Text>
-          <Show above="md">
-            <HStack my={5}>
-              <Button
-                colorScheme={filter === "all" ? "blue" : "gray"}
-                onClick={() => setFilter("all")}
-              >
-                All
-              </Button>
-              <Button
-                variant="outline"
-                colorScheme={filter === "web" ? "blue" : "gray"}
-                onClick={() => setFilter("web")}
-              >
-                Web
-              </Button>
-              <Button
-                variant="outline"
-                colorScheme={filter === "mobile" ? "blue" : "gray"}
-                onClick={() => setFilter("mobile")}
-              >
-                Mobile
-              </Button>
-            </HStack>
-          </Show>
-        </Box>
+        <AnimateMove direction="y">
+          <Flex w="100%" flexDir={{ base: "column", md: "row" }} rowGap={4}>
+            <Box w={{ base: "max-content", md: "20%" }}>
+              <Text color="gray"> Experience </Text>
+            </Box>
 
-        <Box my={{ sm: 5 }}>
-          <SkillsGrid filter={filter} />
-        </Box>
-      </SimpleGrid>
+            <Box flex={1}>
+              <Text>
+                <Text>3+ years of professional development experience.</Text>
+                <Text my={4}>
+                  As a developer I haven't worked in any enterprise or company.
+                  Yet, I have sherpened myself with some good stuff in web
+                  design & development all by myself.
+                </Text>
 
-      <Techniques />
+                <Text my={4}>
+                  Worked & Delivered 3+ High Level Web Applicaions that really
+                  helped to solve problems.
+                  <Link to="/works">
+                    <Text textDecor="underline" color="gray">
+                      View All Projects{" "}
+                    </Text>
+                  </Link>
+                </Text>
 
-      <SimpleGrid
-        columns={{ sm: 1, md: 1, lg: 2 }}
-        mt={40}
-        spacing={{ md: 5, lg: 0 }}
-      >
-        <Box>
-          <Text id="more" fontSize="4xl">
-            Certifications
-          </Text>
-        </Box>
-
-        <Box mt={{ sm: 5 }}>
-          <Box>
-            <Text fontSize="lg"> Python </Text>
-            <Text color="gray">
-              Selenium, Beautiful Soup, Request, Flask, Pandas, NumPy, Scikit
-              Learn, Plotly, and Matplotlib.
-            </Text>
-          </Box>
-
-          <Box mt={5}>
-            <Text fontSize="lg"> Flutter </Text>
-            <Text color="gray">Dart, State Management, Firebase</Text>
-          </Box>
-        </Box>
-      </SimpleGrid>
-
-      <SimpleGrid
-        columns={{ sm: 1, md: 1, lg: 2 }}
-        mt={40}
-        spacing={{ md: 5, lg: 0 }}
-        id="contact"
-      >
-        <Box>
-          <Text id="more" fontSize="4xl">
-            Contact
-          </Text>
-          <Text color="gray" width={80}>
-            Ring @officialpurushothaman@gmail.com
-          </Text>
-        </Box>
-
-        <Box mt={{ sm: 5 }}>
-          <Box>
-            <form onSubmit={() => {}}>
-              <Stack spacing={3}>
-                <Input variant="outline" placeholder="Name" isRequired />
-                <Input variant="outline" placeholder="Email" isRequired />
-                <Textarea variant="outline" placeholder="Message" isRequired />
-              </Stack>
-              <Button my={5} type="submit" colorScheme="blue">
-                Send <Icon as={IoSend} boxSize={3} ml={2} />
-              </Button>
-            </form>
-          </Box>
-        </Box>
-      </SimpleGrid>
-
+                <Text my={4}>
+                  I have Python & Flutter certifications at my desk, though, I
+                  have driven myself towards this wonderful Web tech journey.
+                </Text>
+                <Text my={4}>
+                  If you have any related project, kindly Contact me through any
+                  of the contact method mentioned above.
+                </Text>
+              </Text>
+            </Box>
+          </Flex>
+        </AnimateMove>
+      </Flex>
       <Footer />
+      <Divider my={10} w={400} mx="auto" />
     </Box>
   );
 };
