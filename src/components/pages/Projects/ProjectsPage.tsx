@@ -1,33 +1,29 @@
-import { Box, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Divider, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import WorkCard from "../../elements/Cards/WorkCard";
 import works from "../../data/works";
 
 const ProjectsPage = () => {
   return (
-    <Box paddingY={{ sm: 20, md: 5 }}>
-      <Box>
-        <Text fontSize="4xl" textTransform="capitalize">
-          Works
-        </Text>
+    <Box>
+      <Text fontSize="3xl" fontWeight={700} textTransform="capitalize">
+        Works
+      </Text>
 
-        <SimpleGrid
-          columns={{ sm: 1, md: 2, lg: 3 }}
-          my={5}
-          pb={7}
-          spacing={7}
-          borderBottom="1px solid #a2a2a2"
-        >
-          <Box width="max-content">
-            <Text fontSize="lg"> Total Projects </Text>
+      <Text color="gray">Here are some of the projects I've worked on.</Text>
+
+      {/* <Flex>
+          <Box flex={1}>
+            <Text fontSize="md"> Total Projects </Text>
             <Text color="gray"> {works.count} </Text>
           </Box>
+
           <Box flex={1}>
-            <Text fontSize="lg"> Description </Text>
+            <Text fontSize="md"> Description </Text>
             <Text color="gray">{works.results.description}</Text>
           </Box>
 
           <Box flex={1}>
-            <Text fontSize="lg"> Toolkits </Text>
+            <Text fontSize="md"> Toolkits </Text>
             <Text color="gray">
               {works.results.toolKit.map((tool, index) => (
                 <>
@@ -37,14 +33,17 @@ const ProjectsPage = () => {
               ))}
             </Text>
           </Box>
-        </SimpleGrid>
+        </Flex> */}
 
-        <SimpleGrid columns={{ sm: 1, md: 2 }} my={10} spacing={7}>
-          {works.results.data.map((work, index) => (
-            <WorkCard work={work} index={index + 1} count={works.count} />
-          ))}
-        </SimpleGrid>
-      </Box>
+      <Divider my={10} w={200} mx="auto" />
+
+      <SimpleGrid columns={1} my={10} spacing={{ sm: 12, md: 8 }}>
+        {works.results.data.map((work, index) => (
+          <WorkCard work={work} index={index + 1} count={works.count} />
+        ))}
+      </SimpleGrid>
+
+      <Divider my={10} w={200} mx="auto" />
     </Box>
   );
 };

@@ -8,7 +8,7 @@ const LayoutPage = () => {
     <Box height="max-content" maxW={800} marginX="auto" px="1.5rem">
       <Navbar />
       <Flex justifyContent="center" alignItems="start">
-        <Box py={10}>
+        <Box py={10} w="100%">
           <Outlet />
         </Box>
       </Flex>
