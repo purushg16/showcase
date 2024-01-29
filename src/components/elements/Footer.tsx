@@ -12,7 +12,7 @@ const Footer = () => {
           <Icon as={VscGithubAlt} boxSize={5} />
         </Link>
 
-        <Link target="_blank" to="https://instagram.com/macdasys">
+        <Link target="_blank" to="https://instagram.com/_purush_g">
           <Icon as={SiInstagram} boxSize={5} />
         </Link>
 

@@ -57,72 +57,88 @@ const AboutPage = () => {
             <Box flex={1}>
               <Text>
                 Have a question or just want to chat? Feel free to email me. Try
-                finding me anywhere else at @_purush_g
+                finding me anywhere else at
+                <span style={{ color: "teal" }}> @officialpurushothaman </span>
                 <SimpleGrid columns={{ base: 1, md: 2 }} mt={8} spacing={4}>
-                  <Button
-                    py={8}
-                    variant="outline"
-                    rightIcon={
-                      <Icon as={TbArrowRight} transform="rotate(320deg)" />
-                    }
-                    leftIcon={
-                      <>
-                        <Icon as={SiInstagram} mr={4} />
-                        <Text> Instagram </Text>
-                      </>
-                    }
-                    _hover={{ opacity: 0.8 }}
-                    alignItems="center"
-                    justifyContent="space-between"
-                  />
-                  <Button
-                    py={8}
-                    variant="outline"
-                    rightIcon={
-                      <Icon as={TbArrowRight} transform="rotate(320deg)" />
-                    }
-                    leftIcon={
-                      <>
-                        <Icon as={SiGmail} mr={4} />
-                        <Text> EMail </Text>
-                      </>
-                    }
-                    _hover={{ opacity: 0.8 }}
-                    alignItems="center"
-                    justifyContent="space-between"
-                  />
-                  <Button
-                    py={8}
-                    variant="outline"
-                    rightIcon={
-                      <Icon as={TbArrowRight} transform="rotate(320deg)" />
-                    }
-                    leftIcon={
-                      <>
-                        <Icon as={SiGithub} mr={4} />
-                        <Text> Github </Text>
-                      </>
-                    }
-                    _hover={{ opacity: 0.8 }}
-                    alignItems="center"
-                    justifyContent="space-between"
-                  />
-                  <Button
-                    py={8}
-                    variant="outline"
-                    rightIcon={
-                      <Icon as={TbArrowRight} transform="rotate(320deg)" />
-                    }
-                    leftIcon={
-                      <>
-                        <Icon as={SiLinkedin} mr={4} />
-                        <Text> LinkedIn </Text>
-                      </>
-                    }
-                    _hover={{ opacity: 0.8 }}
-                    alignItems="center"
-                    justifyContent="space-between"
-                  />
+                  <Link to="https://instagram.com/_purush_g">
+                    <Button
+                      w="100%"
+                      py={8}
+                      variant="outline"
+                      rightIcon={
+                        <Icon as={TbArrowRight} transform="rotate(320deg)" />
+                      }
+                      leftIcon={
+                        <>
+                          <Icon as={SiInstagram} mr={4} />
+                          <Text> Instagram </Text>
+                        </>
+                      }
+                      _hover={{ opacity: 0.8 }}
+                      alignItems="center"
+                      justifyContent="space-between"
+                    />
+                  </Link>
+
+                  <Link to="mailto:officialpurushothaman@gmail.com">
+                    <Button
+                      w="100%"
+                      py={8}
+                      variant="outline"
+                      rightIcon={
+                        <Icon as={TbArrowRight} transform="rotate(320deg)" />
+                      }
+                      leftIcon={
+                        <>
+                          <Icon as={SiGmail} mr={4} />
+                          <Text> EMail </Text>
+                        </>
+                      }
+                      _hover={{ opacity: 0.8 }}
+                      alignItems="center"
+                      justifyContent="space-between"
+                    />
+                  </Link>
+
+                  <Link to="https://github.com/purushg16">
+                    <Button
+                      py={8}
+                      w="100%"
+                      variant="outline"
+                      rightIcon={
+                        <Icon as={TbArrowRight} transform="rotate(320deg)" />
+                      }
+                      leftIcon={
+                        <>
+                          <Icon as={SiGithub} mr={4} />
+                          <Text> Github </Text>
+                        </>
+                      }
+                      _hover={{ opacity: 0.8 }}
+                      alignItems="center"
+                      justifyContent="space-between"
+                    />
+                  </Link>
+
+                  <Link to="https://www.linkedin.com/in/purushothaman-g-081a2622a">
+                    <Button
+                      w="100%"
+                      py={8}
+                      variant="outline"
+                      rightIcon={
+                        <Icon as={TbArrowRight} transform="rotate(320deg)" />
+                      }
+                      leftIcon={
+                        <>
+                          <Icon as={SiLinkedin} mr={4} />
+                          <Text> LinkedIn </Text>
+                        </>
+                      }
+                      _hover={{ opacity: 0.8 }}
+                      alignItems="center"
+                      justifyContent="space-between"
+                    />
+                  </Link>
                 </SimpleGrid>
               </Text>
             </Box>
@@ -140,16 +156,16 @@ const AboutPage = () => {
                 <Text>3+ years of professional development experience.</Text>
                 <Text my={4}>
                   As a developer I haven't worked in any enterprise or company.
-                  Yet, I have sherpened myself with some good stuff in web
-                  design & development all by myself.
+                  Yet, I have sharpened myself with some good stuff in web
+                  design & development all by myself for more than 5 years.
                 </Text>
 
                 <Text my={4}>
                   Worked & Delivered 3+ High Level Web Applicaions that really
-                  helped to solve problems.
+                  helped to solve problems in real life scenarios.
                   <Link to="/works">
-                    <Text textDecor="underline" color="gray">
-                      View All Projects{" "}
+                    <Text textDecor="underline" color="teal">
+                      View All Projects
                     </Text>
                   </Link>
                 </Text>
