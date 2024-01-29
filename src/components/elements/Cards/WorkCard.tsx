@@ -15,7 +15,11 @@ const WorkCard = ({ work, index, count }: Props) => {
   const navigate = useNavigate();
 
   return (
-    <Flex flexDir={{ sm: "column", md: "row" }} gap={8}>
+    <Flex
+      flexDir={{ base: "column", md: "row" }}
+      gap={{ base: 0, md: 8 }}
+      rowGap={4}
+    >
       <Box
         bg="url('https://images.unsplash.com/photo-1639628735078-ed2f038a193e?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
         backgroundPosition="center"

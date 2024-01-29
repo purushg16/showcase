@@ -13,7 +13,7 @@ const ProjectsPage = () => {
 
       <Divider my={10} w={200} mx="auto" />
 
-      <SimpleGrid columns={1} my={10} spacing={{ sm: 12, md: 8 }}>
+      <SimpleGrid my={10} spacing={16}>
         {works.results.data.map((work, index) => (
           <WorkCard work={work} index={index + 1} count={works.count} />
         ))}
