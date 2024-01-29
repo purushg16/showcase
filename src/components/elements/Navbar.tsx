@@ -67,6 +67,7 @@ const Navbar = () => {
           <Show above="md">
             <HStack>
               <LinkButton text="Works" route="works" />
+              <LinkButton text="Blogs" route="blogs" />
               <LinkButton text="About" route="about" />
             </HStack>
           </Show>

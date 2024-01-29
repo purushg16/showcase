@@ -6,6 +6,7 @@ import SingleProject from "../pages/Projects/SingleProject";
 import LandingPage from "../pages/Landing/LandingPage";
 import AboutPage from "../pages/AboutPage/AboutPage";
 import ProjectsPage from "../pages/Projects/ProjectsPage";
+import BlogsPage from "../pages/Blogs/BlogsPage";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
       { path: "/works/", element: <ProjectsPage /> },
       { path: "/works/:title", element: <SingleProject /> },
       { path: "/about", element: <AboutPage /> },
+      { path: "/blogs", element: <BlogsPage /> },
     ],
   },
 ]);
