@@ -6,11 +6,12 @@ import AnimateMove from "../../motions/Move";
 interface Props {
   title: String;
   children: String[] | ReactNode[];
+  delay: number;
 }
 
-const AboutTopics = ({ title, children }: Props) => {
+const AboutTopics = ({ title, children, delay }: Props) => {
   return (
-    <AnimateMove direction="y">
+    <AnimateMove direction="y" delay={delay}>
       <Flex w="100%" flexDir={{ base: "column", md: "row" }} rowGap={4}>
         <Box w={{ base: "max-content", md: "20%" }}>
           <Text color="gray"> {title} </Text>

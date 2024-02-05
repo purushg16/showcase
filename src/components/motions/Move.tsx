@@ -4,9 +4,10 @@ import { ReactNode } from "react";
 interface Props {
   children: ReactNode;
   direction?: "x" | "y";
+  delay?: number;
 }
 
-const AnimateMove = ({ children, direction = "x" }: Props) => {
+const AnimateMove = ({ children, direction = "x", delay = 0.1 }: Props) => {
   return (
     <motion.div
       className="box"
@@ -14,7 +15,7 @@ const AnimateMove = ({ children, direction = "x" }: Props) => {
       animate={{ opacity: 1, [direction]: 0 }}
       transition={{
         duration: 0.8,
-        delay: 0.1,
+        delay: delay,
         ease: [0, 0.71, 0.2, 1.01],
       }}
       children={children}

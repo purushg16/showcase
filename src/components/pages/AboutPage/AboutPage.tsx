@@ -31,6 +31,7 @@ const AboutPage = () => {
 
       <Flex gap={20} w="100%" my={20} flexDir="column">
         <AboutTopics
+          delay={0.1}
           title="About"
           children={[
             "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -40,6 +41,7 @@ const AboutPage = () => {
         />
 
         <AboutTopics
+          delay={0.2}
           title="Toolkit"
           children={[
             <Text>
@@ -69,6 +71,7 @@ const AboutPage = () => {
         />
 
         <AboutTopics
+          delay={0.3}
           title="Experiance"
           children={[
             "3+ years of professional development experience.",
@@ -88,6 +91,7 @@ const AboutPage = () => {
         />
 
         <AboutTopics
+          delay={0.4}
           title="Contact"
           children={[
             <Text>
