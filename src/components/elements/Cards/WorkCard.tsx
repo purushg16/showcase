@@ -45,33 +45,30 @@ const WorkCard = ({ work, index, count }: Props) => {
 
             <AnimateMove>
               <Text fontSize="md" color="gray">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Mollitia, alias nihil. Ducimus nemo culpa sequi aliquid facere
-                obcaecati accusamus expedita!
+                {work.description}
               </Text>
             </AnimateMove>
           </Box>
 
           <AnimateMove direction="y">
             <Button borderRadius={9} onClick={() => navigate(`${work.slug}`)}>
-              {" "}
-              View{" "}
+              View
             </Button>
           </AnimateMove>
         </Box>
 
         {/* <Box w="min-content">
-            <AnimateMove direction="y">
-              <Text fontWeight={700}>
-                {index < 9 && 0}
-                {index}
-              </Text>
-            </AnimateMove>
-            <Text fontWeight={700} color="gray">
+          <AnimateMove direction="y">
+            <Text fontWeight={700}>
               {index < 9 && 0}
-              {count}
+              {index}
             </Text>
-          </Box> */}
+          </AnimateMove>
+          <Text fontWeight={700} color="gray">
+            {index < 9 && 0}
+            {count}
+          </Text>
+        </Box> */}
       </Box>
     </Flex>
   );

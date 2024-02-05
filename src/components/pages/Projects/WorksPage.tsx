@@ -1,43 +1,32 @@
-import { Box, Icon, SimpleGrid, Text } from "@chakra-ui/react";
-import { IoGlobe, IoLogoPython, IoUmbrella } from "react-icons/io5";
-import { SiFlutter } from "react-icons/si";
+import { Box, Divider, SimpleGrid, Text } from "@chakra-ui/react";
+import works from "../../data/works";
+import WorkCard from "../../elements/Cards/WorkCard";
 import AnimateMove from "../../motions/Move";
-import ProjectCard from "../../elements/Cards/ProjectCard";
 
 const WorksPage = () => {
   return (
-    <Box paddingY={{ sm: 20, md: 5 }}>
+    <Box>
       <AnimateMove direction="y">
-        <Text fontWeight={500} fontSize="4xl" mb={1}>
-          Projects
-          <Icon as={IoUmbrella} ml={1} />
+        <Text fontSize="3xl" fontWeight={700} textTransform="capitalize">
+          Works
         </Text>
-        <Text mb={10}>
-          I have created about 10+ projects on each firm listed below. Feel free
-          to check everything!
-        </Text>
+
+        <Text color="gray">Here are some of the projects I've worked on.</Text>
       </AnimateMove>
 
-      <SimpleGrid columns={{ md: 1, lg: 3 }} gap={10}>
-        <ProjectCard
-          route="works/web"
-          title="Web"
-          color="#0000ff78"
-          icon={IoGlobe}
-        />
-        <ProjectCard
-          route="works/python"
-          title="Python"
-          color="lavender"
-          icon={IoLogoPython}
-        />
-        <ProjectCard
-          route="works/flutter"
-          title="Flutter"
-          color="white"
-          icon={SiFlutter}
-        />
-      </SimpleGrid>
+      <Divider my={10} w="40%" mx="auto" />
+
+      <AnimateMove direction="y">
+        <SimpleGrid my={10} spacing={16}>
+          {works.results.data.map((work, index) => (
+            <AnimateMove delay={0.1 * (index + 1)}>
+              <WorkCard work={work} index={index + 1} count={works.count} />
+            </AnimateMove>
+          ))}
+        </SimpleGrid>
+      </AnimateMove>
+
+      <Divider my={10} w="40%" mx="auto" />
     </Box>
   );
 };
