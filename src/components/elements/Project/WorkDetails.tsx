@@ -10,7 +10,7 @@ interface Props {
   project: Project;
 }
 
-const ProjectDetails = ({ project }: Props) => {
+const WorkDetails = ({ project }: Props) => {
   return (
     <Box>
       <AnimateMove direction="y">
@@ -38,4 +38,4 @@ const ProjectDetails = ({ project }: Props) => {
   );
 };
 
-export default ProjectDetails;
+export default WorkDetails;

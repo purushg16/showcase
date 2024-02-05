@@ -21,22 +21,25 @@ export default {
     data: [
       {
         id: "1",
-        title: "Urja ",
+        title: "Urja",
         slug: "urja",
         url: "https://urja-thedyingstudio.netlify.app/",
         duration: 100,
         durationUnit: "days",
+        breif: "Urja is an E-Commerce web application that runs on MERN Stack.",
         description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem.",
+          "Urja is an E-Commerce web application that runs on MERN Stack. Admin Panel, Online Payment, Cart and more have been incorporated in Urja. ",
+
         tags: ["MERN", "Javascript", "Github"],
         platform: ["Netlify", "render"],
         image_url:
           "https://urja-thedyingstudio.netlify.app/static/media/logo.b7237d76420d18270deb.png",
         screenshots: [img, img1, img2],
         screenshostDesc: [
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
+          "Landing Page",
+          "Top products browsing in homepage.",
+          "Seperate Products List page",
+          "Cart Page",
         ],
         git: "https://github.com/purushg16/boutique",
         designSystem: {
@@ -44,56 +47,56 @@ export default {
           color: ["D2F5E0", "417570", "F8F6F3", "54B84C"],
         },
       },
-      {
-        id: "2",
-        title: "Lorem Ipsum.",
-        url: "https://urja-thedyingstudio.netlify.app/",
+      // {
+      //   id: "2",
+      //   title: "Lorem Ipsum.",
+      //   url: "https://urja-thedyingstudio.netlify.app/",
 
-        slug: "lorem-ipsum",
-        duration: 3,
-        durationUnit: "months",
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem.",
-        platform: ["Netlify", "render"],
-        tags: ["MongoDB", "VScode", "Github", "Netlify", "render"],
-        image_url: "",
-        screenshots: [img, img1, img2, img3],
-        screenshostDesc: [
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
-        ],
-        git: "",
-        designSystem: {
-          typography: ["MackinacMed", "Poppins"],
-          color: ["D2F5E0", "417570", "F8F6F3", "54B84C"],
-        },
-      },
-      {
-        id: "2",
-        title: "Lorem Ipsum.",
-        url: "https://urja-thedyingstudio.netlify.app/",
+      //   slug: "lorem-ipsum",
+      //   duration: 3,
+      //   durationUnit: "months",
+      //   description:
+      //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem.",
+      //   platform: ["Netlify", "render"],
+      //   tags: ["MongoDB", "VScode", "Github", "Netlify", "render"],
+      //   image_url: "",
+      //   screenshots: [img, img1, img2, img3],
+      //   screenshostDesc: [
+      //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
+      //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
+      //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
+      //   ],
+      //   git: "",
+      //   designSystem: {
+      //     typography: ["MackinacMed", "Poppins"],
+      //     color: ["D2F5E0", "417570", "F8F6F3", "54B84C"],
+      //   },
+      // },
+      // {
+      //   id: "2",
+      //   title: "Lorem Ipsum.",
+      //   url: "https://urja-thedyingstudio.netlify.app/",
 
-        slug: "lorem-ipsum",
-        duration: 3,
-        durationUnit: "months",
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem.",
-        platform: ["Netlify", "render"],
-        tags: ["MongoDB", "VScode", "Github", "Netlify", "render"],
-        image_url: "",
-        screenshots: [img, img1, img2],
-        screenshostDesc: [
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
-        ],
-        git: "",
-        designSystem: {
-          typography: ["MackinacMed", "Poppins"],
-          color: ["D2F5E0", "417570", "F8F6F3", "54B84C"],
-        },
-      },
+      //   slug: "lorem-ipsum",
+      //   duration: 3,
+      //   durationUnit: "months",
+      //   description:
+      //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem.",
+      //   platform: ["Netlify", "render"],
+      //   tags: ["MongoDB", "VScode", "Github", "Netlify", "render"],
+      //   image_url: "",
+      //   screenshots: [img, img1, img2],
+      //   screenshostDesc: [
+      //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
+      //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
+      //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,maxime.",
+      //   ],
+      //   git: "",
+      //   designSystem: {
+      //     typography: ["MackinacMed", "Poppins"],
+      //     color: ["D2F5E0", "417570", "F8F6F3", "54B84C"],
+      //   },
+      // },
     ],
   },
 };

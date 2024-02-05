@@ -6,6 +6,7 @@ export default interface Project {
   git: string;
   duration: number;
   durationUnit: string;
+  breif: string;
   description: string;
   image_url: string;
   tags: string[];

@@ -45,7 +45,7 @@ const WorkCard = ({ work, index, count }: Props) => {
 
             <AnimateMove>
               <Text fontSize="md" color="gray">
-                {work.description}
+                {work.breif}
               </Text>
             </AnimateMove>
           </Box>
