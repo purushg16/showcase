@@ -3,6 +3,7 @@ import {
   Button,
   Divider,
   Flex,
+  Highlight,
   Icon,
   SimpleGrid,
   Text,
@@ -12,6 +13,9 @@ import { TbArrowRight } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import Footer from "../../elements/Footer";
 import AnimateMove from "../../motions/Move";
+import Tools from "./Tools";
+import AboutTopics from "./AboutTopic";
+import ContactLinks from "../../../functions/data/ContactLinks";
 
 const AboutPage = () => {
   return (
@@ -26,162 +30,96 @@ const AboutPage = () => {
       </AnimateMove>
 
       <Flex gap={20} w="100%" my={20} flexDir="column">
-        <AnimateMove direction="y">
-          <Flex w="100%" flexDir={{ base: "column", md: "row" }} rowGap={4}>
-            <Box w={{ base: "max-content", md: "20%" }}>
-              <Text color="gray"> About </Text>
-            </Box>
+        <AboutTopics
+          title="About"
+          children={[
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          ]}
+        />
 
-            <Box flex={1}>
-              <Text>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                <Text my={4}>
-                  Quo quisquam, eligendi distinctio excepturi ratione, magni
-                  vitae esse.
-                </Text>
-                <Text my={4}>
-                  Quo quisquam, eligendi distinctio excepturi ratione, magni
-                  vitae esse reprehenderit.
-                </Text>
+        <AboutTopics
+          title="Toolkit"
+          children={[
+            <Text>
+              As an organised and well knowledged developer & designer, I have
+              created applications with different set of tools.
+            </Text>,
+            <Tools
+              title="For frontend, I have knowledge in"
+              desc="React, Redux, Zustand, ReactQuery, Material UI, Chakra UI,
+                    Javascript, Typescript and more."
+            />,
+            <Tools
+              title="For backend & database, I am aligned with"
+              desc="Node, Express, Postman, MongoDB, Mongoose."
+            />,
+            <Tools
+              title="As others, I have understanding in"
+              desc="Git(Version Control), Google OAuth, Password.js, Cloudinary,
+                  Multer and more."
+            />,
+            <Tools
+              title="Apart from web, I have gained certifications in"
+              desc="Python and Flutter.With Data Science, Pandas, Selenium in Python and Firebase
+                  with Flutter."
+            />,
+          ]}
+        />
+
+        <AboutTopics
+          title="Experiance"
+          children={[
+            "3+ years of professional development experience.",
+            "As a developer I haven't worked in any enterprise or company. Yet, I have sharpened myself with some good stuff in web design & development all by myself for more than 5 years.",
+            `Worked & Delivered 3+ High Level Web Applicaions that really
+            helped to solve problems in real life scenarios.`,
+            <Link to="/works">
+              <Text textDecor="underline" color="teal">
+                View All Projects
               </Text>
-            </Box>
-          </Flex>
-        </AnimateMove>
+            </Link>,
+            `I have Python & Flutter certifications at my desk, though, I
+            have driven myself towards this wonderful Web tech journey.`,
+            `If you have any related project, kindly Contact me through any
+            of the contact method mentioned above.`,
+          ]}
+        />
 
-        <AnimateMove direction="y">
-          <Flex w="100%" flexDir={{ base: "column", md: "row" }} rowGap={4}>
-            <Box w={{ base: "max-content", md: "20%" }}>
-              <Text color="gray"> Contact </Text>
-            </Box>
-
-            <Box flex={1}>
-              <Text>
-                Have a question or just want to chat? Feel free to email me. Try
-                finding me anywhere else at
-                <span style={{ color: "teal" }}> @officialpurushothaman </span>
-                <SimpleGrid columns={{ base: 1, md: 2 }} mt={8} spacing={4}>
-                  <Link to="https://instagram.com/_purush_g">
-                    <Button
-                      w="100%"
-                      py={8}
-                      variant="outline"
-                      rightIcon={
-                        <Icon as={TbArrowRight} transform="rotate(320deg)" />
-                      }
-                      leftIcon={
-                        <>
-                          <Icon as={SiInstagram} mr={4} />
-                          <Text> Instagram </Text>
-                        </>
-                      }
-                      _hover={{ opacity: 0.8 }}
-                      alignItems="center"
-                      justifyContent="space-between"
-                    />
-                  </Link>
-
-                  <Link to="mailto:officialpurushothaman@gmail.com">
-                    <Button
-                      w="100%"
-                      py={8}
-                      variant="outline"
-                      rightIcon={
-                        <Icon as={TbArrowRight} transform="rotate(320deg)" />
-                      }
-                      leftIcon={
-                        <>
-                          <Icon as={SiGmail} mr={4} />
-                          <Text> EMail </Text>
-                        </>
-                      }
-                      _hover={{ opacity: 0.8 }}
-                      alignItems="center"
-                      justifyContent="space-between"
-                    />
-                  </Link>
-
-                  <Link to="https://github.com/purushg16">
-                    <Button
-                      py={8}
-                      w="100%"
-                      variant="outline"
-                      rightIcon={
-                        <Icon as={TbArrowRight} transform="rotate(320deg)" />
-                      }
-                      leftIcon={
-                        <>
-                          <Icon as={SiGithub} mr={4} />
-                          <Text> Github </Text>
-                        </>
-                      }
-                      _hover={{ opacity: 0.8 }}
-                      alignItems="center"
-                      justifyContent="space-between"
-                    />
-                  </Link>
-
-                  <Link to="https://www.linkedin.com/in/purushothaman-g-081a2622a">
-                    <Button
-                      w="100%"
-                      py={8}
-                      variant="outline"
-                      rightIcon={
-                        <Icon as={TbArrowRight} transform="rotate(320deg)" />
-                      }
-                      leftIcon={
-                        <>
-                          <Icon as={SiLinkedin} mr={4} />
-                          <Text> LinkedIn </Text>
-                        </>
-                      }
-                      _hover={{ opacity: 0.8 }}
-                      alignItems="center"
-                      justifyContent="space-between"
-                    />
-                  </Link>
-                </SimpleGrid>
-              </Text>
-            </Box>
-          </Flex>
-        </AnimateMove>
-
-        <AnimateMove direction="y">
-          <Flex w="100%" flexDir={{ base: "column", md: "row" }} rowGap={4}>
-            <Box w={{ base: "max-content", md: "20%" }}>
-              <Text color="gray"> Experience </Text>
-            </Box>
-
-            <Box flex={1}>
-              <Text>
-                <Text>3+ years of professional development experience.</Text>
-                <Text my={4}>
-                  As a developer I haven't worked in any enterprise or company.
-                  Yet, I have sharpened myself with some good stuff in web
-                  design & development all by myself for more than 5 years.
-                </Text>
-
-                <Text my={4}>
-                  Worked & Delivered 3+ High Level Web Applicaions that really
-                  helped to solve problems in real life scenarios.
-                  <Link to="/works">
-                    <Text textDecor="underline" color="teal">
-                      View All Projects
-                    </Text>
-                  </Link>
-                </Text>
-
-                <Text my={4}>
-                  I have Python & Flutter certifications at my desk, though, I
-                  have driven myself towards this wonderful Web tech journey.
-                </Text>
-                <Text my={4}>
-                  If you have any related project, kindly Contact me through any
-                  of the contact method mentioned above.
-                </Text>
-              </Text>
-            </Box>
-          </Flex>
-        </AnimateMove>
+        <AboutTopics
+          title="Contact"
+          children={[
+            <Text>
+              Have a question or just want to chat? Feel free to email me. Try
+              finding me at
+              <span style={{ color: "teal" }}> @officialpurushothaman </span>
+            </Text>,
+            <SimpleGrid columns={{ base: 1, md: 2 }} mt={8} spacing={4}>
+              {ContactLinks.map((link) => (
+                <Link to={link.link}>
+                  <Button
+                    w="100%"
+                    py={8}
+                    variant="outline"
+                    rightIcon={
+                      <Icon as={TbArrowRight} transform="rotate(320deg)" />
+                    }
+                    leftIcon={
+                      <>
+                        <Icon as={link.logo} mr={4} />
+                        <Text> {link.name} </Text>
+                      </>
+                    }
+                    _hover={{ opacity: 0.8 }}
+                    alignItems="center"
+                    justifyContent="space-between"
+                  />
+                </Link>
+              ))}
+            </SimpleGrid>,
+          ]}
+        />
       </Flex>
       <Footer />
       <Divider my={10} w="40%" mx="auto" />
