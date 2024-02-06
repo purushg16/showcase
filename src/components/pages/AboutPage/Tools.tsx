@@ -8,7 +8,7 @@ interface Props {
 const Tools = ({ title, desc }: Props) => {
   return (
     <Text my={4}>
-      {title} <span style={{ fontWeight: 700 }}>{desc}</span>
+      {title} <span style={{ color: "teal" }}>{desc}</span>
     </Text>
   );
 };
