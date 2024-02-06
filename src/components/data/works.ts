@@ -59,6 +59,9 @@ export default {
           "Register Section",
           "Review (or) Testimonals Section",
           "Pricing Section",
+          "Founder's Note Section",
+          "FAQs",
+          "Footer",
         ],
         designSystem: {
           typography: ["MackinacMed", "Poppins"],
