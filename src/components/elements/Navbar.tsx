@@ -29,49 +29,61 @@ const Navbar = () => {
       bg={colorMode === "dark" ? "#121212" : "white"}
     >
       <Flex alignItems="center" py="0.75rem">
-        {/* <Button
-          p={0}
-          variant="text"
-          fontWeight={500}
-          cursor="pointer"
-          onClick={() => navigate("/")}
-        >
-          Purush
-        </Button> */}
         <Link to="/" className="shrink-0 text-primary">
-          <svg
-            id="erOZfPbxXBo1"
-            height={36}
-            width={36}
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 300 300"
-            shape-rendering="geometricPrecision"
-            text-rendering="geometricPrecision"
-          >
-            <ellipse
-              rx="78.089633"
-              ry="27.840652"
-              transform="matrix(1.204348 0 0 1.634145 150 104.504338)"
-              fill="#fff"
-              stroke-width="0"
-            />
-            <ellipse
-              rx="42.779538"
-              ry="76.392033"
-              transform="matrix(.746032 0 0 1 118.085096 168.062472)"
-              fill="#fff"
-              stroke-width="0"
-            />
-          </svg>
+          {colorMode === "dark" ? (
+            <svg
+              id="erOZfPbxXBo1"
+              width={36}
+              height={36}
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 300 300"
+              shape-rendering="geometricPrecision"
+              text-rendering="geometricPrecision"
+            >
+              <ellipse
+                rx="78.089633"
+                ry="27.840652"
+                transform="matrix(1.204348 0 0 1.634145 150 104.504338)"
+                fill="#fff"
+                stroke-width="0"
+              />
+              <ellipse
+                rx="42.779538"
+                ry="76.392033"
+                transform="matrix(.746032 0 0 1 118.085096 168.062472)"
+                fill="#fff"
+                stroke-width="0"
+              />
+            </svg>
+          ) : (
+            <svg
+              id="evQi0V7Dx4t1"
+              width={36}
+              height={36}
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 300 300"
+              shape-rendering="geometricPrecision"
+              text-rendering="geometricPrecision"
+            >
+              <ellipse
+                rx="78.089633"
+                ry="27.840652"
+                transform="matrix(1.204348 0 0 1.634145 150 104.504338)"
+                stroke-width="0"
+              />
+              <ellipse
+                rx="42.779538"
+                ry="76.392033"
+                transform="matrix(.746032 0 0 1 118.085096 168.062472)"
+                stroke-width="0"
+              />
+            </svg>
+          )}
         </Link>
         <Spacer />
         <Box>
           <Show below="md">
             <MenuModal />
-            {/* <HStack>
-              <LinkButton text="Works" route="works" />
-              <LinkButton text="About" route="about" />
-            </HStack> */}
           </Show>
           <Show above="md">
             <HStack>
