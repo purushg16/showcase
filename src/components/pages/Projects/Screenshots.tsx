@@ -29,7 +29,9 @@ const Screenshots = ({ desc, work }: Props) => {
             >
               <Image
                 key={index}
-                src={`/src/assets/images/${work.slug}/${index + 1}.webp`}
+                src={`${import.meta.env.BASE_URL}src/assets/images/${
+                  work.slug
+                }/${index + 1}.webp`}
                 alt={desc[index]}
                 loading="lazy"
                 borderRadius={9}

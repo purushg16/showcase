@@ -33,7 +33,9 @@ const WorkCard = ({ work }: Props) => {
         bg={colorMode === "dark" ? "gray.700" : "gray.100"}
       >
         <Image
-          src={`/src/assets/images/${work.slug}/1.webp`}
+          src={`${import.meta.env.BASE_URL}src/assets/images/${
+            work.slug
+          }/1.webp`}
           alt={work.title}
           loading="lazy"
           borderRadius={9}

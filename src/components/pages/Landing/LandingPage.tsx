@@ -24,7 +24,7 @@ const LandingPage = () => {
             <Image
               boxSize={100}
               borderRadius={999}
-              src={"src/assets/images/profile.jpg"}
+              src={`${import.meta.env.BASE_URL}src/assets/images/profile.jpg`}
             />
           </Box>
           <Text fontSize="3xl" fontWeight={700}>
