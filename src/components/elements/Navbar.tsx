@@ -66,7 +66,11 @@ const Navbar = () => {
         <Spacer />
         <Box>
           <Show below="md">
-            <MenuModal />
+            {/* <MenuModal /> */}
+            <HStack>
+              <LinkButton text="Works" route="works" />
+              <LinkButton text="About" route="about" />
+            </HStack>
           </Show>
           <Show above="md">
             <HStack>
