@@ -1,16 +1,12 @@
-import { Box, Divider, Flex, Icon, Text } from "@chakra-ui/react";
-import { TbArrowLeft, TbArrowRight } from "react-icons/tb";
+import { Box, Divider, Flex, HStack, SimpleGrid, Text } from "@chakra-ui/react";
+import { TbArrowLeft } from "react-icons/tb";
 import { useParams } from "react-router-dom";
 import works from "../../data/works";
-import UnderLineButtton, {
-  IconButton,
-  LinkButton,
-  NavButton,
-} from "../../elements/Button";
+import UnderLineButtton, { IconButton } from "../../elements/Button";
 import DesignSystem from "../../elements/Project/DesignSystem";
 import WorkDetails from "../../elements/Project/WorkDetails";
 import Screenshots from "./Screenshots";
-import { Link } from "react-router-dom";
+import { SiGithub } from "react-icons/si";
 
 const SingleWork = () => {
   const title = useParams().title;
@@ -26,7 +22,11 @@ const SingleWork = () => {
 
       <Box textAlign="center">
         <Text mb={4}>{work.note}</Text>
-        <UnderLineButtton text="Visit Project" route={work.url} />
+        <HStack spacing={3} alignItems="center" justifyContent="center">
+          <UnderLineButtton text="Github" route={work.git} icon={SiGithub} />
+          <Text> | </Text>
+          <UnderLineButtton text="Visit Project" route={work.url} />
+        </HStack>
       </Box>
 
       <Box>

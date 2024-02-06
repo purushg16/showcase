@@ -1,5 +1,6 @@
 export default interface Work {
   id: string;
+  date: string;
   title: string;
   slug: string;
   breif: string;

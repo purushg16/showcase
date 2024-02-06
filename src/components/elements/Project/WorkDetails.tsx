@@ -17,7 +17,7 @@ const WorkDetails = ({ work }: Props) => {
       <AnimateMove direction="y">
         <Box mt={2}>
           <HStack spacing={3} color="gray.500">
-            <Text fontSize="sm"> April, 2022 </Text>
+            <Text fontSize="sm"> {work.date} </Text>
             <Text fontSize="sm"> · </Text>
             <UnderLineButtton text="Visit Project" route={work.url} />
           </HStack>

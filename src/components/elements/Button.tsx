@@ -100,7 +100,13 @@ const IconButton = ({
   );
 };
 
-const UnderLineButtton = ({ text, route }: NavButtonProps) => {
+interface UButton {
+  text: string;
+  route: string;
+  icon?: IconType;
+}
+
+const UnderLineButtton = ({ text, route, icon = TbArrowRight }: UButton) => {
   return (
     <Link to={route} target="_blank">
       <Text
@@ -110,7 +116,11 @@ const UnderLineButtton = ({ text, route }: NavButtonProps) => {
         m="auto"
       >
         {text}
-        <Icon as={TbArrowRight} ml={1} transform="rotate(320deg)" />
+        <Icon
+          as={icon}
+          ml={2}
+          transform={icon === TbArrowRight ? "rotate(320deg)" : ""}
+        />
       </Text>
     </Link>
   );

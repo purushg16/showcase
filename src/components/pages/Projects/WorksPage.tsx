@@ -19,7 +19,7 @@ const WorksPage = () => {
       <AnimateMove direction="y">
         <SimpleGrid my={10} spacing={16}>
           {works.results.data.map((work, index) => (
-            <AnimateMove delay={0.1 * (index + 1)}>
+            <AnimateMove delay={0.2 * (index + 1)}>
               <WorkCard work={work} />
             </AnimateMove>
           ))}
