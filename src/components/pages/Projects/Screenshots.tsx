@@ -18,6 +18,8 @@ const Screenshots = ({ desc, work }: Props) => {
             <Box
               p={5}
               display="flex"
+              alignItems="center"
+              justifyContent="center"
               objectFit="cover"
               aspectRatio="16/9"
               borderRadius={9}

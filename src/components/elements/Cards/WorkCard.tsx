@@ -22,6 +22,7 @@ const WorkCard = ({ work }: Props) => {
         w={{ sm: "100%", md: "40%" }}
         maxW={{ sm: "100%", md: "40%" }}
         display="flex"
+        alignItems="center"
         justifyContent="center"
         objectFit="cover"
         aspectRatio="16/9"
