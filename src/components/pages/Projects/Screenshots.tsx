@@ -1,18 +1,25 @@
 import { Box, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import Work from "../../entities/Work";
+import AnimateMove from "../../motions/Move";
 
 interface Props {
-  screenshots: string[];
   desc: string[];
+  work: Work;
 }
 
-const Screenshots = ({ desc, screenshots }: Props) => {
+const Screenshots = ({ desc, work }: Props) => {
   return (
     <Box>
-      <Text fontSize="3xl"> Screenshots </Text>
-      <SimpleGrid spacing={8}>
-        {screenshots.map((img, index) => (
-          <Box>
-            <Image src={img} alt="nope" loading="lazy" borderRadius={9} />
+      <SimpleGrid spacing={16}>
+        {[...Array(6)].map((_, index) => (
+          <AnimateMove direction="y" delay={0.2 * (index + 1)}>
+            <Image
+              key={index}
+              src={`/public/images/${work.slug}/${index + 1}.webp`}
+              alt={desc[index]}
+              loading="lazy"
+              borderRadius={9}
+            />
             <Text
               textAlign="center"
               mt={2}
@@ -23,7 +30,7 @@ const Screenshots = ({ desc, screenshots }: Props) => {
             >
               {desc[index]}
             </Text>
-          </Box>
+          </AnimateMove>
         ))}
       </SimpleGrid>
     </Box>

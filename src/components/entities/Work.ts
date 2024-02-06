@@ -1,20 +1,21 @@
-export default interface Project {
+export default interface Work {
   id: string;
   title: string;
   slug: string;
-  url: string;
-  git: string;
-  duration: number;
-  durationUnit: string;
   breif: string;
   description: string;
-  image_url: string;
+  note: string;
   tags: string[];
   platform: string[];
+
+  url: string;
+  logo: string;
+  git: string;
+
   designSystem: {
     typography: string[];
     color: string[];
   };
-  screenshots: string[];
+  screenshotCount: number;
   screenshostDesc: string[];
 }

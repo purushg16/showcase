@@ -1,7 +1,8 @@
-import { Button, Text } from "@chakra-ui/react";
+import { Button, Icon, Text } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { IconType } from "react-icons";
-import { useNavigate } from "react-router-dom";
+import { TbArrowRight } from "react-icons/tb";
+import { Link, useNavigate } from "react-router-dom";
 
 interface LinkButtonProps {
   text: string;
@@ -98,3 +99,21 @@ const IconButton = ({
     </Button>
   );
 };
+
+const UnderLineButtton = ({ text, route }: NavButtonProps) => {
+  return (
+    <Link to={route} target="_blank">
+      <Text
+        fontSize="sm"
+        borderBottom="1px solid gray"
+        w="max-content"
+        m="auto"
+      >
+        {text}
+        <Icon as={TbArrowRight} ml={1} transform="rotate(320deg)" />
+      </Text>
+    </Link>
+  );
+};
+
+export default UnderLineButtton;

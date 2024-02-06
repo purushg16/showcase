@@ -1,21 +1,16 @@
-import {
-  Box,
-  Divider,
-  Flex,
-  GridItem,
-  Image,
-  SimpleGrid,
-  Text,
-} from "@chakra-ui/react";
-import { TbArrowLeft } from "react-icons/tb";
+import { Box, Divider, Flex, Icon, Text } from "@chakra-ui/react";
+import { TbArrowLeft, TbArrowRight } from "react-icons/tb";
 import { useParams } from "react-router-dom";
 import works from "../../data/works";
-import { IconButton } from "../../elements/Button";
+import UnderLineButtton, {
+  IconButton,
+  LinkButton,
+  NavButton,
+} from "../../elements/Button";
 import DesignSystem from "../../elements/Project/DesignSystem";
 import WorkDetails from "../../elements/Project/WorkDetails";
-import AnimateRotate from "../../motions/Rotate";
 import Screenshots from "./Screenshots";
-import AnimateMove from "../../motions/Move";
+import { Link } from "react-router-dom";
 
 const SingleWork = () => {
   const title = useParams().title;
@@ -23,19 +18,15 @@ const SingleWork = () => {
   if (!work) return <Text> No data found! </Text>;
   return (
     <Flex flexDir="column" gap={16}>
-      <WorkDetails project={work} />
-
-      <AnimateMove>
-        <Image src={work.image_url} alt="Some Error" w="100%" loading="lazy" />
-      </AnimateMove>
+      <WorkDetails work={work} />
 
       <Box>
-        <AnimateMove direction="y">
-          <Screenshots
-            screenshots={work.screenshots}
-            desc={work.screenshostDesc}
-          />
-        </AnimateMove>
+        <Screenshots work={work} desc={work.screenshostDesc} />
+      </Box>
+
+      <Box textAlign="center">
+        <Text mb={4}>{work.note}</Text>
+        <UnderLineButtton text="Visit Project" route={work.url} />
       </Box>
 
       <Box>
