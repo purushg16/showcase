@@ -1,4 +1,4 @@
-import { Box, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Image, SimpleGrid, Text, useColorMode } from "@chakra-ui/react";
 import Work from "../../entities/Work";
 import AnimateMove from "../../motions/Move";
 
@@ -8,18 +8,34 @@ interface Props {
 }
 
 const Screenshots = ({ desc, work }: Props) => {
+  const { colorMode } = useColorMode();
+
   return (
     <Box>
       <SimpleGrid spacing={16}>
         {[...Array(6)].map((_, index) => (
           <AnimateMove direction="y" delay={0.2 * (index + 1)}>
-            <Image
-              key={index}
-              src={`/public/images/${work.slug}/${index + 1}.webp`}
-              alt={desc[index]}
-              loading="lazy"
+            <Box
+              p={5}
+              display="flex"
+              objectFit="cover"
+              aspectRatio="16/9"
               borderRadius={9}
-            />
+              overflow="hidden"
+              _hover={{ opacity: 0.7 }}
+              transition="all 0.7s"
+              // bg="gray.700"
+              bg={colorMode === "dark" ? "gray.700" : "gray.100"}
+            >
+              <Image
+                key={index}
+                src={`/public/images/${work.slug}/${index + 1}.webp`}
+                alt={desc[index]}
+                loading="lazy"
+                borderRadius={9}
+              />
+            </Box>
+
             <Text
               textAlign="center"
               mt={2}
