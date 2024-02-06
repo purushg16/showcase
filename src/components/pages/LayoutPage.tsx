@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/layout";
 import { Flex } from "@chakra-ui/react";
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import Navbar from "../elements/Navbar";
 
 const LayoutPage = () => {
@@ -10,6 +10,7 @@ const LayoutPage = () => {
       <Flex justifyContent="center" alignItems="start">
         <Box py={10} w="100%">
           <Outlet />
+          <ScrollRestoration />
         </Box>
       </Flex>
     </Box>
