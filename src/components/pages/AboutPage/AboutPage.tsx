@@ -1,21 +1,10 @@
-import {
-  Box,
-  Button,
-  Divider,
-  Flex,
-  Highlight,
-  Icon,
-  SimpleGrid,
-  Text,
-} from "@chakra-ui/react";
-import { SiGithub, SiGmail, SiInstagram, SiLinkedin } from "react-icons/si";
-import { TbArrowRight } from "react-icons/tb";
+import { Box, Divider, Flex, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import ContactLinksGrid from "../../elements/ContactLinksGrid";
 import Footer from "../../elements/Footer";
 import AnimateMove from "../../motions/Move";
-import Tools from "./Tools";
 import AboutTopics from "./AboutTopic";
-import ContactLinks from "../../../functions/data/ContactLinks";
+import Tools from "./Tools";
 
 const AboutPage = () => {
   return (
@@ -99,29 +88,7 @@ const AboutPage = () => {
               finding me at
               <span style={{ color: "teal" }}> @officialpurushothaman </span>
             </Text>,
-            <SimpleGrid columns={{ base: 1, md: 2 }} mt={8} spacing={4}>
-              {ContactLinks.map((link) => (
-                <Link to={link.link}>
-                  <Button
-                    w="100%"
-                    py={8}
-                    variant="outline"
-                    rightIcon={
-                      <Icon as={TbArrowRight} transform="rotate(320deg)" />
-                    }
-                    leftIcon={
-                      <>
-                        <Icon as={link.logo} mr={4} />
-                        <Text> {link.name} </Text>
-                      </>
-                    }
-                    _hover={{ opacity: 0.8 }}
-                    alignItems="center"
-                    justifyContent="space-between"
-                  />
-                </Link>
-              ))}
-            </SimpleGrid>,
+            <ContactLinksGrid />,
           ]}
         />
       </Flex>
