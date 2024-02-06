@@ -1,18 +1,14 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import ContactLinksGrid from "../../elements/ContactLinksGrid";
 import AnimateMove from "../../motions/Move";
+import profile from "../../../assets/images/profile.jpg";
 
 const ConnectPage = () => {
   return (
     <Box textAlign="center" py={16}>
       <AnimateMove delay={0.2} direction="y">
         <Box id="card-img-cont">
-          <Image
-            m="auto"
-            boxSize={100}
-            borderRadius={999}
-            src="public/images/profile.jpg"
-          />
+          <Image m="auto" boxSize={100} borderRadius={999} src={profile} />
         </Box>
       </AnimateMove>
 
