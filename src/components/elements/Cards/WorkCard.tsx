@@ -1,18 +1,15 @@
-import { Box, Button, Flex, Icon, Image, Text } from "@chakra-ui/react";
-import { TbArrowRight } from "react-icons/tb";
+import { Box, Button, Flex, Image, Text, useColorMode } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import Work from "../../entities/Work";
 import AnimateMove from "../../motions/Move";
-import AnimateScale from "../../motions/Scale";
 
 interface Props {
   work: Work;
-  index: number;
-  count: number;
 }
 
-const WorkCard = ({ work, index, count }: Props) => {
+const WorkCard = ({ work }: Props) => {
   const navigate = useNavigate();
+  const { colorMode } = useColorMode();
 
   return (
     <Flex
@@ -21,19 +18,28 @@ const WorkCard = ({ work, index, count }: Props) => {
       rowGap={4}
     >
       <Box
-        bg="url('https://images.unsplash.com/photo-1639628735078-ed2f038a193e?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
-        backgroundPosition="center"
-        backgroundRepeat="no-repeat"
-        backgroundSize="cover"
-        objectFit="cover"
-        aspectRatio="16/9"
+        p={2}
         w={{ sm: "100%", md: "40%" }}
         maxW={{ sm: "100%", md: "40%" }}
+        display="flex"
+        justifyContent="center"
+        objectFit="cover"
+        aspectRatio="16/9"
         borderRadius={9}
         overflow="hidden"
         _hover={{ opacity: 0.7 }}
         transition="all 0.7s"
-      />
+        // bg="gray.700"
+        bg={colorMode === "dark" ? "gray.700" : "gray.100"}
+      >
+        <Image
+          src={work.logo}
+          alt={work.title}
+          loading="lazy"
+          borderRadius={9}
+        />
+      </Box>
+
       <Box flex={1}>
         <Box>
           <Box mb={4}>

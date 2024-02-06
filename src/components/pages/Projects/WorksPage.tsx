@@ -20,7 +20,7 @@ const WorksPage = () => {
         <SimpleGrid my={10} spacing={16}>
           {works.results.data.map((work, index) => (
             <AnimateMove delay={0.1 * (index + 1)}>
-              <WorkCard work={work} index={index + 1} count={works.count} />
+              <WorkCard work={work} />
             </AnimateMove>
           ))}
         </SimpleGrid>
