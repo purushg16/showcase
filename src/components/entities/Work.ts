@@ -17,6 +17,6 @@ export default interface Work {
     typography: string[];
     color: string[];
   };
-  screenshotCount: number;
+  screenshots: string[];
   screenshostDesc: string[];
 }

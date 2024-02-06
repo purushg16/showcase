@@ -13,7 +13,7 @@ const Screenshots = ({ desc, work }: Props) => {
   return (
     <Box>
       <SimpleGrid spacing={16}>
-        {[...Array(work.screenshotCount)].map((_, index) => (
+        {work.screenshots.map((ss, index) => (
           <AnimateMove direction="y" delay={0.2 * (index + 1)}>
             <Box
               p={5}
@@ -29,9 +29,7 @@ const Screenshots = ({ desc, work }: Props) => {
             >
               <Image
                 key={index}
-                src={`${import.meta.env.BASE_URL}src/assets/images/${
-                  work.slug
-                }/${index + 1}.webp`}
+                src={ss}
                 alt={desc[index]}
                 loading="lazy"
                 borderRadius={9}

@@ -14,6 +14,7 @@ import { TbArrowRight } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import AnimateMove from "../../motions/Move";
 import Footer from "../../elements/Footer";
+import profile from "../../../assets/images/profile.jpg";
 
 const LandingPage = () => {
   return (
@@ -21,11 +22,7 @@ const LandingPage = () => {
       <AnimateMove direction="y">
         <Flex flexDir="column" gap={5}>
           <Box id="card-img-cont">
-            <Image
-              boxSize={100}
-              borderRadius={999}
-              src={`${import.meta.env.BASE_URL}src/assets/images/profile.jpg`}
-            />
+            <Image boxSize={100} borderRadius={999} src={profile} />
           </Box>
           <Text fontSize="3xl" fontWeight={700}>
             <Text fontSize="md" fontWeight={500} opacity={0.8}>
