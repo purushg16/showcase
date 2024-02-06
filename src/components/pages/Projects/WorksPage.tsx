@@ -14,10 +14,8 @@ const WorksPage = () => {
         <Text color="gray">Here are some of the projects I've worked on.</Text>
       </AnimateMove>
 
-      <Divider my={10} w="40%" mx="auto" />
-
       <AnimateMove direction="y">
-        <SimpleGrid my={10} spacing={16}>
+        <SimpleGrid my={20} spacing={16}>
           {works.results.data.map((work, index) => (
             <AnimateMove delay={0.2 * (index + 1)}>
               <WorkCard work={work} />
