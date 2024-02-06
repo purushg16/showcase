@@ -8,6 +8,7 @@ import {
   Image,
   Show,
   Spacer,
+  Text,
   useColorMode,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
@@ -66,11 +67,11 @@ const Navbar = () => {
         <Spacer />
         <Box>
           <Show below="md">
-            {/* <MenuModal /> */}
-            <HStack>
+            <MenuModal />
+            {/* <HStack>
               <LinkButton text="Works" route="works" />
               <LinkButton text="About" route="about" />
-            </HStack>
+            </HStack> */}
           </Show>
           <Show above="md">
             <HStack>

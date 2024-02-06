@@ -1,10 +1,57 @@
-import { Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  HStack,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  Text,
+  VStack,
+  useColorMode,
+} from "@chakra-ui/react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import AnimateMove from "../../motions/Move";
+import { LinkButton } from "../Button";
 
 const MenuModal = () => {
+  const [show, hide] = useState(false);
+  const { colorMode } = useColorMode();
+
   return (
-    <>
-      <Menu>
+    <Box pos="relative">
+      <Button
+        maxH="100%"
+        bg="none"
+        _hover={{ bg: "none" }}
+        _focus={{ bg: "none" }}
+        _active={{ bg: "none" }}
+        onClick={() => hide(!show)}
+      >
+        Menu
+      </Button>
+
+      {show && (
+        <AnimateMove direction="y">
+          <Box
+            position="absolute"
+            bg={colorMode === "dark" ? "black" : "white"}
+            boxShadow="0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1)"
+            borderRadius={9}
+            p={5}
+            left={-10}
+          >
+            <VStack>
+              <LinkButton text="Works" route="works" />
+              <LinkButton text="Blogs" route="blogs" />
+              <LinkButton text="About" route="about" />
+            </VStack>
+          </Box>
+        </AnimateMove>
+      )}
+
+      {/* <Menu>
         <MenuButton
           maxH="100%"
           as={Button}
@@ -28,8 +75,8 @@ const MenuModal = () => {
             </Link>
           </MenuItem>
         </MenuList>
-      </Menu>
-    </>
+      </Menu> */}
+    </Box>
   );
 };
 
