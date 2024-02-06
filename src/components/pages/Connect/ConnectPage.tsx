@@ -1,7 +1,6 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import ContactLinksGrid from "../../elements/ContactLinksGrid";
 import AnimateMove from "../../motions/Move";
-import ImageAllocator from "../../elements/ImageAllocator";
 
 const ConnectPage = () => {
   return (
@@ -12,7 +11,7 @@ const ConnectPage = () => {
             m="auto"
             boxSize={100}
             borderRadius={999}
-            src={ImageAllocator.profileImg}
+            src={"src/assets/images/profile.jpg"}
           />
         </Box>
       </AnimateMove>

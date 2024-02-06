@@ -1,4 +1,12 @@
-import { Box, Divider, Flex, HStack, SimpleGrid, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Divider,
+  Flex,
+  HStack,
+  Image,
+  SimpleGrid,
+  Text,
+} from "@chakra-ui/react";
 import { TbArrowLeft } from "react-icons/tb";
 import { useParams } from "react-router-dom";
 import works from "../../data/works";

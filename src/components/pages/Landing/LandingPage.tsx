@@ -14,7 +14,6 @@ import { TbArrowRight } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import AnimateMove from "../../motions/Move";
 import Footer from "../../elements/Footer";
-import ImageAllocator from "../../elements/ImageAllocator";
 
 const LandingPage = () => {
   return (
@@ -25,7 +24,7 @@ const LandingPage = () => {
             <Image
               boxSize={100}
               borderRadius={999}
-              src={ImageAllocator.profileImg}
+              src={"src/assets/images/profile.jpg"}
             />
           </Box>
           <Text fontSize="3xl" fontWeight={700}>
