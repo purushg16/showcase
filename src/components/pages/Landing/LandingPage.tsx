@@ -10,11 +10,12 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { TbArrowRight } from "react-icons/tb";
+import { TbArrowDown, TbArrowRight } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import AnimateMove from "../../motions/Move";
 import Footer from "../../elements/Footer";
 import profile from "../../../assets/images/profile.jpg";
+import resume from "../../../assets/Resume.pdf";
 
 const LandingPage = () => {
   return (
@@ -59,7 +60,7 @@ const LandingPage = () => {
                   borderRadius={0}
                   pb={2}
                   variant="link"
-                  leftIcon={
+                  rightIcon={
                     <Icon as={TbArrowRight} transform="rotate(320deg)" />
                   }
                   borderBottom="1px solid gray"
@@ -73,13 +74,27 @@ const LandingPage = () => {
                   borderRadius={0}
                   pb={2}
                   variant="link"
-                  leftIcon={
+                  rightIcon={
                     <Icon as={TbArrowRight} transform="rotate(320deg)" />
                   }
                   borderBottom="1px solid gray"
                   _hover={{ opacity: 0.8 }}
                 >
                   Connect
+                </Button>
+              </Link>
+
+              <Link
+                to={resume}
+                download="Resume - Purushothaman G"
+                target="_blank"
+              >
+                <Button
+                  borderRadius={9}
+                  rightIcon={<Icon as={TbArrowDown} />}
+                  _hover={{ opacity: 0.8 }}
+                >
+                  Resume
                 </Button>
               </Link>
             </HStack>

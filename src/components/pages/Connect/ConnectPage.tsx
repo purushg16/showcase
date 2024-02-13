@@ -1,7 +1,10 @@
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Icon, Image, Text } from "@chakra-ui/react";
 import ContactLinksGrid from "../../elements/ContactLinksGrid";
 import AnimateMove from "../../motions/Move";
 import profile from "../../../assets/images/profile.jpg";
+import { TbArrowDown } from "react-icons/tb";
+import { Link } from "react-router-dom";
+import resume from "../../../assets/Resume.pdf";
 
 const ConnectPage = () => {
   return (
@@ -17,10 +20,27 @@ const ConnectPage = () => {
           <Text fontSize="3xl" fontWeight={700}>
             Purush G
           </Text>
-          <Text fontSize="md" fontWeight={300} color="gray" maxW={400} m="auto">
+          <Text
+            fontSize="md"
+            fontWeight={300}
+            color="gray"
+            maxW={400}
+            m="auto"
+            mb={4}
+          >
             I write code & can provide extreme outcome. Besides, I do freelaning
             and could work at any time schedule according to the projects.
           </Text>
+
+          <Link to={resume} download="Resume - Purushothaman G" target="_blank">
+            <Button
+              borderRadius={9}
+              rightIcon={<Icon as={TbArrowDown} />}
+              _hover={{ opacity: 0.8 }}
+            >
+              Resume
+            </Button>
+          </Link>
         </Box>
       </AnimateMove>
 
