@@ -22,7 +22,12 @@ const LandingPage = () => {
       <AnimateMove direction="y">
         <Flex flexDir="column" gap={5}>
           <Box id="card-img-cont">
-            <Image boxSize={100} borderRadius={999} src={profile} />
+            <Image
+              boxSize={100}
+              borderRadius={999}
+              src={profile}
+              className="profile"
+            />
           </Box>
           <Text fontSize="3xl" fontWeight={700}>
             <Text fontSize="md" fontWeight={500} opacity={0.8}>

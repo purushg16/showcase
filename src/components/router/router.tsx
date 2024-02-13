@@ -7,6 +7,7 @@ import LandingPage from "../pages/Landing/LandingPage";
 import AboutPage from "../pages/AboutPage/AboutPage";
 import BlogsPage from "../pages/Blogs/BlogsPage";
 import ConnectPage from "../pages/Connect/ConnectPage";
+import SingleBlogPage from "../pages/Blogs/SingleBlogPage";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       { path: "/works/:title", element: <SingleWork /> },
       { path: "/about", element: <AboutPage /> },
       { path: "/blogs", element: <BlogsPage /> },
+      { path: "/blogs/:id", element: <SingleBlogPage /> },
       { path: "/connect", element: <ConnectPage /> },
     ],
   },

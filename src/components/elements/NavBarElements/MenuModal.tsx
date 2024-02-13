@@ -35,17 +35,18 @@ const MenuModal = () => {
       {show && (
         <AnimateMove direction="y">
           <Box
+            w={130}
             position="absolute"
             bg={colorMode === "dark" ? "black" : "white"}
             boxShadow="0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1)"
             borderRadius={9}
             p={5}
-            left={-10}
+            left={-7}
           >
             <VStack>
-              <LinkButton text="Works" route="works" />
-              <LinkButton text="Blogs" route="blogs" />
-              <LinkButton text="About" route="about" />
+              <LinkButton text="Works" route="works" size="md" />
+              <LinkButton text="Blogs" route="blogs" size="md" />
+              <LinkButton text="About" route="about" size="md" />
             </VStack>
           </Box>
         </AnimateMove>

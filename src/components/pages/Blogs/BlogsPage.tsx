@@ -1,18 +1,17 @@
 import {
   Box,
-  Button,
   Flex,
   HStack,
   Icon,
-  Image,
+  Link,
   SimpleGrid,
   Text,
-  VStack,
 } from "@chakra-ui/react";
-import { TbArrowRight } from "react-icons/tb";
-import AnimateMove from "../../motions/Move";
-import { Link } from "react-router-dom";
 import { SiGithub, SiGmail, SiInstagram } from "react-icons/si";
+import AnimateMove from "../../motions/Move";
+import { TbArrowRight } from "react-icons/tb";
+import blogs from "../../data/blogs";
+import BlogEntry from "../../elements/Blog/BlogEntry";
 
 const BlogsPage = () => {
   return (
@@ -26,100 +25,20 @@ const BlogsPage = () => {
         </Box>
       </AnimateMove>
 
-      <AnimateMove>
+      {blogs.map((blog, i) => (
+        <AnimateMove delay={0.2 * (i + 1)} direction="y" key={i}>
+          <BlogEntry key={blog.id} blog={blog} />
+        </AnimateMove>
+      ))}
+
+      {/* <AnimateMove>
         <Text textAlign="center">
           There are no blogs I have published as of now! Soon all will reach
           you!
         </Text>
-      </AnimateMove>
-
-      {/* <AnimateMove direction="y">
-        <SimpleGrid spacing={12}>
-          <Flex gap={8}>
-            <Box
-              bg="url('https://images.unsplash.com/photo-1639628735078-ed2f038a193e?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
-              backgroundPosition="center"
-              backgroundRepeat="no-repeat"
-              backgroundSize="cover"
-              objectFit="cover"
-              aspectRatio="1/1"
-              w="15%"
-              maxW={{ sm: "100%", md: "40%" }}
-              borderRadius={9}
-              overflow="hidden"
-              _hover={{ opacity: 0.7 }}
-              transition="all 0.7s"
-            />
-            <Box flex={1}>
-              <Text color="gray" fontSize="sm">
-                Oct 26, 2026
-              </Text>
-              <Link to="">
-                <Text fontWeight={500} _hover={{ textDecor: "underline" }}>
-                  Lorem ipsum dolor sit.
-                  <Icon as={TbArrowRight} ml={1} transform="rotate(320deg)" />
-                </Text>
-              </Link>
-            </Box>
-          </Flex>
-          <Flex gap={8}>
-            <Box
-              bg="url('https://images.unsplash.com/photo-1639628735078-ed2f038a193e?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
-              backgroundPosition="center"
-              backgroundRepeat="no-repeat"
-              backgroundSize="cover"
-              objectFit="cover"
-              aspectRatio="1/1"
-              w="15%"
-              maxW={{ sm: "100%", md: "40%" }}
-              borderRadius={9}
-              overflow="hidden"
-              _hover={{ opacity: 0.7 }}
-              transition="all 0.7s"
-            />
-            <Box flex={1}>
-              <Text color="gray" fontSize="sm">
-                Oct 26, 2026
-              </Text>
-              <Link to="">
-                <Text fontWeight={500} _hover={{ textDecor: "underline" }}>
-                  Lorem ipsum dolor sit.
-                  <Icon as={TbArrowRight} ml={1} transform="rotate(320deg)" />
-                </Text>
-              </Link>
-            </Box>
-          </Flex>
-          <Flex gap={8}>
-            <Box
-              bg="url('https://images.unsplash.com/photo-1639628735078-ed2f038a193e?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
-              backgroundPosition="center"
-              backgroundRepeat="no-repeat"
-              backgroundSize="cover"
-              objectFit="cover"
-              aspectRatio="1/1"
-              w="15%"
-              maxW={{ sm: "100%", md: "40%" }}
-              borderRadius={9}
-              overflow="hidden"
-              _hover={{ opacity: 0.7 }}
-              transition="all 0.7s"
-            />
-            <Box flex={1}>
-              <Text color="gray" fontSize="sm">
-                Oct 26, 2026
-              </Text>
-              <Link to="">
-                <Text fontWeight={500} _hover={{ textDecor: "underline" }}>
-                  Lorem ipsum dolor sit.
-                  <Icon as={TbArrowRight} ml={1} transform="rotate(320deg)" />
-                </Text>
-              </Link>
-            </Box>
-          </Flex>
-        </SimpleGrid>
       </AnimateMove> */}
 
-      <AnimateMove direction="y">
+      <AnimateMove direction="y" delay={0.2 * (blogs.length + 1)}>
         <Box textAlign="center" px={{ base: 4, md: 8 }}>
           <Text> Contact Me </Text>
           <Text my={4}>

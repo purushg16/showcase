@@ -86,7 +86,7 @@ const Navbar = () => {
             <MenuModal />
           </Show>
           <Show above="md">
-            <HStack>
+            <HStack gap={8}>
               <LinkButton text="Works" route="works" />
               <LinkButton text="Blogs" route="blogs" />
               <LinkButton text="About" route="about" />

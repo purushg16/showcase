@@ -7,15 +7,15 @@ import { Link, useNavigate } from "react-router-dom";
 interface LinkButtonProps {
   text: string;
   route: string;
-  color?: string;
-  icon?: IconType;
+  size?: string;
 }
 
-const LinkButton = ({ text, route }: LinkButtonProps) => {
+const LinkButton = ({ text, route, size = "sm" }: LinkButtonProps) => {
   const navigate = useNavigate();
   return (
     <Button
-      size="sm"
+      p={0}
+      size={size}
       variant="text"
       fontWeight={400}
       opacity={0.5}
