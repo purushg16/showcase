@@ -8,17 +8,21 @@ interface LinkButtonProps {
   text: string;
   route: string;
   size?: string;
+  active?: boolean;
 }
 
 const LinkButton = ({ text, route, size = "sm" }: LinkButtonProps) => {
+  const active = window.location.pathname === `/${route}`;
+
   const navigate = useNavigate();
   return (
     <Button
       p={0}
+      px={active ? 3 : 0}
       size={size}
-      variant="text"
+      variant={active ? "solid" : "text"}
       fontWeight={400}
-      opacity={0.5}
+      opacity={active ? 1 : 0.5}
       _hover={{ opacity: 1 }}
       transition="all 0.7s"
       onClick={() => {

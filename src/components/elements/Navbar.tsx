@@ -18,7 +18,6 @@ import { Link } from "react-router-dom";
 import favicon from "../../assets/favicon.svg";
 
 const Navbar = () => {
-  const navigate = useNavigate();
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
