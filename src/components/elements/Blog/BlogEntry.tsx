@@ -27,7 +27,7 @@ const BlogEntry = ({ blog }: Props) => {
       borderBottom="1px solid"
       borderColor="gray.700"
       flexDirection={{ base: "column", md: "column", lg: "row" }}
-      gap={{ sm: 4, md: 6 }}
+      gap={{ base: 4, md: 6 }}
       pb={4}
     >
       <Image src={blog.imgUrls[0]} alt="" w={200} borderRadius={10} />
