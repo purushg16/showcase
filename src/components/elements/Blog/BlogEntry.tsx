@@ -1,17 +1,7 @@
-import {
-  Box,
-  Button,
-  Divider,
-  Flex,
-  Icon,
-  Image,
-  Text,
-} from "@chakra-ui/react";
-import { Blog } from "../../entities/Blog";
+import { Box, Button, Flex, Icon, Image, Text } from "@chakra-ui/react";
+import { TbArrowRight } from "react-icons/tb";
 import { Link } from "react-router-dom";
-import { IconButton, LinkButton, NavButton } from "../Button";
-import { ArrowBackIcon } from "@chakra-ui/icons";
-import { TbArrowBarToRight, TbArrowRight } from "react-icons/tb";
+import { Blog } from "../../entities/Blog";
 
 interface Props {
   blog: Blog;
@@ -30,12 +20,15 @@ const BlogEntry = ({ blog }: Props) => {
       gap={{ base: 4, md: 6 }}
       pb={4}
     >
-      <Image src={blog.imgUrls[0]} alt="" w={200} borderRadius={10} />
+      <Image src={blog.thumbnail} alt="" w={200} borderRadius={10} />
       <Box flex={1}>
-        <Text color="gray">{date}</Text>
+        <Text color="gray" fontSize="sm">
+          {date}
+        </Text>
         <Link to={`/blogs/${blog.id}`}>
           <Text
-            fontWeight={500}
+            fontSize="lg"
+            fontWeight={600}
             _hover={{ opacity: 0.7 }}
             transition="all 0.7s"
             width="fit-content"
