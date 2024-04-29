@@ -17,7 +17,7 @@ export default [
     link: "https://github.com/purushg16",
   },
   {
-    name: "Instagram",
+    name: "LinkedIn",
     logo: SiLinkedin,
     link: "https://www.linkedin.com/in/purushothaman-g-081a2622a",
   },

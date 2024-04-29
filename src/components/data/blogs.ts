@@ -6,7 +6,7 @@ export default [
     id: "b01",
     createdAt: new Date(2024, 2, 12),
     title:
-      "User Interface Magic: Choosing the Right React Library for Your Project.",
+      "Helping you with choosing the right react library for your project.",
     desc: `In the ever-evolving landscape of web development, 
           React has established itself as a powerhouse for building dynamic 
           and interactive user interfaces. To streamline the development process 

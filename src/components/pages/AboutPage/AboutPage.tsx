@@ -23,9 +23,16 @@ const AboutPage = () => {
           delay={0.1}
           title="About"
           children={[
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            `As I have told before, I am an aspiring MERN Stack developer & freelancer,  
+            who loves building cool things with code, 
+            placing the right colors at right place and 
+            providing the lovable product`,
+            `Me & my cousin are currently running a startup named Macdasy, 
+            through which we are providing solutions to many problems the enterprises are facing`,
+            `Since June 2021, I am studying & working with full-stack development. 
+            I personally love to develop things like posters, designs and illustrations. 
+            Then, I found myself interseted in web-design & developing. 
+            Below, I have listed my tech-stack I use to build amazing web-applications.`,
           ]}
         />
 
@@ -53,8 +60,7 @@ const AboutPage = () => {
             />,
             <Tools
               title="Apart from web, I have gained certifications in"
-              desc="Python and Flutter.With Data Science, Pandas, Selenium in Python and Firebase
-                  with Flutter."
+              desc="Flutter (Inc. Firebase) & Python (Inc. Data Science, Pandas, Selenium)"
             />,
           ]}
         />

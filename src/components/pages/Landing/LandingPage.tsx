@@ -4,6 +4,7 @@ import {
   Divider,
   Flex,
   HStack,
+  Heading,
   Highlight,
   Icon,
   Image,
@@ -16,12 +17,15 @@ import AnimateMove from "../../motions/Move";
 import Footer from "../../elements/Footer";
 import profile from "../../../assets/images/profile.jpg";
 import resume from "../../../assets/Resume.pdf";
+import PostCard from "../../elements/PostCard";
+import RecentPosts from "../../elements/RecentPosts";
+import LandingBento from "../../elements/LandingBento";
 
 const LandingPage = () => {
   return (
     <Box textAlign="left">
       <AnimateMove direction="y">
-        <Flex flexDir="column" gap={5}>
+        <Flex flexDir="column" gap={4}>
           <Box id="card-img-cont">
             <Image
               boxSize={100}
@@ -48,13 +52,26 @@ const LandingPage = () => {
                 children={`An aspiring MERN Stack freelancer,  
                             who loves building cool things with code, 
                             placing the right colors at right place and 
-                            providing the lovable product.`}
+                            providing the lovable product `}
               />
+              and have developed many{" "}
+              <Link to="works" style={{ borderBottom: "1px solid" }}>
+                web-applications
+              </Link>{" "}
+              with{" "}
+              <Link
+                to="https://macdasys.netlify.app/"
+                target="_blank"
+                style={{ borderBottom: "1px solid" }}
+              >
+                Macdasy
+              </Link>
+              .
             </Text>
           </Box>
 
           <Box>
-            <HStack gap={7}>
+            <Flex align="center" gap={8} flexWrap="wrap">
               <Link to="about">
                 <Button
                   borderRadius={0}
@@ -84,7 +101,7 @@ const LandingPage = () => {
                 </Button>
               </Link>
 
-              <Link
+              {/* <Link
                 to={resume}
                 download="Resume - Purushothaman G"
                 target="_blank"
@@ -96,8 +113,8 @@ const LandingPage = () => {
                 >
                   Resume
                 </Button>
-              </Link>
-            </HStack>
+              </Link> */}
+            </Flex>
           </Box>
         </Flex>
       </AnimateMove>
@@ -105,33 +122,14 @@ const LandingPage = () => {
       <Divider my={10} w="40%" mx="auto" />
 
       <AnimateMove>
-        <Box>
-          <Text fontSize="md" mb={5}>
-            Recent Posts
+        <VStack align="start" gap={4}>
+          <Heading fontSize="lg">Recent Posts</Heading>
+          <Text mb={4}>
+            I occasionally write about programming, productivity, and more.
+            <br />
+            Check me out and support if you like.
           </Text>
-          <VStack alignItems="start" gap={5} mb={8}>
-            <HStack columnGap={10}>
-              <Text color="gray"> Oct 26, 2026 </Text>
-              <Link to="">
-                <Text fontWeight={500}> Lorem ipsum dolor sit. </Text>
-              </Link>
-            </HStack>
-            <HStack columnGap={10}>
-              <Text color="gray"> Oct 26, 2026 </Text>
-
-              <Link to="">
-                <Text fontWeight={500}> Lorem ipsum dolor sit. </Text>
-              </Link>
-            </HStack>
-            <HStack columnGap={10}>
-              <Text color="gray"> Oct 26, 2026 </Text>
-
-              <Link to="">
-                <Text fontWeight={500}> Lorem ipsum dolor sit. </Text>
-              </Link>
-            </HStack>
-          </VStack>
-
+          <RecentPosts />
           <Link to="blogs">
             <Button
               pb={2}
@@ -144,7 +142,7 @@ const LandingPage = () => {
               See All
             </Button>
           </Link>
-        </Box>
+        </VStack>
       </AnimateMove>
 
       <Divider my={10} w="40%" mx="auto" />

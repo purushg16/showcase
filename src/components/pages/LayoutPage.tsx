@@ -5,7 +5,7 @@ import Navbar from "../elements/Navbar";
 
 const LayoutPage = () => {
   return (
-    <Box height="max-content" maxW={800} marginX="auto" px="1.5rem">
+    <Box height="max-content" maxW={700} marginX="auto" px="1.5rem">
       <Navbar />
       <Flex justifyContent="center" alignItems="start">
         <Box py={10} w="100%">

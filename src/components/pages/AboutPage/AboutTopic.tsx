@@ -21,7 +21,9 @@ const AboutTopics = ({ title, children, delay }: Props) => {
           <Text>
             {children.length > 0 &&
               children.map((desc, index) => (
-                <Text my={index !== 0 ? 4 : 0}> {desc} </Text>
+                <Text key={index} my={index !== 0 ? 4 : 0}>
+                  {desc}
+                </Text>
               ))}
           </Text>
         </Box>

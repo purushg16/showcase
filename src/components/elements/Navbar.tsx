@@ -25,7 +25,7 @@ const Navbar = () => {
       zIndex={20}
       position="sticky"
       top={0}
-      bg={colorMode === "dark" ? "#121212" : "white"}
+      bg={colorMode === "dark" ? "#000" : "white"}
     >
       <Flex alignItems="center" py="0.75rem">
         <Link to="/" className="shrink-0 text-primary">
