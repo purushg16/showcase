@@ -1,4 +1,11 @@
-import { GridItem, HStack, VStack, Button, Text } from "@chakra-ui/react";
+import {
+  GridItem,
+  HStack,
+  VStack,
+  Button,
+  Text,
+  Stack,
+} from "@chakra-ui/react";
 import { TbArrowUpRight } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import ProjectsGrid from "../ProjectsGrid";
@@ -15,7 +22,12 @@ const Projects = () => {
       borderRadius={10}
       boxShadow="base"
     >
-      <HStack align="start" gap={12} h="100%">
+      <Stack
+        direction={{ base: "column", md: "row" }}
+        align="start"
+        gap={12}
+        h="100%"
+      >
         <VStack align="start" justify="space-between" h="100%">
           <Text fontSize="md" opacity={0.7}>
             {" "}
@@ -28,7 +40,7 @@ const Projects = () => {
           </Link>
         </VStack>
         <ProjectsGrid />
-      </HStack>
+      </Stack>
     </GridItem>
   );
 };

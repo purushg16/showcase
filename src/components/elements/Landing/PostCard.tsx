@@ -5,7 +5,7 @@ import { Blog } from "../../entities/Blog";
 
 const PostCard = ({ blog }: { blog: Blog }) => {
   return (
-    <Stack direction="row" gap={{ base: 4, md: 8 }}>
+    <Stack direction={{ base: "column", md: "row" }} gap={{ base: 4, md: 8 }}>
       <Box
         w={100}
         aspectRatio="4/3"
