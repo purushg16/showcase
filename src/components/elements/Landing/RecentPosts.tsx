@@ -1,6 +1,6 @@
 import { VStack } from "@chakra-ui/react";
 import PostCard from "./PostCard";
-import blogs from "../data/blogs";
+import blogs from "../../data/blogs";
 
 const RecentPosts = () => {
   return (

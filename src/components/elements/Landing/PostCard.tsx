@@ -1,7 +1,7 @@
 import { Box, Image, Stack, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { convertDate } from "../generator/dateConvertor";
-import { Blog } from "../entities/Blog";
+import { convertDate } from "../../generator/dateConvertor";
+import { Blog } from "../../entities/Blog";
 
 const PostCard = ({ blog }: { blog: Blog }) => {
   return (

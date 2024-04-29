@@ -22,6 +22,7 @@ const Navbar = () => {
 
   return (
     <Box
+      py={4}
       zIndex={20}
       position="sticky"
       top={0}

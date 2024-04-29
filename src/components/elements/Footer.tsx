@@ -1,4 +1,4 @@
-import { Box, HStack, Icon, Text } from "@chakra-ui/react";
+import { Box, Divider, HStack, Icon, Text } from "@chakra-ui/react";
 import { SiInstagram } from "react-icons/si";
 import { TiSocialLinkedin } from "react-icons/ti";
 import { VscGithubAlt } from "react-icons/vsc";
@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <Box my={10}>
+    <Box>
+      <Divider my={8} />
+
       <HStack my={2} gap={5}>
         <Link target="_blank" to="https://github.com/purushg16">
           <Icon as={VscGithubAlt} boxSize={5} />
