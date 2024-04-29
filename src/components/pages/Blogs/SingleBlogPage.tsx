@@ -1,10 +1,12 @@
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import blogs from "../../data/blogs";
 import BlogAuthor from "../../elements/Blog/BlogAuthor";
 import BlogArticle from "../../elements/Blog/BlogArticle";
 import AnimateMove from "../../motions/Move";
 import BlogPointsSection from "../../elements/Blog/BlogPoints";
+import { TbArrowLeft } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const SingleBlogPage = () => {
   const id = useParams().id;
@@ -62,6 +64,12 @@ const SingleBlogPage = () => {
           <Text color="gray">{blog?.conclusion}</Text>
         </Box>
       </AnimateMove>
+
+      <Link to="/blogs" style={{ margin: "auto" }}>
+        <Button variant="outline" leftIcon={<TbArrowLeft />} mt={8}>
+          All Blogs
+        </Button>
+      </Link>
     </Flex>
   );
 };

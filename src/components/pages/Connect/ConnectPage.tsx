@@ -5,6 +5,7 @@ import profile from "../../../assets/images/profile.jpg";
 import { TbArrowDown } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import resume from "../../../assets/Resume.pdf";
+import Footer from "../../elements/Footer";
 
 const ConnectPage = () => {
   return (
@@ -49,6 +50,7 @@ const ConnectPage = () => {
           <ContactLinksGrid />
         </Box>
       </AnimateMove>
+      <Footer />
     </Box>
   );
 };

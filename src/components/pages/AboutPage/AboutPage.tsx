@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import ContactLinksGrid from "../../elements/ContactLinksGrid";
 import Footer from "../../elements/Footer";
@@ -99,7 +99,6 @@ const AboutPage = () => {
         />
       </Flex>
       <Footer />
-      <Divider my={10} w="40%" mx="auto" />
     </Box>
   );
 };

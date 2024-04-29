@@ -21,7 +21,7 @@ const HireMe = () => {
           And, I am also open to work in a company!
         </Text>
         <HStack gap={4}>
-          <Link to="about">
+          <Link to="connect">
             <Button
               size="sm"
               borderRadius={0}

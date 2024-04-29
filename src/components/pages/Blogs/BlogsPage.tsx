@@ -1,5 +1,6 @@
 import {
   Box,
+  Divider,
   Flex,
   HStack,
   Icon,
@@ -12,10 +13,11 @@ import AnimateMove from "../../motions/Move";
 import { TbArrowRight } from "react-icons/tb";
 import blogs from "../../data/blogs";
 import BlogEntry from "../../elements/Blog/BlogEntry";
+import ContactForm from "../../elements/ContactForm";
 
 const BlogsPage = () => {
   return (
-    <Flex gap={20} flexDir="column">
+    <Flex gap={12} flexDir="column">
       <AnimateMove direction="y">
         <Box>
           <Text fontSize="3xl" fontWeight={700}>
@@ -30,28 +32,10 @@ const BlogsPage = () => {
           <BlogEntry key={blog.id} blog={blog} />
         </AnimateMove>
       ))}
-
-      {/* <AnimateMove>
-        <Text textAlign="center">
-          There are no blogs I have published as of now! Soon all will reach
-          you!
-        </Text>
-      </AnimateMove> */}
+      <Divider w="40%" mx="auto" my={4} />
 
       <AnimateMove direction="y" delay={0.2 * (blogs.length + 1)}>
-        <Box textAlign="center" px={{ base: 4, md: 8 }}>
-          <Text> Contact Me </Text>
-          <Text my={4}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro odit
-            natus id itaque tenetur sed quos at, ut animi cupiditate.
-          </Text>
-
-          <HStack justifyContent="center" gap={4}>
-            <Icon as={SiGithub} />
-            <Icon as={SiInstagram} />
-            <Icon as={SiGmail} />
-          </HStack>
-        </Box>
+        <ContactForm />
       </AnimateMove>
     </Flex>
   );
