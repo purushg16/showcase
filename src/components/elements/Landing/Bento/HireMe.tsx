@@ -13,6 +13,7 @@ const HireMe = () => {
       border="1px solid"
       borderColor="whiteAlpha.200"
       borderRadius={10}
+      boxShadow="base"
     >
       <VStack gap={8} align="start">
         <Text fontSize="md">

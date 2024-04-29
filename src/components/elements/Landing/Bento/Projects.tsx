@@ -13,6 +13,7 @@ const Projects = () => {
       border="1px solid"
       borderColor="whiteAlpha.200"
       borderRadius={10}
+      boxShadow="base"
     >
       <HStack align="start" gap={12} h="100%">
         <VStack align="start" justify="space-between" h="100%">

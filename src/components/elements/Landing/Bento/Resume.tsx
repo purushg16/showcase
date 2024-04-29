@@ -14,6 +14,7 @@ const Resume = () => {
       borderRadius={10}
       pos="relative"
       overflow="hidden"
+      boxShadow="base"
     >
       <Text mb={4}> Find my resume here. </Text>
       <Button size="sm" rightIcon={<TbArrowDown />}>

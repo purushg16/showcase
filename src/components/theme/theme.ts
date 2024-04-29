@@ -1,4 +1,4 @@
-import { extendTheme, ThemeConfig } from "@chakra-ui/react";
+import { extendTheme, StyleFunctionProps, ThemeConfig } from "@chakra-ui/react";
 
 const config: ThemeConfig = {
   initialColorMode: "dark",
@@ -6,7 +6,27 @@ const config: ThemeConfig = {
 
 const theme = extendTheme({
   config,
+  components: {
+    Button: {
+      variants: {
+        solid: (props: StyleFunctionProps) => ({
+          bg: props.colorMode === "dark" ? "gray.700" : "gray.50",
+        }),
+      },
+    },
+  },
   colors: {
+    button: {
+      "100": "#fafafa",
+      "200": "#f5f5f5",
+      "300": "#f0f0f0",
+      "400": "#eaeaea",
+      "500": "#e5e5e5",
+      "600": "#dfdfdf",
+      "700": "#d9d9d9",
+      "800": "#d3d3d3",
+      "900": "#cccccc",
+    },
     gray: {
       "50": "#e0e0e0",
       "100": "#c7c7c7",
@@ -15,8 +35,8 @@ const theme = extendTheme({
       "400": "#6f6f6f",
       "500": "#565656",
       "600": "#404040",
-      "700": "#000000",
-      "800": "#000000",
+      "700": "#1a1a1a",
+      "800": "#000",
       "900": "#000000",
     },
     red: {

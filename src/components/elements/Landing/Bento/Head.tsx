@@ -11,6 +11,7 @@ const Head = () => {
       bg="whiteAlpha.100"
       border="1px solid"
       borderColor="whiteAlpha.200"
+      boxShadow="base"
       borderRadius={10}
     >
       <HStack w="100%" justify="space-between">

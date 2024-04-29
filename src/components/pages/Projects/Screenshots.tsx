@@ -14,7 +14,7 @@ const Screenshots = ({ desc, work }: Props) => {
     <Box>
       <SimpleGrid spacing={16}>
         {work.screenshots.map((ss, index) => (
-          <AnimateMove direction="y" delay={0.2 * (index + 1)}>
+          <AnimateMove key={index} direction="y" delay={0.2 * (index + 1)}>
             <Box
               p={5}
               display="flex"
@@ -26,8 +26,8 @@ const Screenshots = ({ desc, work }: Props) => {
               overflow="hidden"
               _hover={{ opacity: 0.7 }}
               transition="all 0.7s"
-              // bg="gray.700"
-              bg={colorMode === "dark" ? "gray.700" : "gray.100"}
+              bg={colorMode === "dark" ? "gray.700" : "gray.50"}
+              borderColor={colorMode === "dark" ? "gray.600" : "gray.100"}
             >
               <Image
                 key={index}

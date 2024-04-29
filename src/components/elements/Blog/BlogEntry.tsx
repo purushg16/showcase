@@ -14,8 +14,6 @@ const BlogEntry = ({ blog }: Props) => {
 
   return (
     <Flex
-      borderBottom="1px solid"
-      borderColor="gray.700"
       flexDirection={{ base: "column", md: "column", lg: "row" }}
       gap={{ base: 4, md: 6 }}
       pb={4}

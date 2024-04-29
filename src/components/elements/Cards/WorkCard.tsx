@@ -18,6 +18,9 @@ const WorkCard = ({ work }: Props) => {
       rowGap={4}
     >
       <Box
+        border="1px solid"
+        bg={colorMode === "dark" ? "gray.700" : "gray.50"}
+        borderColor={colorMode === "dark" ? "gray.600" : "gray.100"}
         p={2}
         w={{ sm: "100%", md: "40%" }}
         maxW={{ sm: "100%", md: "40%" }}
@@ -26,18 +29,18 @@ const WorkCard = ({ work }: Props) => {
         justifyContent="center"
         objectFit="cover"
         aspectRatio="16/9"
-        borderRadius={9}
+        borderRadius={20}
         overflow="hidden"
         _hover={{ opacity: 0.7 }}
         transition="all 0.7s"
-        // bg="gray.700"
-        bg={colorMode === "dark" ? "gray.700" : "gray.100"}
       >
         <Image
+          w="100%"
+          h="100%"
           src={work.screenshots[1]}
           alt={work.title}
           loading="lazy"
-          borderRadius={9}
+          borderRadius={20}
         />
       </Box>
 

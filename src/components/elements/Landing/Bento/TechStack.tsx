@@ -7,6 +7,7 @@ const TechStack = () => {
       rowSpan={1}
       colSpan={{ base: 3, md: 2 }}
       p={4}
+      boxShadow="base"
       bg="whiteAlpha.100"
       border="1px solid"
       borderColor="whiteAlpha.200"
