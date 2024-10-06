@@ -4,6 +4,7 @@ import Projects from "./Bento/Projects";
 import Resume from "./Bento/Resume";
 import TechStack from "./Bento/TechStack";
 import Head from "./Bento/Head";
+import Work from "./Bento/Work";
 
 const LandingBento = () => {
   return (
@@ -15,6 +16,7 @@ const LandingBento = () => {
       gap={4}
     >
       <Head />
+      <Work />
       <TechStack />
       <Projects />
       <HireMe />
